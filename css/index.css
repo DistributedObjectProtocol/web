@@ -105,6 +105,7 @@ header > div {
     display: block;
     font-weight: 400;
     margin: 0px 20px;
+    line-height: 25px;
 }
 
 .dropdown a {
