@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+        svg{
+            background-color: #FFFFFF;
+        }
+        </style>
+        </head> 
+        
+        <body> 
+    <script src="./SnapSVGAnimator/js/vendor/snap.svg/snap.svg-min.js"></script>
+    <script src="./SnapSVGAnimator/js/SnapSVGAnimator.min.js"></script>
+    <script src="./json.js"></script>
+
+    <script type="text/javascript"> 
+        var jsonfile = "index3.json",
+            fps = 50,
+            width = 1000,
+            height = 500;
+
+json=JSON.parse(json);
+            comp = new SVGAnim(
+                           json,
+                           width,
+                           height,
+                           fps
+                           );
+            
+        }
+
+
+            </script>
+        </body>
+        </html>
