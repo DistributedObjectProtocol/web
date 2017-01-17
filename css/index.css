@@ -56,18 +56,23 @@ header > div {
     display: inline-block;
     margin-left: 20px;
     position: relative;
+    cursor: pointer
 }
-.header-menu a {
+.header-menu > li > a {
     font-size: 14px;
     text-decoration: none;
     color: #7a7a7a;
     font-weight: 900;
     display: inline-block;
-}
-.header-menu a.selected, .header-menu a:hover {
-    color: #000;/*#fb4768;*/
-    border-bottom: 3px double;
     padding-bottom: 11px;
+    border-bottom: 3px solid transparent;
+}
+.header-menu > li > a.selected, .header-menu > li > a:hover {
+    color: #000;/*#fb4768;*/
+    border-bottom: 3px double #000;
+}
+.header-menu > li:hover .dropdown {
+    display: block
 }
 
 
@@ -80,17 +85,33 @@ header > div {
     border-top: 5px solid #bbb;
 }
 .dropdown {
-    /* display: none; */
+    display: none; 
     overflow-y: auto;
     background-color: #fff;
     padding: 10px 0;
-    border: 1px solid #ddd;
+    border: 1px solid #dbdbdb;
     text-align: left;
     border-radius: 4px;
     white-space: nowrap;
     position: absolute;
-    top: calc(100% + 10px);
+    top: calc(100% + -3px);
     right: -4px;
     overflow-y: scroll;
     min-width: 150px;
+    box-shadow: 1px 1px 1px 0px rgba(0,0,0,.1);
+}
+
+.dropdown li {
+    display: block;
+    font-weight: 400;
+    margin: 0px 20px;
+}
+
+.dropdown a {
+    font-weight: 400;
+    color: #7a7a7a;
+    text-decoration: none
+}
+.dropdown a:hover {
+    color: #222;
 }
