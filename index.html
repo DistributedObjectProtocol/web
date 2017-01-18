@@ -78,6 +78,7 @@
             <h1>mola</h1>
         </div>
     </body>
+
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -86,43 +87,9 @@
     ga('create', 'UA-90475527-1', 'auto');
     ga('send', 'pageview');
     </script>
-    <script src="resources/slides/snapsvg/SnapSVGAnimator/js/vendor/snap.svg/snap.svg-min.js"></script>
-    <script src="resources/slides/snapsvg/SnapSVGAnimator/js/SnapSVGAnimator.min.js"></script>
-    <script type="text/javascript"> 
-        var jsonfile = "resources/slides/snapsvg/main.json",
-            fps = 50,
-            width = "#svg",
-            height = undefined,
-            AJAX_req;
-
-    AJAX_JSON_Req(jsonfile);
-
-    function handle_AJAX_Complete() {
-        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
-        {
-            json = JSON.parse(AJAX_req.responseText);
-            comp = new SVGAnim(
-                           json,
-                           width,
-                           height,
-                           fps
-                           );
-            
-        }
-    }
-
-    function AJAX_JSON_Req( url )
-    {
-        AJAX_req = new XMLHttpRequest();
-        AJAX_req.open("GET", url, true);
-        AJAX_req.setRequestHeader("Content-type", "application/json");
-        
-        AJAX_req.onreadystatechange = handle_AJAX_Complete;
-        AJAX_req.send();
-    }
-
-    </script>
-
+    <script src="lib/snap.svg-min.js"></script>
+    <script src="lib/SnapSVGAnimator.min.js"></script>
+    <script src="js/index.js"></script>
 
     <script src="https://unpkg.com/dop"></script>
 </html>
