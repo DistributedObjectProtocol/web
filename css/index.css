@@ -121,10 +121,10 @@ header > div {
     background-color: #f5f5f5
 }
 
-.slide > * {
+.slide {
+    text-align: center;
     margin-top: -33px;
+}
+.slide > * {
     max-width: 1200px !important;
-    width: 100% !important;
-    height: 600px !important;
-    margin: 0 auto;
 }
