@@ -12,11 +12,9 @@
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700" rel="stylesheet">
         <link rel="stylesheet" href="css/index.css">
 
-        <script src="js/index.js"></script>
-        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-        <script src="resources/slides/canvas.js?1484644373465"></script>
+
     </head>
-    <body onload="init();">
+    <body>
         <header>
             <div class="header-left"></div>
             <div class="header-center"><a href="/"><img class="logo" src="img/logo.svg" /></a></div>
@@ -46,7 +44,7 @@
             </div>
         </header>
         <div class="slide">
-            <canvas id="canvas" height="100%" style="display:block"></canvas>
+            <svg id="svg" width="100%" height="600"></svg>
         </div>
         <div>
             <h1>mola</h1>
@@ -82,5 +80,43 @@
     ga('create', 'UA-90475527-1', 'auto');
     ga('send', 'pageview');
     </script>
+    <script src="resources/slides/snapsvg/SnapSVGAnimator/js/vendor/snap.svg/snap.svg-min.js"></script>
+    <script src="resources/slides/snapsvg/SnapSVGAnimator/js/SnapSVGAnimator.min.js"></script>
+    <script type="text/javascript"> 
+        var jsonfile = "resources/slides/snapsvg/main.json",
+            fps = 50,
+            width = "#svg",
+            height = undefined,
+            AJAX_req;
+
+    AJAX_JSON_Req(jsonfile);
+
+    function handle_AJAX_Complete() {
+        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
+        {
+            json = JSON.parse(AJAX_req.responseText);
+            comp = new SVGAnim(
+                           json,
+                           width,
+                           height,
+                           fps
+                           );
+            
+        }
+    }
+
+    function AJAX_JSON_Req( url )
+    {
+        AJAX_req = new XMLHttpRequest();
+        AJAX_req.open("GET", url, true);
+        AJAX_req.setRequestHeader("Content-type", "application/json");
+        
+        AJAX_req.onreadystatechange = handle_AJAX_Complete;
+        AJAX_req.send();
+    }
+
+    </script>
+
+
     <script src="https://unpkg.com/dop"></script>
 </html>
