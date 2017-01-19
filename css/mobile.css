@@ -1,0 +1,24 @@
+
+
+/*********** MAX-750 **********/
+
+@media screen and (max-width: 750px){
+
+.slides-text {
+    left: auto;
+    bottom: 0
+}
+.slides-text > div {
+    left: auto;
+    width: 100%;
+    max-width: 450px;
+    padding: 5px 8px;
+    font-size: 11px;
+    margin: 0 auto;
+}
+.slides-title {
+    font-size: 3.4vw; /*42px;*/
+    letter-spacing: -.5px;
+}
+}
+/*********** MAX-750 **********/

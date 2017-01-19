@@ -166,7 +166,7 @@ header > div {
     color: white;
     text-align: center;
     left: -50%;
-    min-width: 400px;
+    min-width: 500px;
     padding: 15px 25px;
     /* font-weight: 600; */
     font-size: 16px;
@@ -185,7 +185,7 @@ header > div {
 .slides-claim {
     display: block;
     position: absolute;
-    top: 175px;
+    top: 28%;
     width: 100%;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
@@ -195,16 +195,15 @@ header > div {
 .slides-claim > div {
     /* position: relative; */
     /* left: -50%; */
-    width: 670px;
-    margin: 0 auto;
+    width: 100%;
     text-align: center;
 }
 .slides-title {
-    font-size: 42px;
+    font-size: 3.4vw; /*42px;*/
     letter-spacing: -1.5px;
 }
 .slides-description {
-    font-size: 19.1px;
+    font-size: 1.55vw; /*19.1px;*/
     /* letter-spacing: -.5px; */
     /* line-height: 23px; */
     color: #999999;
