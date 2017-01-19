@@ -10,7 +10,23 @@ AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
         var slide = comp.mc;
         var text = "";
         var textElement = document.getElementById('text');
+        var prevElement = document.getElementById('prevBtn');
+        var nextElement = document.getElementById('nextBtn');
         var textVisible = false;
+        
+        prevElement.addEventListener('click', function(){
+            slide.prev();
+        });
+        nextElement.addEventListener('click', function(){
+            slide.next();
+        });
+
+        window.addEventListener("keydown", function(e){
+            if (e.keyCode === 39)
+                slide.next();
+            else if (e.keyCode === 37)
+                slide.prev();
+        });
 
         // We need to delay it, if not SVGAnim will overwrite
         setTimeout(function(){

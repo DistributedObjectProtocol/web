@@ -132,22 +132,32 @@ header > div {
     height: 100%;
     position: absolute;
     width: 100px;
+    cursor: pointer;
 }
 .slides-arrowleft {
     left: 0;
-    background: red;
 }
 .slides-arrowright {
     right: 0;
-    background: blue;
 }
 .slides-arrows img {
-    width: 50px
+    width: 50px;
+    display: block;
+    position: relative;
+    top: calc(50% - 25px);
+    margin: 0 auto;
+    opacity: .3
+}
+.slides-arrows div:hover img {
+    opacity: 1
+}
+.slides-arrowleft img {
+    transform: rotate(180deg);
 }
 .slides-text {
     position: absolute;
     left: 50%;
-    bottom: 25px
+    bottom: 50px
 }
 .slides-text > div {
     opacity: 0;
@@ -157,7 +167,7 @@ header > div {
     text-align: center;
     left: -50%;
     min-width: 400px;
-    padding: 20px 30px;
+    padding: 15px 25px;
     /* font-weight: 600; */
     font-size: 16px;
     cursor: default;
