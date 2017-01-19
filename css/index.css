@@ -18,10 +18,19 @@ header {
     z-index: 1;
 }
 
+
+
 header > div {
     float:left;
     height: 100%;
 }
+
+a {
+    color:black
+}
+
+
+
 
 .header-left, .header-right {
     width: calc(50% - 40px);
@@ -207,4 +216,121 @@ header > div {
     /* letter-spacing: -.5px; */
     /* line-height: 23px; */
     color: #999999;
+}
+
+.h1 {
+    font-weight: bold;
+    font-size: 35px;
+    letter-spacing: -1px;
+}
+
+
+.transports {
+    /*    
+    background: #f6f6f6;
+    border-top: 1px solid #EEE;    
+    background: linear-gradient(135deg,  rgba(255,255,255,.5) 0%,#f3f3f3 52%,rgba(255,255,255,.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.transports-title {
+    text-align: center;
+    /*margin-top:60px;*/
+    color: #999;
+    font-weight: 100
+}
+.transports-table {
+    margin-top: 60px;
+}
+.transports-table table {
+    margin: 0 auto;
+    border-spacing: 0;
+    border-collapse:collapse;
+}
+.transports-table th, .transports-table td {
+    border: 1px dotted #AAA;
+}
+.transports-table th {
+    border-top: 0;
+    padding-top: 0;
+    width: 110px;
+    padding-bottom: 10px;
+    color: #666;
+    font-weight: 400;
+}
+.transports-table th:first-child, .transports-table td:first-child {
+    border-left:0
+}
+.transports-table th:last-child, .transports-table td:last-child {
+    border-right:0
+}
+.transports-table tr:last-child td {
+    border-bottom:0
+}
+
+.transports-table th img {
+    height: 70px;
+}
+
+.transports-table td {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 6px;
+}
+
+.transports-table td:first-child {
+    width: 165px;
+    padding: 7px 0;
+    text-align: left;
+}
+
+.transports-table td img {
+    height: 20px;
+    display: inline-block;
+}
+
+.transports-table td span {
+    font-size: 26px;
+    line-height: 0;
+    font-weight: 400;
+}
+
+.transports-table td:first-child span {
+    font-size: 11px;
+    color: #bbb;
+    display: inherit;
+    line-height: 10px;
+}
+
+footer {
+    margin-top: 60px;
+    background: black;
+    border-bottom: 20px;
+    color: #a1a1a1;
+    height: 55px;
+    box-shadow: 0px -4px rgba(0,0,0,.1);
+}
+footer > div { 
+    float:left;
+    width: 33%;
+    height: 100%;
+}
+footer > div > div { 
+    padding-top: 20px;
+}
+.footer-left > div {
+    font-size:13px;
+    padding-left: 20px
+}
+.footer-center > div {
+    text-align: center;
+    width: 100%;
+    height: calc(100% - 20px);
+}
+.footer-right > div {
+    float: right;
+    padding-right: 20px
+}
+.footer-center img {
+    width: 35px;
+    filter:invert(.3)
 }
