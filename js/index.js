@@ -12,6 +12,7 @@ AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
         var textElement = document.getElementById('text');
         var prevElement = document.getElementById('prevBtn');
         var nextElement = document.getElementById('nextBtn');
+        var claimElement = document.getElementById('claim');
         var textVisible = false;
         
         prevElement.addEventListener('click', function(){
@@ -46,6 +47,24 @@ AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
                 if (textVisible) {
                     textVisible = false;
                     textElement.style.opacity = 0;
+                }
+            }
+            var timeout, claimvisible=true;
+            slide.showClaim = function() {
+                if (!claimvisible) {
+                    claimvisible = true;
+                    claimElement.style.opacity = 1;
+                    claimElement.style.display = 'block';
+                    clearTimeout(timeout);
+                }
+            }
+            slide.hideClaim = function() {
+                if (claimvisible) {
+                    claimvisible = false;
+                    claimElement.style.opacity = 0;
+                    timeout = setTimeout(function(){
+                        claimElement.style.display = 'none';
+                    }, 1000)
                 }
             }
         }, 1000);

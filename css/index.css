@@ -178,7 +178,34 @@ header > div {
     border-radius: 2px;
     /* box-shadow: 4px 4px 1px rgba(0,0,0,0.2); */
 }
-
 .slide #svg {
     max-width: 1200px !important;
+}
+
+.slides-claim {
+    display: block;
+    position: absolute;
+    top: 175px;
+    width: 100%;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.55s ease;
+    -o-transition: all 0.5s ease;
+}
+.slides-claim > div {
+    /* position: relative; */
+    /* left: -50%; */
+    width: 670px;
+    margin: 0 auto;
+    text-align: center;
+}
+.slides-title {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+}
+.slides-description {
+    font-size: 19.1px;
+    /* letter-spacing: -.5px; */
+    /* line-height: 23px; */
+    color: #999999;
 }
