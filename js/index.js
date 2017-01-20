@@ -8,12 +8,10 @@ AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
 
         var comp = new SVGAnim(JSON.parse(AJAX_req.responseText), "#svg", null, 50);
         var slide = comp.mc;
-        var text = "";
         var textElement = document.getElementById('text');
         var prevElement = document.getElementById('prevBtn');
         var nextElement = document.getElementById('nextBtn');
         var claimElement = document.getElementById('claim');
-        var textVisible = false;
         
         prevElement.addEventListener('click', function(){
             slide.prev();
@@ -31,7 +29,19 @@ AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
 
         // We need to delay it, if not SVGAnim will overwrite
         setTimeout(function(){
+            var timeout, 
+                claimvisible=true, 
+                textVisible=false,
+                pause = slide.pause,
+                text = "";
+                
+
+            slide.pause = function() {
+                //console.log(slide.getDuration, slide.m_currentFrameNo);
+                pause()
+            }
             slide.changeText = function(t) {
+                console.log(t)
                 if (t!==text) {
                     text = t;
                     textElement.innerHTML = text;
@@ -49,7 +59,7 @@ AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
                     textElement.style.opacity = 0;
                 }
             }
-            var timeout, claimvisible=true;
+            
             slide.showClaim = function() {
                 if (!claimvisible) {
                     claimvisible = true;
