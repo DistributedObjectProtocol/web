@@ -337,5 +337,21 @@ footer > div > div {
 }
 .footer-center img {
     width: 35px;
-    filter:invert(.3)
+    filter:invert(.4)
+}
+
+.footer-right > div {
+    float: right;
+    padding-top: 17px
+}
+.footer-right ul {
+    padding: 0;
+    margin: 0;
+}
+.footer-right li {
+    display: inline-block;
+    margin-left: 10px;
+}
+.footer-right img {
+    width: 24px;
 }
