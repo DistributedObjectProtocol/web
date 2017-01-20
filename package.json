@@ -1,13 +1,13 @@
 {
   "name": "dop-web",
   "version": "1.0.0",
-  "description": "Distributed Object Protocol web",
+  "description": "Web for Distributed Object Protocol",
   "main": "index.js",
   "dependencies": {
+    "ejs": "^2.5.5",
     "express": "^4.14.0",
     "marked": "^0.3.6"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "node index"
   },
@@ -15,14 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/DistributedObjectProtocol/web.git"
   },
-  "keywords": [
-    "dop",
-    "web"
-  ],
   "author": "Josema Gonzalez",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DistributedObjectProtocol/web/issues"
-  },
-  "homepage": "https://github.com/DistributedObjectProtocol/web#readme"
+  "homepage": "https://distributedobjectprotocol.org"
 }
