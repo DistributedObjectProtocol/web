@@ -15,7 +15,7 @@ header {
     height: 43px;
     position: fixed;
     background: url('../img/background.png') #fff;
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -142,6 +142,7 @@ a {
     position: absolute;
     width: 100px;
     cursor: pointer;
+    z-index: 1;
 }
 .slides-arrowleft {
     left: 0;
@@ -321,10 +322,14 @@ footer > div > div {
     font-size:13px;
     padding-left: 20px
 }
+.footer-center {
+    width: 34%;
+}
 .footer-center > div {
     text-align: center;
     width: 100%;
     height: calc(100% - 20px);
+    padding-top: 17px;
 }
 .footer-right > div {
     float: right;
