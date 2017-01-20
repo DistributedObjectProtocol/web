@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Distributed Object Protocol</title>
+        <% include ../partials/head %>
+    </head>
+    <body>
+        <div class="container">
+        <% include ../partials/header %>
+        <div class="content">
+            <div class="slides">
+                <div class="slides-arrows">
+                    <div id="prevBtn" class="slides-arrowleft"><img src="/img/arrow.svg"></div>
+                    <div id="nextBtn" class="slides-arrowright"><img src="/img/arrow.svg"></div>
+                </div>
+                <div class="slides-claim" id="claim">
+                    <div>
+                        <div class="slides-title"><strong>Distributed  Object  Protocol</strong> is for</div>
+                        <div class="slides-description">Data sync,  Pub/Sub,  Remote procedure calls,  Reactive programming,<br/>
+        Optimistic updates,  Time-travel debugging,  One-way data,<br/>
+        State management, <strong>Real time apps.</strong></div>
+                    </div>
+                </div>
+                <div class="slides-text"><div id="text"></div></div>
+                <svg 
+                    id="svg"
+                    version="1.1"
+                    width="100%"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 1200 600" 
+                    xmlns="http://www.w3.org/2000/svg"></svg>
+            </div>
+            <div class="transports">
+                <div class="transports-title h1">Current transports</div>
+                <div class="transports-table">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>
+                                <div><img src="img/javascript.svg" /></div>
+                                <div>Browser</div>
+                            </th>
+                            <th>
+                                <div><img src="img/nodejs.svg" /></div>
+                                <div>node.js</div>
+                            </th>
+                            <th><strong>Your Favorite language?</strong></th>
+                        </tr>
+                        <tr>
+                            <td>WebSockets</td>
+                            <td><img src="img/nodejs.svg" /></td>
+                            <td><img src="img/nodejs.svg" /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/socketio">socket.io</a></td>
+                            <td><img src="img/nodejs.svg" /></td>
+                            <td><img src="img/nodejs.svg" /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/sockjs/">SockJS</a></td>
+                            <td><img src="img/nodejs.svg" /></td>
+                            <td><img src="img/nodejs.svg" /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>HTTP/2<br><span>Comming soon</span></td>
+                            <td><img src="img/nodejs.svg" /></td>
+                            <td><img src="img/nodejs.svg" /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>WebRTC<br><span>Comming soon</span></td>
+                            <td><img src="img/javascript.svg" /></td>
+                            <td><span>-</span></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <% include ../partials/footer %>
+        </div>
+    </body>
+    <script src="/lib/snap.svg-min.js"></script>
+    <script src="/lib/SnapSVGAnimator.min.js"></script>
+    <script src="/js/slides.js"></script>
+    <% include ../partials/scripts %>
+</html>

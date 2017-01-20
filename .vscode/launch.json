@@ -1,0 +1,41 @@
+{
+    // Use IntelliSense to learn about possible Node.js debug attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "V8",
+            "type": "node2",
+            "request": "launch",
+            "program": "${workspaceRoot}/${relativeFile}",
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "name": "Chakra",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/${relativeFile}",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "/Users/enzo/.nvs/chakracore/7.0.0-pre10/x64/bin/node",
+            "runtimeArgs": [
+                "--nolazy",
+                "--debug",
+                "-TTDebug:log",
+                "-TTBreakFirst" 
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "internalConsole"
+        },
+        {
+            "name": "index",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/index.js",
+            "cwd": "${workspaceRoot}"
+        }
+    ]
+}

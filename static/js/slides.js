@@ -1,6 +1,6 @@
 (function() {
 var AJAX_req = new XMLHttpRequest();
-AJAX_req.open("GET", "resources/slides/snapsvg/main.json", true);
+AJAX_req.open("GET", "js/slides.json", true);
 AJAX_req.setRequestHeader("Content-type", "application/json");
 AJAX_req.send();
 AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
@@ -35,13 +35,12 @@ AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
                 pause = slide.pause,
                 text = "";
                 
-
+            //console.log(slide)
             slide.pause = function() {
                 //console.log(slide.getDuration, slide.m_currentFrameNo);
                 pause()
             }
             slide.changeText = function(t) {
-                console.log(t)
                 if (t!==text) {
                     text = t;
                     textElement.innerHTML = text;
