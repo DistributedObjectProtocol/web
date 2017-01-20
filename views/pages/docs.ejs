@@ -7,9 +7,14 @@
         <link rel="stylesheet" href="/css/highlight.css">
     </head>
     <body>
-        <div class="container">
+        <div id="container">
             <% include ../partials/header %>
-            <div class="content"><%- content %></div>
+            <div id="content">
+                <div class="page">
+                    <div class="page-sidebar">a</div>
+                    <div class="page-document"><%- content %></div>
+                </div>
+            </div>
             <% include ../partials/footer %>
         </div>
     </body>

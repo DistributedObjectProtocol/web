@@ -13,14 +13,70 @@ body {
     padding-top: 43px;
 }
 
-.container {
-    min-height: 100%;
+#container {
+    min-height: calc(100% - 60px);
     position: relative;
 }
 
 
+.decoration {
+    /*background: #fc4768;*/
+    width: 100%;
+    height: 3px;
+    /*background: linear-gradient(253deg, #43f2c5, #0e4637, #f0ca0f);*/
+    background: linear-gradient(90deg, 
+      #fc4768,
+      #fb7793,
+      #fdcd66,
+      #fbcf8c, 
+      #fbcf8c, 
+      #fdcd66,
+      #fb7793,
+      #fc4768);
+    background-size: 300%;
+    -webkit-animation: AnimationName 15s ease infinite;
+    -moz-animation: AnimationName 15s ease infinite;
+    animation: AnimationName 15s ease infinite;
+}
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.decoration-header {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+.decoration-footer {
+    bottom: 0;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
 header {
-    top:0;
+    top:3px;
     width:100%;
     height: 43px;
     position: fixed;
@@ -40,7 +96,7 @@ a {
 }
 
 
-.content {
+#content {
     padding-bottom: 100px;
 }
 
@@ -60,6 +116,7 @@ a {
     display: block;
     margin: 0 auto;
     padding-top: 3px;
+    filter: drop-shadow( 0 1px 0px #fff);
 }
 
 .header-right {
@@ -318,9 +375,9 @@ footer {
     background: black;
     border-bottom: 20px;
     color: #a1a1a1;
-    height: 55px;
+    height: 58px;
     box-shadow: 0px -4px rgba(0,0,0,.1);
-    position: absolute;
+    clear: both;
     bottom: 0;
     width: 100%
 }
@@ -372,6 +429,8 @@ footer > div > div {
 
 
 
+
+/* NOT FOUND PAGE */
 .notfound {
     font-size: 170px;
     font-weight: bold;
@@ -384,4 +443,16 @@ footer > div > div {
     display: block;
     font-size: 38px;
     font-weight: 100;
+}
+
+
+/* DOCS PAGE */
+.page > div {
+    float: left;
+}
+.page-sidebar {
+    width: 250px
+}
+.page-document {
+    width: calc(100% - 250px)
 }
