@@ -1,7 +1,6 @@
 html, body {
     height: 100%
 }
-
 body {
     font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
     font-size: 15px;
@@ -10,11 +9,10 @@ body {
     background: url('../img/background.png') #fff fixed;
     margin: 0;
     color: #222;
-    padding-top: 43px;
 }
 
 #container {
-    min-height: calc(100% - 104px);
+    min-height: calc(100% - 61px);
     position: relative;
 }
 
@@ -38,8 +36,6 @@ body {
     -moz-animation: AnimationName 15s ease infinite;
     animation: AnimationName 15s ease infinite;
 }
-
-
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -99,6 +95,7 @@ a {
     clear: both
 }
 #content {
+    padding-top: 46px;
     padding-bottom: 50px;
 }
 
@@ -120,6 +117,13 @@ a {
     padding-top: 3px;
     filter: drop-shadow( 0 1px 0px #fff);
 }
+
+.h1 {
+    font-weight: bold;
+    font-size: 35px;
+    letter-spacing: -1px;
+}
+
 
 .header-right {
     text-align:right;
@@ -201,6 +205,75 @@ a {
     color: #222;
     background-color: #f5f5f5
 }
+
+footer {
+    background: black;
+    border-bottom: 20px;
+    color: #a1a1a1;
+    height: 58px;
+    box-shadow: 0px -4px rgba(0,0,0,.1);
+    clear: both;
+    width: 100%;
+}
+footer > div { 
+    float:left;
+    width: 33%;
+    height: 100%;
+}
+footer > div > div { 
+    padding-top: 20px;
+}
+.footer-left > div {
+    font-size:13px;
+    padding-left: 20px
+}
+.footer-center {
+    width: 34%;
+}
+.footer-center > div {
+    text-align: center;
+    width: 100%;
+    height: calc(100% - 20px);
+    padding-top: 17px;
+}
+.footer-right > div {
+    float: right;
+    padding-right: 20px
+}
+.footer-center img {
+    width: 35px;
+    filter:invert(.4)
+}
+
+.footer-right > div {
+    float: right;
+    padding-top: 17px
+}
+.footer-right ul {
+    padding: 0;
+    margin: 0;
+}
+.footer-right li {
+    display: inline-block;
+    margin-left: 10px;
+}
+.footer-right img {
+    width: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+/************************/
+/****** INDEX PAGE ******/
+/************************/
+
 
 .slides {
     text-align: center;
@@ -303,17 +376,6 @@ a {
 }
 
 
-
-
-
-
-.h1 {
-    font-weight: bold;
-    font-size: 35px;
-    letter-spacing: -1px;
-}
-
-
 /*.transports {
         
     background: #f6f6f6;
@@ -391,65 +453,17 @@ a {
     line-height: 10px;
 }
 
-footer {
-    background: black;
-    border-bottom: 20px;
-    color: #a1a1a1;
-    height: 58px;
-    box-shadow: 0px -4px rgba(0,0,0,.1);
-    clear: both;
-    width: 100%;
-}
-footer > div { 
-    float:left;
-    width: 33%;
-    height: 100%;
-}
-footer > div > div { 
-    padding-top: 20px;
-}
-.footer-left > div {
-    font-size:13px;
-    padding-left: 20px
-}
-.footer-center {
-    width: 34%;
-}
-.footer-center > div {
-    text-align: center;
-    width: 100%;
-    height: calc(100% - 20px);
-    padding-top: 17px;
-}
-.footer-right > div {
-    float: right;
-    padding-right: 20px
-}
-.footer-center img {
-    width: 35px;
-    filter:invert(.4)
-}
-
-.footer-right > div {
-    float: right;
-    padding-top: 17px
-}
-.footer-right ul {
-    padding: 0;
-    margin: 0;
-}
-.footer-right li {
-    display: inline-block;
-    margin-left: 10px;
-}
-.footer-right img {
-    width: 24px;
-}
 
 
 
 
-/* NOT FOUND PAGE */
+
+
+
+/****************************/
+/****** NOT FOUND PAGE ******/
+/****************************/
+
 .notfound {
     font-size: 170px;
     font-weight: bold;
@@ -465,7 +479,16 @@ footer > div > div {
 }
 
 
-/* DOCS PAGE */
+
+
+
+
+
+
+/****************************/
+/****** DOCS PAGE ******/
+/****************************/
+
 .page > div {
     /* float: left; */
 }
@@ -476,10 +499,13 @@ footer > div > div {
     position: fixed;
     /* margin-right: 250px; */
     top: 46px;
-    box-shadow: inset -3px -2px 6px 0px rgba(0,0,0,.1);
+    box-shadow: inset -2px -2px 3px 0px rgba(0,0,0,.1);
 }
 .page-document {
     /* width: calc(100% - 275px); */
     margin-left: 250px;
     padding-left: 50px;
+}
+.page-document > h1:first-of-type {
+    background: red;
 }
