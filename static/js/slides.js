@@ -12,6 +12,7 @@ AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
         var prevElement = document.getElementById('prevBtn');
         var nextElement = document.getElementById('nextBtn');
         var claimElement = document.getElementById('claim');
+        var slidesPercentageElement = document.getElementById('slides-percentage');
         
         prevElement.addEventListener('click', function(){
             slide.prev();
@@ -33,12 +34,26 @@ AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
                 claimvisible=true, 
                 textVisible=false,
                 pause = slide.pause,
-                text = "";
+                text = "",
+                labels,
+                totalSlides,
+                currentSlide = 0,
+                percentageSlide = 0,
+                lastFrame = 1;
                 
-            //console.log(slide)
+            labels = [];
+            for (var i=0; i<slide._labels.length;++i)
+                labels[i] = Number(slide._labels[i].frameNum)+1;
+
+            totalSlides = labels.length;
             slide.pause = function() {
-                //console.log(slide.getDuration, slide.m_currentFrameNo);
-                pause()
+                if (lastFrame != slide.m_currentFrameNo) {
+                    lastFrame = slide.m_currentFrameNo;
+                    currentSlide = labels.indexOf(lastFrame);
+                    percentageSlide = (currentSlide*100)/(totalSlides-1)
+                    slidesPercentageElement.style.width = percentageSlide + '%';
+                }
+                pause();
             }
             slide.changeText = function(t) {
                 if (t!==text) {

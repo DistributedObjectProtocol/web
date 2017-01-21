@@ -14,7 +14,7 @@ body {
 }
 
 #container {
-    min-height: calc(100% - 60px);
+    min-height: calc(100% - 104px);
     position: relative;
 }
 
@@ -95,9 +95,11 @@ a {
     color:black
 }
 
-
+.clear {
+    clear: both
+}
 #content {
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .header-left, .header-right {
@@ -235,7 +237,7 @@ a {
 }
 .slides-text {
     position: absolute;
-    left: 50%;
+    width: 100%;
     bottom: 50px
 }
 .slides-text > div {
@@ -244,18 +246,19 @@ a {
     background: black;
     color: white;
     text-align: center;
-    left: -50%;
-    min-width: 500px;
+    /* left: -50%; */
+    max-width: 650px;
     padding: 15px 25px;
     /* font-weight: 600; */
     font-size: 16px;
     cursor: default;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.55s ease;
+    -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     border-radius: 2px;
     /* box-shadow: 4px 4px 1px rgba(0,0,0,0.2); */
+    margin: 0 auto;
 }
 .slide #svg {
     max-width: 1200px !important;
@@ -268,7 +271,7 @@ a {
     width: 100%;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.55s ease;
+    -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
 }
 .slides-claim > div {
@@ -287,6 +290,22 @@ a {
     /* line-height: 23px; */
     color: #999999;
 }
+#slides-percentage {
+    position: absolute;
+    bottom: 6px;
+    width: 0;
+    height: 5px;
+    background: rgba(0,0,0,.2);
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+
+
+
+
 
 .h1 {
     font-weight: bold;
@@ -295,16 +314,17 @@ a {
 }
 
 
-.transports {
-    /*    
+/*.transports {
+        
     background: #f6f6f6;
     border-top: 1px solid #EEE;    
-    background: linear-gradient(135deg,  rgba(255,255,255,.5) 0%,#f3f3f3 52%,rgba(255,255,255,.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
+    background: linear-gradient(135deg,  rgba(255,255,255,.5) 0%,#f3f3f3 52%,rgba(255,255,255,.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+    
+}*/
 
 .transports-title {
     text-align: center;
-    /*margin-top:60px;*/
+    margin-top:60px;
     color: #999;
     font-weight: 100
 }
@@ -378,8 +398,7 @@ footer {
     height: 58px;
     box-shadow: 0px -4px rgba(0,0,0,.1);
     clear: both;
-    bottom: 0;
-    width: 100%
+    width: 100%;
 }
 footer > div { 
     float:left;
