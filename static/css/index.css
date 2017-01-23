@@ -84,7 +84,8 @@ header {
     width:100%;
     height: 43px;
     position: fixed;
-    background: url('../img/background.png') #fff;
+    /*background: url('../img/background.png') #fff;*/
+    background: #fff;
     z-index: 2;
 }
 
@@ -545,7 +546,7 @@ footer > div > div {
   cursor: grab;
 }
 .page-sidebar::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.0);
 }
 .page-sidebar > div {
     padding: 35px;
