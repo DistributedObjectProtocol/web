@@ -4,13 +4,10 @@
         <title>Distributed Object Protocol</title>
         <% include ../partials/head %>
         <link rel="stylesheet" href="/css/markdown.css">
-        <link rel="stylesheet" href="/css/highlight.css">
     </head>
     <body>
-        <div id="container">
-            <% include ../partials/header %>
-            <div id="content">
-                <div class="page">
+        <% include ../partials/header %>
+        <div id="container" class="page">
                     <div class="page-sidebar">
                         <div>
                             <div class="page-sidebar-title">API</div>
@@ -22,7 +19,7 @@
                                     <li class="page-sidebar-link"><a href="#">set</a></li>
                                     <li class="page-sidebar-link"><a href="#">del</a></li>
                                     <li class="page-sidebar-link"><a href="#">observe</a></li>
-                                    <li class="page-sidebar-link selected"><a href="#">observeProperty</a></li>
+                                    <li class="page-sidebar-link"><a href="/javascript/api/observeProperty" class="autoselect">observeProperty</a></li>
                                     <li class="page-sidebar-link"><a href="#">collect</a></li>
                                     <li class="page-sidebar-link"><a href="#">createObserver</a></li>
                                     <li class="page-sidebar-subcategory">nodes</li>
@@ -42,11 +39,9 @@
                         <div class="page-document-path"><%= type.toUpperCase() %> / <%= language %> /</div>
                         <%- content %>
                     </div>
-                </div>
                 <div class="clear"></div>
-            </div>
-            <% include ../partials/footer %>
         </div>
+        <% include ../partials/footer %>
     </body>
     <script src="/lib/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>

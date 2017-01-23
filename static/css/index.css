@@ -147,8 +147,6 @@ header > div {
 
 .header-menu > li {
     display: inline-block;
-    padding-top: 10px;
-    padding-left: 20px;
     position: relative;
 }
 .header-menu > li > a {
@@ -157,17 +155,20 @@ header > div {
     color: #7a7a7a;
     font-weight: 900;
     display: inline-block;
-    padding-bottom: 11px;
-    border-bottom: 3px solid transparent;
+    padding: 12px 15px 15px 10px;
 }
-.header-menu > li > a.selected, .header-menu > li > a:hover {
-    color: #000;/*#fb4768;*/
+.header-menu > li > a.selected .header-menu-aunderline, 
+.header-menu > li > a:hover .header-menu-aunderline {
+    color: #000;
     border-bottom: 3px solid #000;
-    padding-bottom: 1px
+    padding-bottom: 10px
 }
 .header-menu > li:hover .dropdown {
     display: block
 }
+
+
+
 
 
 .dropdown-icon {
@@ -373,7 +374,7 @@ footer > div > div {
 }
 #slides-percentage {
     position: absolute;
-    top: 33px;
+    top: 45px;
     width: 0;
     height: 5px;
     background: rgba(0,0,0,.2);
@@ -499,10 +500,13 @@ footer > div > div {
 /****************************/
 
 .page {
+    width: 100%;
     background: white;
-    height: 100%;
+    /*height: calc(100% - 50px);*/
     padding-bottom: 30px;
     padding-top: 46px;
+    /*position: relative;*/
+    /*width: 100%;*/
 }
 .page > div {
     /* float: left; */
@@ -526,6 +530,9 @@ footer > div > div {
     /* top: 46px; */
     /*box-shadow: 5px -2px 0px 0px rgba(0,0,0,.1); */
     /*border-right: 3px double #ddd;*/
+    background: -webkit-linear-gradient(left, #ffffff 0%, #f8f8f8 100%);
+    background: -o-linear-gradient(left, #ffffff 0%, #f8f8f8 100%);
+    background: linear-gradient(to right, #ffffff 0%, #f8f8f8 100%);
 }
 
 .page-sidebar::-webkit-scrollbar {
@@ -576,7 +583,7 @@ footer > div > div {
     line-height: 23px
 }
 .page-sidebar-link a:hover,
-.page-sidebar-link.selected a {
+.page-sidebar-link a.selected {
     color: #777;
     border-bottom: 1px solid #ccc
 }
