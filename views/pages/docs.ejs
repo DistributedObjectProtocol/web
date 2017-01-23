@@ -11,8 +11,37 @@
             <% include ../partials/header %>
             <div id="content">
                 <div class="page">
-                    <div class="page-sidebar">a</div>
-                    <div class="page-document"><%- content %></div>
+                    <div class="page-sidebar">
+                        <div>
+                            <div class="page-sidebar-title">API</div>
+                            <div>
+                                <ul>
+                                    <li class="page-sidebar-category">dop</li>
+                                    <li class="page-sidebar-subcategory">Objects &amp; mutations</li>
+                                    <li class="page-sidebar-link"><a href="#">register</a></li>
+                                    <li class="page-sidebar-link"><a href="#">set</a></li>
+                                    <li class="page-sidebar-link"><a href="#">del</a></li>
+                                    <li class="page-sidebar-link"><a href="#">observe</a></li>
+                                    <li class="page-sidebar-link selected"><a href="#">observeProperty</a></li>
+                                    <li class="page-sidebar-link"><a href="#">collect</a></li>
+                                    <li class="page-sidebar-link"><a href="#">createObserver</a></li>
+                                    <li class="page-sidebar-subcategory">nodes</li>
+                                    <li class="page-sidebar-link"><a href="#">listen</a></li>
+                                    <li class="page-sidebar-link"><a href="#">connect</a></li>
+                                    <li class="page-sidebar-link"><a href="#">onSubscribe</a></li>
+
+                                    <li class="page-sidebar-category">&lt;node&gt;</li>
+                                    <li class="page-sidebar-link"><a href="#">register</a></li>
+                                    <li class="page-sidebar-link"><a href="#">set</a></li>
+                                    <li class="page-sidebar-link"><a href="#">del</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-document">
+                        <div class="page-document-path"><%= type.toUpperCase() %> / <%= language %> /</div>
+                        <%- content %>
+                    </div>
                 </div>
                 <div class="clear"></div>
             </div>

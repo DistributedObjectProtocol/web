@@ -1,35 +1,8 @@
-/*
-This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
-Content is property of the document author
-Please leave this notice in place, along with any additional credits below.
----------------------------------------------------------------
-Title: GitHub
-Author: Brett Terpstra
-Description: Github README style. Includes theme for Pygmentized code blocks.
-*/
-html, body {
-  color: black; }
 
-*:not('#mkdbuttons') {
-  margin: 0;
-  padding: 0; }
 
-#wrapper {
-  font: 15px helvetica,arial,freesans,clean,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.7;
-  padding: 3px;
-  background: #fff;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px; }
 
 p {
   margin: 1em 0; }
-
-a {
-  color: #4183c4;
-  text-decoration: none; }
 
 #wrapper {
   background-color: #fff;
@@ -160,21 +133,28 @@ table {
     border-top: 1px solid #ccc;
     background-color: #fff; }
     table tr:nth-child(2n) {
-      background-color: #f8f8f8; }
+      background-color: #f7f7f7; }
 
 img {
   max-width: 100%; }
 
 code, tt {
   margin: 0 2px;
-  padding: 0 5px;
+  padding: 10px;
   white-space: nowrap;
   border: 1px solid #eaeaea;
-  background-color: #f8f8f8;
+  background-color: #f7f7f7;
   border-radius: 3px;
-  font-family: Consolas, 'Liberation Mono', Courier, monospace;
-  font-size: 12px;
-  color: #333333; }
+  font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+  font-size: 13px;
+  color: #333333;
+  padding: 16px;
+  overflow: auto;
+  line-height: 24px;
+  background-color: #f7f7f7;
+  border: 0;
+  border-radius: 3px;
+}
 
 pre > code {
   margin: 0;
@@ -184,7 +164,7 @@ pre > code {
   background: transparent; }
 
 .highlight pre {
-  background-color: #f8f8f8;
+  background-color: #f7f7f7;
   border: 1px solid #ccc;
   font-size: 13px;
   line-height: 19px;
@@ -193,14 +173,13 @@ pre > code {
   border-radius: 3px; }
 
 pre {
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  line-height: 19px;
+  background-color: #f7f7f7;
+  border: 0;
   overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px;
-  margin: 26px 0; }
+  padding: 10px 15px;
+  border-radius: 2px;
+  margin-bottom: 35px;
+  }
   pre code, pre tt {
     background-color: transparent;
     border: none; }
@@ -420,3 +399,62 @@ sub {
 body.dark #wrapper {
   background: transparent !important;
   box-shadow: none !important; }
+
+
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+}
+
+.hljs,.hljs-subst {
+    color: #444;
+}
+
+.hljs-comment {
+    color: #aaaaaa
+}
+
+.hljs-keyword,.hljs-attribute,.hljs-selector-tag,.hljs-meta-keyword,.hljs-doctag,.hljs-name {
+    font-weight: bold;
+    color: #E12977
+}
+
+.hljs-type,.hljs-string,.hljs-number,.hljs-selector-id,.hljs-selector-class,.hljs-quote,.hljs-template-tag,.hljs-deletion {
+    color: #e48876
+}
+
+.hljs-title,.hljs-section {
+    color: #EE9000;
+    font-weight: bold
+}
+
+.hljs-regexp,.hljs-symbol,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-selector-pseudo {
+    color: #e48876
+}
+
+.hljs-literal {
+    color: #1f88f1;
+    font-weight: bold;
+}
+
+.hljs-built_in,.hljs-bullet,.hljs-code,.hljs-addition {
+    color: #EE9000;
+    font-weight: bold
+}
+
+.hljs-meta {
+    color: #555
+}
+
+.hljs-meta-string {
+    color: #4d99bf
+}
+
+.hljs-emphasis {
+    font-style: italic
+}
+
+.hljs-strong {
+    font-weight: bold
+}
