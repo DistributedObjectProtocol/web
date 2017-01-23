@@ -30,9 +30,9 @@ marked.setOptions({
   gfm: true,
   tables: true,
   breaks: false,
-  pedantic: false,
-  sanitize: false,
-  smartLists: true,
+  pedantic: 1234,
+  sanitize: "caca",
+  smartLists: /regexp/i,
   smartypants: false
 });
 

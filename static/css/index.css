@@ -101,8 +101,8 @@ header > div {
     clear: both
 }
 #content {
-    padding-top: 46px;
-    padding-bottom: 50px;
+    /*padding-top: 46px;
+    padding-bottom: 50px;*/
 }
 
 .header-left, .header-right {
@@ -163,6 +163,7 @@ header > div {
 .header-menu > li > a.selected, .header-menu > li > a:hover {
     color: #000;/*#fb4768;*/
     border-bottom: 3px solid #000;
+    padding-bottom: 1px
 }
 .header-menu > li:hover .dropdown {
     display: block
@@ -285,7 +286,6 @@ footer > div > div {
 
 .slides {
     text-align: center;
-    margin-top: -33px;
     position: relative
 }
 
@@ -391,7 +391,9 @@ footer > div > div {
     background: linear-gradient(135deg,  rgba(255,255,255,.5) 0%,#f3f3f3 52%,rgba(255,255,255,.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
     
 }*/
-
+.transports {
+    padding-bottom: 50px;
+}
 .transports-title {
     text-align: center;
     margin-top:60px;
@@ -476,9 +478,8 @@ footer > div > div {
     font-size: 170px;
     font-weight: bold;
     text-align: center;
-    padding-top: 50px;
     line-height: 100px;
-    padding-top: 15%;
+    padding-top: 18%;
 }
 .notfound span {
     display: block;
@@ -497,6 +498,12 @@ footer > div > div {
 /****** DOCS PAGE ******/
 /****************************/
 
+.page {
+    background: white;
+    height: 100%;
+    padding-bottom: 30px;
+    padding-top: 46px;
+}
 .page > div {
     /* float: left; */
 }
@@ -511,12 +518,12 @@ footer > div > div {
 
 .page-sidebar {
     width: 250px;
-    background: rgba(255,255,255,1);
+    /*background: #fff;*/
     height: calc(100% - 46px);
     position: fixed;
     overflow-y: scroll;
     /* margin-right: 250px; */
-    top: 46px;
+    /* top: 46px; */
     /*box-shadow: 5px -2px 0px 0px rgba(0,0,0,.1); */
     /*border-right: 3px double #ddd;*/
 }
