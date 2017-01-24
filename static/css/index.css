@@ -383,7 +383,7 @@ footer > div > div {
     font-weight: bold;
     font-size: 12px;
     color: #ccc;
-    bottom: 6px;
+    top: 0;
 }
 #slides-percentage {
     position: absolute;
