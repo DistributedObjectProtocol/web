@@ -1,3 +1,26 @@
+var headerMenu = document.getElementById('header-menu');
+var headerMenuButton = document.getElementById('header-menu-button');
+var headerMenuOpen = false;
+headerMenuButton.addEventListener('click', function(e) {
+    if (!headerMenuOpen) {
+        headerMenu.style.display = 'block';
+        headerMenuOpen = true;
+        e.stopPropagation()
+    }
+})
+document.addEventListener('click',function(){
+    if (headerMenuOpen) {
+        headerMenu.style.display = 'none';
+        headerMenuOpen = false;
+    }
+})
+
+
+
+
+
+
+
 
 // document.querySelectorAll('a[class^="autoselect"]')
 var elements = document.getElementsByClassName('autoselect');

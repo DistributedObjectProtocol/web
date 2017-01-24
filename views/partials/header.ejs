@@ -3,7 +3,8 @@
             <div class="header-left"></div>
             <div class="header-center"><a href="/"><img class="logo" src="/img/logo.svg" /></a></div>
             <div class="header-right">
-                <ul class="header-menu">
+                <div id="header-menu-button" class="header-menu-button"><img src="/img/menu.svg" /></div>
+                <ul id="header-menu" class="header-menu">
                     <li>
                         <a href="/javascript/guide/index" class="autoselect" autoselect="1,2">
                             <span class="header-menu-aunderline">Guide</span>
@@ -11,7 +12,7 @@
 
                         </a>
                         <ul class="dropdown">
-                            <li><a href="/javascript/guide/index"><span>JavaScript</a></li>
+                            <li><a href="/javascript/guide/index" class="autoselect" autoselect="0,2"><span>JavaScript</a></li>
                         </ul>  
                     </li>
                     <li>
@@ -20,7 +21,7 @@
                             <span class="dropdown-icon"></span>
                         </a>
                         <ul class="dropdown">
-                            <li><a href="/javascript/api/index">JavaScript</a></li>
+                            <li><a href="/javascript/api/index" class="autoselect" autoselect="0,2">JavaScript</a></li>
                         </ul>
                     </li>
                     <li><a href="https://github.com/DistributedObjectProtocol">GitHub</a><li>

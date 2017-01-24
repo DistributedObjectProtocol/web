@@ -1,24 +1,23 @@
 
 
 /*********** MAX-750 **********/
-@media only screen and (max-width: 750px) and (orientation: portrait) {
-.slides {
-    height: 40%;
-}
-.slides-arrowright img {
-    float: right;
-    margin-right: 10px;
-}
-.slides-arrowleft img {
-    margin-left: 10px;
-    float: left
-}
-}
-
 
 @media screen and (max-width: 750px){
 body {
-    background-attachment: local;
+    background-attachment: scroll !important;
+}
+.header-menu-button {
+    display: block;
+    float: right;
+    width: 40px;
+    height: 30px;
+    /* background: red; */
+    opacity: .5;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.header-menu-button img {
+    width: 20px;
 }
 /*.slides {
     margin-top: 5%;
@@ -44,5 +43,102 @@ body {
     font-size: 3.4vw; /*42px;*/
     letter-spacing: -.5px;
 }
+
+
+.transports-title {
+    font-size: 26px;
+}
+.transports-table {
+    overflow-x: auto;
+    margin-right: 20px;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.transports-table table {
+    min-width: 500px;
+}
+.footer-left > div {
+    padding-left: 10px;
+    font-size: 11px;
+}
+.footer-right > div {
+    padding-right: 10px;
+}
+
+
+.header-menu {
+    display: none;
+    background-color: #fff;
+    margin-top: 40px;
+    border: 1px solid #f1f1f1;
+    padding: 10px 20px;
+    margin-right: 0px;
+    max-height: 250px;
+    overflow-y: auto;
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+}
+
+.header-menu > li {
+    display: block;
+}
+.header-menu .dropdown {
+    display: block;
+    background: transparent;
+    border: none;
+    position: static;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    overflow-y: unset
+}
+.header-menu .dropdown a {
+    padding: 0
+}
+.header-menu .dropdown a:hover,
+.header-menu .dropdown a.selected {
+    background-color: transparent
+}
+.header-menu > li:first-child > a {
+    padding-top: 0;
+}
+.header-menu > li > a {
+    display: block;
+    text-align: left;
+    padding: 0;
+    padding-top: 10px;
+}
+.header-menu-aunderline {
+    border: 0 !important;
+    padding-bottom: 0 !important;
+}
+}
+
+
+@media only screen and (max-width: 750px) and (orientation: portrait) {
+.slides {
+    height: 40%;
+}
+.slides-arrowright img {
+    float: right;
+    margin-right: 10px;
+}
+.slides-arrowleft img {
+    margin-left: 10px;
+    float: left
+}
+.footer-left > div {
+    padding-top: 15px;
+}
+
+.header-center {
+    padding-top: 7px;
+    border-bottom: 3px double #d3d3d3;
+    height: 33px;
+}
+.logo {
+    width: 35px;
+}
+
 }
 /*********** MAX-750 **********/
