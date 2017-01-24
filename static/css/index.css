@@ -288,7 +288,10 @@ footer > div > div {
 
 .slides {
     text-align: center;
-    position: relative
+    position: relative;
+    margin-top: 46px; 
+    height: calc(100% - 46px);
+    width: 100%;
 }
 
 .slides-arrows div {
@@ -321,7 +324,7 @@ footer > div > div {
 .slides-text {
     position: absolute;
     width: 100%;
-    bottom: 50px
+    bottom: 15px
 }
 .slides-text > div {
     opacity: 0;
@@ -373,9 +376,18 @@ footer > div > div {
     /* line-height: 23px; */
     color: #999999;
 }
+#slides-count {
+    position: absolute;
+    right: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #ccc;
+    bottom: 6px;
+}
 #slides-percentage {
     position: absolute;
-    top: 45px;
+    bottom: 4px;
     width: 0;
     height: 5px;
     background: rgba(0,0,0,.2);
@@ -531,9 +543,9 @@ footer > div > div {
     /* top: 46px; */
     /*box-shadow: 5px -2px 0px 0px rgba(0,0,0,.1); */
     /*border-right: 3px double #ddd;*/
-    background: -webkit-linear-gradient(left, #ffffff 0%, #f8f8f8 100%);
-    background: -o-linear-gradient(left, #ffffff 0%, #f8f8f8 100%);
-    background: linear-gradient(to right, #ffffff 0%, #f8f8f8 100%);
+    background: -webkit-linear-gradient(left, #ffffff 0%, #f5f5f5 100%);
+    background: -o-linear-gradient(left, #ffffff 0%, #f5f5f5 100%);
+    background: linear-gradient(to right, #ffffff 0%, #f5f5f5 100%);
 }
 
 .page-sidebar::-webkit-scrollbar {

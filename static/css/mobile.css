@@ -1,13 +1,35 @@
 
 
 /*********** MAX-750 **********/
+@media only screen and (max-width: 750px) and (orientation: portrait) {
+.slides {
+    height: 40%;
+}
+.slides-arrowright img {
+    float: right;
+    margin-right: 10px;
+}
+.slides-arrowleft img {
+    margin-left: 10px;
+    float: left
+}
+}
+
 
 @media screen and (max-width: 750px){
-
+/*.slides {
+    margin-top: 5%;
+}*/
 .slides-text {
-    left: auto;
-    bottom: 0
+    /* left: auto; */
+    bottom: 10px;
 }
+.slides-arrows img {
+    width: 25px;
+    top: calc(50% - 12.5px);
+}
+
+
 .slides-text > div {
     left: auto;
     width: 100%;

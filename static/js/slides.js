@@ -13,6 +13,7 @@ AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
         var nextElement = document.getElementById('nextBtn');
         var claimElement = document.getElementById('claim');
         var slidesPercentageElement = document.getElementById('slides-percentage');
+        var slidesCountElement = document.getElementById('slides-count');
         
         prevElement.addEventListener('click', function(){
             slide.prev();
@@ -51,7 +52,8 @@ AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
                     lastFrame = slide.m_currentFrameNo;
                     currentSlide = labels.indexOf(lastFrame);
                     percentageSlide = (currentSlide*100)/(totalSlides-1)
-                    slidesPercentageElement.style.width = percentageSlide + '%';
+                    // slidesPercentageElement.style.width = percentageSlide + '%';
+                    slidesCountElement.innerHTML = currentSlide + '/' + (totalSlides-1);
                 }
                 pause();
             }

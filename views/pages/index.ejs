@@ -6,7 +6,6 @@
     </head>
     <body>
         <% include ../partials/header %>
-        <div id="container">
             <div class="slides">
                 <div class="slides-arrows">
                     <div id="prevBtn" class="slides-arrowleft"><img src="/img/arrow.svg"></div>
@@ -21,15 +20,19 @@
                     </div>
                 </div>
                 <div class="slides-text"><div id="text"></div></div>
-                <div id="slides-percentage"></div>
+                <!--<div id="slides-percentage"></div>-->
+                <div id="slides-count"></div>
                 <svg 
                     id="svg"
                     version="1.1"
                     width="100%"
+                    height="100%"
                     preserveAspectRatio="xMidYMid meet"
                     viewBox="0 0 1200 600" 
                     xmlns="http://www.w3.org/2000/svg"></svg>
             </div>
+        <div id="container">
+
             <div class="transports">
                 <div class="transports-title h1">Current transports</div>
                 <div class="transports-table">
