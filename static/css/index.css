@@ -544,6 +544,7 @@ footer > div > div {
 }
 .page-document-edit a {
     opacity: .2;
+    display: block;
 }
 .page-document-edit a:hover {
     opacity: 1
@@ -632,7 +633,7 @@ footer > div > div {
     font-size: 3.7em;
     line-height: 44px;
     border-bottom: 0;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     letter-spacing: -2px;
 }
 
