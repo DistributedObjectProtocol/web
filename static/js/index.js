@@ -1,3 +1,4 @@
+// Menu
 var headerMenu = document.getElementById('header-menu');
 var headerMenuButton = document.getElementById('header-menu-button');
 var headerMenuOpen = false;
@@ -8,10 +9,41 @@ headerMenuButton.addEventListener('click', function(e) {
         e.stopPropagation()
     }
 })
+headerMenu.addEventListener('click', function(e) {
+    e.stopPropagation()
+})
+
+// Sidebar
+var sidebarMenu = document.getElementById('sidebar');
+var sidebarButton = document.getElementById('sidebar-button');
+if (sidebarMenu) {
+    var sidebarOpen = false;
+    sidebarButton.addEventListener('click', function(e) {
+        if (!sidebarOpen) {
+            sidebarMenu.classList.add('open');
+            sidebarButton.classList.add('open');
+            sidebarOpen = true;
+            e.stopPropagation()
+        }
+    })
+    sidebar.addEventListener('click', function(e) {
+        e.stopPropagation()
+    })
+}
+else
+    sidebarButton.style.display = 'none';
+
+
+// Closing open menus
 document.addEventListener('click',function(){
     if (headerMenuOpen) {
         headerMenu.style.display = 'none';
         headerMenuOpen = false;
+    }
+    if (sidebarOpen) {
+        sidebarMenu.classList.remove('open');
+        sidebarButton.classList.remove('open');
+        sidebarOpen = false;
     }
 })
 
@@ -21,7 +53,7 @@ document.addEventListener('click',function(){
 
 
 
-
+// Autoselect
 // document.querySelectorAll('a[class^="autoselect"]')
 var elements = document.getElementsByClassName('autoselect');
 var currentPath = location.href.split('/').slice(3);

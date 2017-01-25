@@ -170,7 +170,9 @@ header > div {
 .header-menu-button {
     display: none
 }
-
+.sidebar-button {
+    display: none;
+}
 
 
 
@@ -496,7 +498,7 @@ footer > div > div {
     font-weight: bold;
     text-align: center;
     line-height: 100px;
-    padding-top: 18%;
+    padding-top: 150px;
 }
 .notfound span {
     display: block;
@@ -536,7 +538,7 @@ footer > div > div {
     background: rgba(255,255,255,1);
 }
 
-.page-sidebar {
+.sidebar {
     width: 250px;
     /*background: #fff;*/
     height: calc(100% - 46px);
@@ -551,55 +553,55 @@ footer > div > div {
     background: linear-gradient(to right, #ffffff 0%, #f5f5f5 100%);
 }
 
-.page-sidebar::-webkit-scrollbar {
+.sidebar::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
-.page-sidebar::-webkit-scrollbar-thumb {
+.sidebar::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.07);
   border-radius: 1em;
   cursor: grab;
 }
-.page-sidebar::-webkit-scrollbar-track {
+.sidebar::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.0);
 }
-.page-sidebar > div {
+.sidebar > div {
     padding: 35px;
     padding-bottom: 100px;
 }
 
-.page-sidebar-title {
+.sidebar-title {
     font-weight: bold;
     font-size: 22px;
     border-bottom: 1px dotted #ccc;
     padding-bottom: 15px;
 }
-.page-sidebar ul {
+.sidebar ul {
     padding: 0;
     margin: 0;
 }
-.page-sidebar li {
+.sidebar li {
     list-style: none;
 }
-.page-sidebar a {
+.sidebar a {
     text-decoration: none;
 }
-.page-sidebar-category {
+.sidebar-category {
     font-weight: 100;
     padding-top: 15px;
     font-size: 19px;
     letter-spacing: -0.5px;
     color: #ff5977;
 }
-.page-sidebar-subcategory {
+.sidebar-subcategory {
     font-size: 11px;
     color: #ccc !important;
 }
-.page-sidebar-link {
+.sidebar-link {
     line-height: 23px
 }
-.page-sidebar-link a:hover,
-.page-sidebar-link a.selected {
+.sidebar-link a:hover,
+.sidebar-link a.selected {
     color: #777;
     border-bottom: 1px solid #ccc
 }
@@ -616,7 +618,7 @@ footer > div > div {
 .page-document > h1:first-of-type {
     padding: 0;
     margin: 0;
-    font-size: 55px;
+    font-size: 3.7em;
     line-height: 44px;
     border-bottom: 0;
     margin-bottom: 60px;
@@ -626,6 +628,6 @@ footer > div > div {
 .page-document-path {
     font-weight: bold;
     color: #aaa;
-    font-size: 16px;
+    font-size: 1em;
     padding-left: 2px;
 }
