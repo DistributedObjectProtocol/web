@@ -585,8 +585,14 @@ footer > div > div {
 .sidebar-title {
     font-weight: bold;
     font-size: 22px;
+    line-height: 17px;
+}
+.sidebar-title-category {
     border-bottom: 1px dotted #ccc;
     padding-bottom: 15px;
+    font-weight: bold;
+    color: #ccc;
+    font-size: 12px;
 }
 .sidebar ul {
     padding: 0;

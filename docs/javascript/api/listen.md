@@ -4,8 +4,8 @@
 
 ## Arguments
 
-#### options `{Object} optional`
-- `transport`*(function)* By default is WebSockets ([ws](https://github.com/websockets/ws)) on node.js
+#### [options] `Object`
+- *transport* `Function` By default is WebSockets ([ws](https://github.com/websockets/ws)) on node.js
 
 ## Returns
 

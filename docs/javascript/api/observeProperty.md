@@ -4,13 +4,13 @@
 
 ## Arguments
 
-#### object `{Object}`
-A registered object
+#### object `Object`
+A registered object.
 
-#### property `{String}`
-The property of the object
+#### property `String`
+The property of the object.
 
-#### callback `{function}`
+#### callback `Function`
 The function you want to receive the mutations
 
 

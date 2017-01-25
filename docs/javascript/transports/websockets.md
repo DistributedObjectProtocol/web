@@ -1,15 +1,9 @@
-# connect( [options] )
+# WebSockets
 
-> Creates a new [node](/javascript/api/node) instance that connects to another node.
+### Options
 
-## Arguments
+- *port* `Number` 4444
 
-#### options `{Object} optional`
-- `transport`*(function)* By default is [ws](https://github.com/websockets/ws) on node.js and native WebSockets on browsers.
-
-## Returns
-
-A new [node](/javascript/api/node) instance.
 
 
 ## Examples
