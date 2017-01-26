@@ -34,6 +34,11 @@ app.get('/:language/:type/:doc', function (req, res) {
 })
 
 
+// transports
+app.get('/transports', function (req, res) {
+    res.render('pages/transports')
+})
+
 var port = 4444;
 app.listen(port, function () {
     console.log('port:', port)

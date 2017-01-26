@@ -23,6 +23,9 @@ a:hover {
     min-height: calc(100% - 61px);
     position: relative;
 }
+#content {
+    padding-top: 100px;
+}
 
 
 .decoration {
@@ -101,10 +104,10 @@ header > div {
 .clear {
     clear: both
 }
-#content {
-    /*padding-top: 46px;
-    padding-bottom: 50px;*/
+.center {
+    text-align: center
 }
+
 
 .header-left, .header-right {
     width: calc(50% - 40px);
@@ -498,7 +501,7 @@ footer > div > div {
     font-weight: bold;
     text-align: center;
     line-height: 100px;
-    padding-top: 150px;
+    padding-top: 100px;
 }
 .notfound span {
     display: block;
@@ -634,7 +637,7 @@ footer > div > div {
 
 
 
-.page-document > h1:first-of-type {
+.h0, .page-document > h1:first-of-type {
     padding: 0;
     margin: 0;
     font-size: 3.7em;

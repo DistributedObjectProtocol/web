@@ -32,56 +32,8 @@
                     xmlns="http://www.w3.org/2000/svg"></svg>
             </div>
         <div id="container">
-
-            <div class="transports">
-                <div class="transports-title h1">Transports overview</div>
-                <div class="transports-table">
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th>
-                                <div><img src="img/javascript.svg" /></div>
-                                <div>Browser</div>
-                            </th>
-                            <th>
-                                <div><img src="img/nodejs.svg" /></div>
-                                <div>node.js</div>
-                            </th>
-                            <th><strong>Your Favorite language?</strong></th>
-                        </tr>
-                        <tr>
-                            <td>WebSockets</td>
-                            <td><img src="img/nodejs.svg" /></td>
-                            <td><img src="img/nodejs.svg" /></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/socketio">socket.io</a></td>
-                            <td><img src="img/nodejs.svg" /></td>
-                            <td><img src="img/nodejs.svg" /></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/sockjs/">SockJS</a></td>
-                            <td><img src="img/nodejs.svg" /></td>
-                            <td><img src="img/nodejs.svg" /></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>HTTP/2<br><span>Comming soon</span></td>
-                            <td><img src="img/nodejs.svg" /></td>
-                            <td><img src="img/nodejs.svg" /></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>WebRTC<br><span>Comming soon</span></td>
-                            <td><img src="img/javascript.svg" /></td>
-                            <td><span>-</span></td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+            <div class="transports-title h1">Transports overview</div>
+            <% include ../partials/transports %>
         </div>
         <% include ../partials/footer %>
     </body>

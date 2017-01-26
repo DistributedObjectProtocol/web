@@ -54,4 +54,4 @@ console.log(wsTransport.getApi() === ws) // true
 
 ## Options
 
-- *url* `String` default ws://localhost:4444
+- *url* `String` default `ws://localhost:4444`
