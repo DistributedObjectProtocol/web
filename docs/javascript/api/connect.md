@@ -1,11 +1,11 @@
 # connect( [options] )
 
-> Starts the connection with other [node](/javascript/api/node) that is listening.
+> Connect with a listening [node](/javascript/api/node).
 
 ## Arguments
 
 #### [options] `Object`
-- *transport* `Function` By default is [ws](https://github.com/websockets/ws) on node.js and native WebSockets on browsers.
+- *[transport](/javascript/transports/websockets-connect)* `Function` By default is [ws](https://github.com/websockets/ws) on node.js and native WebSockets on browsers.
 
 ## Returns
 

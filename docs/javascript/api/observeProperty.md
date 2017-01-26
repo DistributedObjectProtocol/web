@@ -11,7 +11,7 @@ A registered object.
 The property of the object.
 
 #### callback `Function`
-The function you want to receive the mutations
+The function where you want to receive the mutations.
 
 
 

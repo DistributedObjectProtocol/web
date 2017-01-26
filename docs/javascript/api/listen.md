@@ -5,7 +5,7 @@
 ## Arguments
 
 #### [options] `Object`
-- *transport* `Function` By default is WebSockets ([ws](https://github.com/websockets/ws)) on node.js
+- *[transport](/javascript/transports/websockets)* `Function` By default is WebSockets ([ws](https://github.com/websockets/ws)) on node.js
 
 ## Returns
 

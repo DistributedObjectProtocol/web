@@ -541,6 +541,7 @@ footer > div > div {
 .page-document-edit {
     position: fixed;
     right: 35px;
+    z-index: 1;
 }
 .page-document-edit a {
     opacity: .2;
