@@ -15,13 +15,13 @@ app.get('/', function (req, res) {
 })
 
 // docs
-app.get('/:language/:type/:doc', function (req, res) {
+app.get('/:type/:language/:doc', function (req, res) {
     req.params.language = req.params.language.toLowerCase()
     req.params.type = req.params.type.toLowerCase()
     // req.params.doc = req.params.doc.toLowerCase()
     var filepath = path.join(
         __dirname,
-        'docs/'+req.params.language+'/'+req.params.type+'/'+req.params.doc+'.md'
+        'docs/'+req.params.type+'/'+req.params.language+'/'+req.params.doc+'.md'
     )
     if (fs.existsSync(filepath)) {
         var content = fs.readFileSync(filepath, 'utf8')
