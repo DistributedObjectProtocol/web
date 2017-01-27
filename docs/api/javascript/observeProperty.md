@@ -19,6 +19,6 @@ The function where you want to receive the mutations.
 
 ## Returns
 
-A function that can be executed to unobserve. Is the equivalent of calling [`unobserveProperty()`](/javascript/api/unobserveProperty).
+A function that can be executed to unobserve. Is the equivalent of calling [`unobserveProperty()`](/api/javascript/unobserveProperty).
 
 

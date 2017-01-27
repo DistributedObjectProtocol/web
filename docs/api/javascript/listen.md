@@ -1,15 +1,15 @@
 # listen( [options] )
 
-> Creates a new [listener](/javascript/api/listener) instance that listen for new [connections/nodes](/javascript/api/node).
+> Creates a new [listener](/api/javascript/listener) instance that listen for new [connections/nodes](/api/javascript/node).
 
 ## Arguments
 
 #### [options] `Object`
-- *[transport](/javascript/transports/websockets)* `Function` By default is WebSockets ([ws](https://github.com/websockets/ws)) on node.js
+- *[transport](/transports/javascript/websockets)* `Function` By default is WebSockets ([ws](https://github.com/websockets/ws)) on node.js
 
 ## Returns
 
-A new [listener](/javascript/api/listener) instance.
+A new [listener](/api/javascript/listener) instance.
 
 
 ## Examples
@@ -17,3 +17,8 @@ A new [listener](/javascript/api/listener) instance.
 let dop = require('dop')
 let listener = dop.listen()
 ```
+
+
+> See also
+- [connect](/api/javascript/connect)
+- [WebSockets transport](/transports/javascript/websockets)

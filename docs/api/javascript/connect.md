@@ -1,15 +1,15 @@
 # connect( [options] )
 
-> Connect with a listening [node](/javascript/api/node).
+> Connect with a listening [node](/api/javascript/node).
 
 ## Arguments
 
 #### [options] `Object`
-- *[transport](/javascript/transports/websockets-connect)* `Function` By default is [ws](https://github.com/websockets/ws) on node.js and native WebSockets on browsers.
+- *[transport](/transports/javascript/websockets-connect)* `Function` By default is [ws](https://github.com/websockets/ws) on node.js and native WebSockets on browsers.
 
 ## Returns
 
-A new [node](/javascript/api/node) instance.
+A new [node](/api/javascript/node) instance.
 
 
 ## Examples
@@ -34,3 +34,8 @@ If you don't want to use ES6
 var listener = dop.connect() // WebSockets by default
 </script>
 ```
+
+
+> See also
+- [listen](/api/javascript/listen)
+- [WebSockets transport](/transports/javascript/websockets)
