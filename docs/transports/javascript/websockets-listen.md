@@ -36,9 +36,9 @@ const listener = dop.listen({transport:uwsTransport})
 
 ## Options
 
-- *port* `Number` default 4444
+- *port* `Number` default `4444`
 
-- *timeout* `Number` default 60 (seconds)
+- *timeout* `Number` default `60 (seconds)`
 When a node is disconnected this can be reconnected if the time spent if less than 60 seconds. You can define your own timeout.
 
 - *httpServer* `Object`
