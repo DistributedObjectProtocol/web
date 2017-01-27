@@ -14,8 +14,8 @@ A new [listener](/api/javascript/listener) instance.
 
 ## Examples
 ```js
-let dop = require('dop')
-let listener = dop.listen()
+const dop = require('dop')
+const listener = dop.listen()
 ```
 
 

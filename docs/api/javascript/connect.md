@@ -16,14 +16,14 @@ A new [node](/api/javascript/node) instance.
 
 ```js
 // node.js
-let dop = require('dop')
-let listener = dop.connect() // ws by default
+const dop = require('dop')
+const listener = dop.connect() // ws by default
 ```
 
 ```js
 // browser
 import dop from 'dop'
-let listener = dop.connect() // WebSockets by default
+const listener = dop.connect() // WebSockets by default
 ```
 
 If you don't want to use ES6
