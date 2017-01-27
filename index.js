@@ -27,6 +27,10 @@ app.get('/:type/:language/:doc', function (req, res) {
         var content = fs.readFileSync(filepath, 'utf8')
         req.params.info = info[req.params.language]
         req.params.content = marked(content)
+        req.params.sidebar = (req.params.type === 'transports') ? 
+            '../partials/sidebar-transports'
+        :
+            '../partials/sidebar-' + req.params.type + '-' + req.params.language; 
         res.render('pages/docs', req.params)
     }
     else

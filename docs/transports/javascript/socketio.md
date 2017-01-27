@@ -1,8 +1,9 @@
-# socket.io
+# [socket.io](https://github.com/socketio)
+
 
 ## listen( [options] )
 
-#### Options
+### Options
 
 - *port* `Number` default `4445`
 
@@ -18,32 +19,64 @@ You can set a http server. If not httpServer is passed then `port` option will t
 const socketioTransport = require('dop-transports').listen.socketio
 const listener = dop.listen({
     transport:socketioTransport,
-    namespace:'test',
-    port:12345,
-    timeout:10
+    namespace:'dop',
+    port:4445,
+    timeout:60
 })
 listener.on('connect', node => console.log('Connected!', node.token))
 ```
 
 
+#### Using httpServer
+```js
+const http = require('http');
+const httpServer = http.createServer(function (req, res) {})
+httpServer.listen(4445);
 
-## connect()
+const socketioTransport = require('dop-transports').listen.socketio
+const listener = dop.listen({httpServer:httpServer, transport:socketioTransport});
+listener.on('connect', onconnect);
+// In browser or in other node instance. Even here would work
+dop.connect({url:'ws://localhost:4445'})
+```
 
-#### Options
+
+
+#### Using [ExpressJS](https://github.com/expressjs/express)
+
+```js
+const express = require('express')
+const http = require('http')
+const app = express()
+const expressServer = http.createServer(app)
+expressServer.listen(4445)
+
+const socketioTransport = require('dop-transports').listen.socketio
+const listener = dop.listen({httpServer:expressServer, transport:socketioTransport});
+listener.on('connect', node => console.log('Connected!', node.token))
+```
+
+
+
+## connect( [options] )
+
+### Options
 
 - *url* `String` default `ws://localhost:4445/dop`
 
+### In node.js
+
 ```js
-// node.js
 const socketioTransport = require('dop-transports').connect.socketio
 const server = dop.connect({transport:socketioTransport})
 server.on('connect', () => console.log('Server connected!'))
 ```
 
+### In browsers
+
 In browsers you have to include socket.io client library manually
 
 ```js
-// browser ES6
 import socketioTransport from 'dop-transports/connect/socketio'
 const server = dop.connect({transport:socketioTransport, url:'ws://localhost:4445/test'})
 server.on('connect', () => console.log('Server connected!'))

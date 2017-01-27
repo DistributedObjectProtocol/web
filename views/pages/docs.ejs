@@ -8,7 +8,7 @@
     <body>
         <% include ../partials/header %>
         <div id="container" class="page">
-            <%- include('../partials/'+language + '-' + type) %>
+            <%- include(sidebar) %>
             <div class="page-document">
                 <div class="page-document-edit"><a href="<%= info.urldocs %><%= language %>/<%= type %>/<%= doc %>.md" target="_blank"><img src="/img/edit.svg" /></a></div>
                 <div class="page-document-path"><%= type[0].toUpperCase() + type.slice(1) %> / <%= info.name %> /</div>

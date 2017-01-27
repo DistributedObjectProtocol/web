@@ -6,11 +6,12 @@
     </head>
     <body>
         <% include ../partials/header %>
-        <div id="container">
-            <div id="content" class="center">
-                <h1 class="h0">Transports</h1>
-                <% include ../partials/transports %>
-            </div>
+        <div id="container" class="page">
+                <%- include('../partials/sidebar-transports') %>
+                <div class="page-document">
+                    <!--<h1 class="h0 center">Transports</h1>-->
+                    <% include ../partials/transports-table %>
+                </div>
         </div>
         <% include ../partials/footer %>
     </body>
