@@ -1,6 +1,6 @@
 # onSubscribe( callback )
 
-> Nodes/clients can subscribe to local object
+> Nodes subscribe to local objects
 
 ## Arguments
 
@@ -17,8 +17,8 @@
 // server
 const listener = dop.listen()
 const user = dop.register({
-    name: "John",
-    surname: "Doe"
+    name: 'John',
+    surname: 'Doe'
 })
 dop.onSubscribe(() => user)
 
@@ -26,7 +26,7 @@ dop.onSubscribe(() => user)
 // client
 const server = dop.connect()
 const user = await server.subscribe()
-console.log(user) // {name:"John", surname:"Doe"}
+console.log(user) // {name:'John', surname:'Doe'}
 ```
 
 ##### You can pass arguments when calling subscribe
@@ -34,12 +34,12 @@ console.log(user) // {name:"John", surname:"Doe"}
 ```js
 // server
 dop.onSubscribe((email, password) => {
-    if (email === "johndoe@mail.com" && password === "1234")
+    if (email === 'johndoe@mail.com' && password === '1234')
         return user
 })
 
 // client
-const user = await server.subscribe("johndoe@mail.com", "1234")
+const user = await server.subscribe('johndoe@mail.com', '1234')
 ```
 
 ##### If onSubscribe doesn't return an object will reject an error to the subscriber/client
@@ -47,13 +47,13 @@ const user = await server.subscribe("johndoe@mail.com", "1234")
 ```js
 // server
 dop.onSubscribe((email, password) => {
-    if (email === "johndoe@mail.com" && password === "1234")
+    if (email === 'johndoe@mail.com' && password === '1234')
         return user
 })
 
 // client
 try {
-    const user = await server.subscribe("wrong", "wrong")
+    const user = await server.subscribe('wrong', 'wrong')
 } catch(message_error) {
     console.error(message_error) // Remote object not found or not permissions to use it
 }
@@ -62,14 +62,14 @@ try {
 
 
 
-##### But you can custom your rejections
+##### But you can customize your rejections
 
 ```js
 // server
 dop.onSubscribe((email, password, ...args) => {
     const req = args[args.length-1]
     const reject = req.reject
-    if (email === "johndoe@mail.com" && password === "1234")
+    if (email === 'johndoe@mail.com' && password === '1234')
         return user
     else
         return reject('Invalid login')
@@ -77,7 +77,7 @@ dop.onSubscribe((email, password, ...args) => {
 
 // client
 try {
-    const user = await server.subscribe("wrong", "wrong")
+    const user = await server.subscribe('wrong', 'wrong')
 } catch(message_error) {
     console.error(message_error) // Invalid login
 }
@@ -93,7 +93,7 @@ dop.onSubscribe((email, password, ...args) => {
     const resolve = req.resolve
     const reject = req.reject
     setTimeout(()=>{
-        if (email === "johndoe@mail.com" && password === "1234")
+        if (email === 'johndoe@mail.com' && password === '1234')
             resolve(user)
         else
             reject('Invalid login')
