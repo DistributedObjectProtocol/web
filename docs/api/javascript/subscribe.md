@@ -76,4 +76,3 @@ server.subscribe('johndoe@mail.com', '1234')
 > See also
 - [onSubscribe](/api/javascript/onSubscribe)
 - [register](/api/javascript/register)
-- [subscribe.into](/api/javascript/subscribeinto)
