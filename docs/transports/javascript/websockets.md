@@ -84,7 +84,7 @@ dop.connect({url:'ws://localhost:4444'})
 
 ### In node.js
 
-Uses [ws](https://github.com/websockets/ws)
+Uses [ws](https://github.com/websockets/ws) by default
 
 ```js
 const dop = require('dop')
