@@ -616,6 +616,12 @@ footer > div > div {
     letter-spacing: -0.5px;
     color: #ff5977;
 }
+.sidebar-category a {
+    color:#ff5977
+}
+.sidebar-category a:hover {
+    text-decoration: underline
+}
 .sidebar-subcategory {
     font-size: 11px;
     color: #ccc !important;

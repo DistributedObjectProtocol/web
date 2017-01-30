@@ -37,3 +37,9 @@ const userObject = {name: 'John'}
 const user = dop.register(userObject)
 user === userObject // false
 ```
+
+
+> See also
+- [observe](/api/javascript/observe)
+- [observeProperty](/api/javascript/observeProperty)
+- [collect](/api/javascript/collect)
