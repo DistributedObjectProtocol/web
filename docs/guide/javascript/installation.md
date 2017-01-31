@@ -53,4 +53,5 @@ import dop from 'dop'
 <script src="https://unpkg.com/dop@0.11.8/dist/browser.js"></script>
 ```
 
-> Next &gt; [Connecting nodes](/guide/javascript/connecting-nodes)
+> #### Next step
+> [Connecting nodes](/guide/javascript/connecting-nodes)
