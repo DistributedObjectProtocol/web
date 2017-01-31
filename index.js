@@ -1,7 +1,8 @@
+var http = require('http')
+var express = require('express')
 var path = require('path')
 var fs = require('fs')
 var marked = require('marked')
-var express = require('express')
 var info = require('./info')
 var app = express()
 
@@ -43,7 +44,19 @@ app.get('/transports', function (req, res) {
     res.render('pages/transports')
 })
 
-var port = 4444;
-app.listen(port, function () {
+// any other
+app.get('/*', function (req, res) {
+    res.render('pages/404')
+})
+
+
+var port = 4444
+var expressServer = http.createServer(app)
+expressServer.listen(port, function () {
     console.log('port:', port)
 })
+
+
+// var dop = require("dop")
+// dop.listen({httpServer:expressServer})
+// dop.onSubscribe(() => {mola:'mazo'})
