@@ -16,7 +16,7 @@ const dop = require('dop')
 
 ## Browsers
 
-If you are using ES6 with babel first you have to install it via npm like in node.js.
+If you are using ES6 with babel, first you have to install it via npm like in node.js.
 
 ```
 npm install dop

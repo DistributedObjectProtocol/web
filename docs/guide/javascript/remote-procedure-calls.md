@@ -1,9 +1,9 @@
 
 # Remote procedure calls
 
-Remember that when we mutate `dataServer` on client the server won't be notified? That is because is unidiectional dataflow as mentiones before.
+When we did a mutation of `dataServer` on client, the server didn't receive the mutation. That is because is unidiectional dataflow as mentiones before.
 
-But we can do is define a function on server and call that function from the client.
+But what we can do is define a function on server and call that function from the client.
 
 
 
