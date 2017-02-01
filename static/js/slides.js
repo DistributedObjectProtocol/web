@@ -57,6 +57,14 @@ AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
                 }
                 pause();
             }
+
+            var next = slide.next
+            slide.next = function() {
+                slide.hideClaim()
+                next()
+            }
+
+
             slide.changeText = function(t) {
                 if (t!==text) {
                     text = t;
