@@ -1,12 +1,12 @@
 (function() {
-var AJAX_req = new XMLHttpRequest()
-AJAX_req.open("GET", "js/slides.json", true)
-AJAX_req.setRequestHeader("Content-type", "application/json")
-AJAX_req.send()
-AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
-    if( AJAX_req.readyState == 4 && AJAX_req.status == 200 ) {
-
-        var comp = new SVGAnim(JSON.parse(AJAX_req.responseText), "#svg", null, 50)
+// var AJAX_req = new XMLHttpRequest()
+// AJAX_req.open("GET", "js/slides.json", true)
+// AJAX_req.setRequestHeader("Content-type", "application/json")
+// AJAX_req.send()
+// AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
+    // if( AJAX_req.readyState == 4 && AJAX_req.status == 200 ) {
+        // var slidesjson = JSON.parse(AJAX_req.responseText);
+        var comp = new SVGAnim(slidesjson, "#svg", null, 50)
         var slide = comp.mc
         var textElement = document.getElementById('text')
         var prevElement = document.getElementById('prevBtn')
@@ -103,6 +103,6 @@ AJAX_req.onreadystatechange = function handle_AJAX_Complete() {
                 }
             }
         }, 1000)
-    }
-}
+    // }
+// }
 })()
