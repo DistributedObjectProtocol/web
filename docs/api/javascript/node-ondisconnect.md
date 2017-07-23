@@ -1,4 +1,4 @@
-# on('disconnect', callback)
+# Node.on('disconnect', callback)
 
 > Event emmited when a node is disconnected.  When a node is connected via listen() the disconnected event only emmits when server calls [disconnect()](/api/javascript/disconnect). Or when timeout is reached on [transports](/transports) that use it.
 
@@ -32,9 +32,8 @@ listener.on('connect', node => {
 
 
 > See also
-- [node.on('connect')](/api/javascript/node-onconnect)
-- [node.on('disconnect')](/api/javascript/node-ondisconnect)
-- [node.on('reconnect')](/api/javascript/node-onreconnect)
+- [Node.on('connect')](/api/javascript/Node-onconnect)
+- [Node.on('reconnect')](/api/javascript/Node-onreconnect)
 - [connect](/api/javascript/connect)
 - [listen](/api/javascript/listen)
 - [disconnect](/api/javascript/disconnect)

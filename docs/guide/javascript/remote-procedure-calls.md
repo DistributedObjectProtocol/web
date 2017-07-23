@@ -18,9 +18,11 @@ We just have to call that function on client and we will receive the mutation as
 
 ```js
 // client
-dop.observe(dataServer, mutations => {
+const observer = dop.createObserver(mutations => {
     console.log(dataServer.totalUsers)
 })
+observer.observe(dataServer)
+
 dataServer.increaseTotalUsers()
 ```
 

@@ -1,6 +1,6 @@
 # listen( [options] )
 
-> Creates a new [listener](/api/javascript/listener) instance that listen for new [connections/nodes](/api/javascript/node).
+> Creates a new [Listener](/api/javascript/Listener) instance that listen for new [connections/nodes](/api/javascript/node).
 
 ## Arguments
 
@@ -9,7 +9,7 @@
 
 ## Returns
 
-A new [listener](/api/javascript/listener) instance.
+A new [Listener](/api/javascript/Listener) instance.
 
 
 ## Examples

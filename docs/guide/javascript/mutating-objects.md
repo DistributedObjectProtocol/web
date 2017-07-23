@@ -20,17 +20,18 @@ dataServer.totalUsers += 1
 
 ```js
 // client
-dop.observe(dataServer, mutations => {
+const observer = dop.createObserver(mutations => {
     console.log(dataServer.totalUsers) // > 1
 })
+observer.observe(dataServer)
 ```
 
-If client mutate dataServer server won't be notified but the mutation will still be handle by `dop.observe`
+If client mutate dataServer server won't be notified but the mutation will still be observed.
 
 
 
 
-*For a more detailed documentation have a look [observer](/api/javascript/observer)*
+*For a more detailed documentation have a look [createObserver](/api/javascript/createObserver)*
 
 
 

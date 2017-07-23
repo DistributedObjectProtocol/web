@@ -2,10 +2,14 @@
 
 ## node.js
 
-To use it in node.js you must have [npm](https://www.npmjs.com/) installed.
+To use it in node.js you must have [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com) installed.
 
 ```
 npm install dop
+```
+
+```
+yarn add dop
 ```
 
 Then you just have to require the library in your script.
@@ -16,13 +20,7 @@ const dop = require('dop')
 
 ## Browsers
 
-If you are using ES6 with babel, first you have to install it via npm like in node.js.
-
-```
-npm install dop
-```
-
-Then you can just import it.
+If you are using ES6 and you already have installed the package
 
 ```js
 import dop from 'dop'
@@ -39,19 +37,19 @@ import dop from 'dop'
 
 *For the latest unminified version*
 ```html
-<script src="https://unpkg.com/dop/dist/browser.js"></script>
+<script src="https://unpkg.com/dop/dist/dop.js"></script>
 ```
 
 
 *For a specific minified version*
 ```html
-<script src="https://unpkg.com/dop@0.11.8/dist/browser.min.js"></script>
+<script src="https://unpkg.com/dop@X.X.X/dist/dop.min.js"></script>
 ```
 
 *For a specific unminified version*
 ```html
-<script src="https://unpkg.com/dop@0.11.8/dist/browser.js"></script>
+<script src="https://unpkg.com/dop@X.X.X/dist/dop.js"></script>
 ```
 
 > #### Next step
-> [Connecting nodes](/guide/javascript/connecting-nodes)
+> [Register object](/guide/javascript/register-object)

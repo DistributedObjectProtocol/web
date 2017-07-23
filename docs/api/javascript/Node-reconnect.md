@@ -1,4 +1,4 @@
-# reconnect()
+# Node.reconnect()
 
 > Try to reconnect to the node previously connected. This function is only available on nodes that connect. And only for a specific transports that need connectivity.
 

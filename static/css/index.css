@@ -116,15 +116,17 @@ header > div {
 }
 .header-center {
     width: 80px;
-    padding-top: 21px;
+    padding-top: 3px;
+    border-bottom: 3px double #d3d3d3;
+    height: calc(100% - 6px);
 }
 
 
 .logo {
-    width: 50px;
+    width: 42px;
     display: block;
     margin: 0 auto;
-    padding-top: 3px;
+    padding-top: 4px;
     /*filter: drop-shadow( 1px 1px 0px #fff);*/
 }
 
@@ -375,7 +377,7 @@ footer > div > div {
     text-align: center;
 }
 .slides-title {
-    font-size: 3.4vw; /*42px;*/
+    font-size: 3.45vw; /*42px;*/
     letter-spacing: -1.5px;
 }
 .slides-description {
@@ -522,7 +524,7 @@ footer > div > div {
 
 .page {
     width: 100%;
-    background: white;
+    background: rgba(255,255,255,.5);
     /*height: calc(100% - 50px);*/
     padding-bottom: 30px;
     padding-top: 46px;
@@ -538,7 +540,8 @@ footer > div > div {
     margin-left: 250px;
     padding-left: 50px;
     padding-right: 40px;
-    background: rgba(255,255,255,1);
+    font-size: 16px;
+    /*background: rgba(255,255,255,1);*/
 }
 
 .page-document-edit {

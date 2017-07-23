@@ -15,8 +15,8 @@
 ## Examples
 ```js
 // server
-const listener = dop.listen()
-const user = dop.register({
+let listener = dop.listen()
+let user = dop.register({
     name: 'John',
     surname: 'Doe'
 })
@@ -24,8 +24,8 @@ dop.onSubscribe(() => user)
 
 
 // client
-const server = dop.connect()
-const user = await server.subscribe()
+let server = dop.connect()
+let user = await server.subscribe()
 console.log(user) // {name:'John', surname:'Doe'}
 ```
 
@@ -39,7 +39,7 @@ dop.onSubscribe((email, password) => {
 })
 
 // client
-const user = await server.subscribe('johndoe@mail.com', '1234')
+let user = await server.subscribe('johndoe@mail.com', '1234')
 ```
 
 ##### If onSubscribe doesn't return an object will reject an error to the subscriber/client
@@ -53,7 +53,7 @@ dop.onSubscribe((email, password) => {
 
 // client
 try {
-    const user = await server.subscribe('wrong', 'wrong')
+    let user = await server.subscribe('wrong', 'wrong')
 } catch(message_error) {
     console.error(message_error) // Remote object not found or not permissions to use it
 }
@@ -67,8 +67,8 @@ try {
 ```js
 // server
 dop.onSubscribe((email, password, ...args) => {
-    const req = args[args.length-1]
-    const reject = req.reject
+    let req = args[args.length-1]
+    let reject = req.reject
     if (email === 'johndoe@mail.com' && password === '1234')
         return user
     else
@@ -77,7 +77,7 @@ dop.onSubscribe((email, password, ...args) => {
 
 // client
 try {
-    const user = await server.subscribe('wrong', 'wrong')
+    let user = await server.subscribe('wrong', 'wrong')
 } catch(message_error) {
     console.error(message_error) // Invalid login
 }
@@ -89,9 +89,9 @@ try {
 ```js
 // server
 dop.onSubscribe((email, password, ...args) => {
-    const req = args[args.length-1]
-    const resolve = req.resolve
-    const reject = req.reject
+    let req = args[args.length-1]
+    let resolve = req.resolve
+    let reject = req.reject
     setTimeout(()=>{
         if (email === 'johndoe@mail.com' && password === '1234')
             resolve(user)
@@ -110,12 +110,12 @@ dop.onSubscribe((email, password, ...args) => {
 
 ```js
 // server
-const transportSocketio = require('dop-transports').listen.socketio
-const listenerWebsockets = dop.listen()
-const listenerSocketio = dop.listen({transport:transportSocketio})
+let transportSocketio = require('dop-transports').listen.socketio
+let listenerWebsockets = dop.listen()
+let listenerSocketio = dop.listen({transport:transportSocketio})
 dop.onSubscribe((email, password, ...args) => {
-    const req = args[args.length-1]
-    const node = req.node
+    let req = args[args.length-1]
+    let node = req.node
 
     if (node.listener === listenerWebsockets)
         return user1
@@ -129,7 +129,7 @@ dop.onSubscribe((email, password, ...args) => {
 
 
 > See also
-- [node.subscribe](/api/javascript/subscribe)
+- [Node.subscribe](/api/javascript/Node-subscribe)
 - [register](/api/javascript/register)
 - [listen](/api/javascript/listen)
 - [connect](/api/javascript/connect)

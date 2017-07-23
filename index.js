@@ -34,8 +34,10 @@ app.get('/:type/:language/:doc', function (req, res) {
             '../partials/sidebar-' + req.params.type + '-' + req.params.language; 
         res.render('pages/docs', req.params)
     }
-    else
+    else {
+        console.log('404', '/'+req.params.type+'/'+req.params.language+'/'+req.params.doc );
         res.render('pages/404')
+    }
 })
 
 
@@ -46,6 +48,7 @@ app.get('/transports', function (req, res) {
 
 // any other
 app.get('/*', function (req, res) {
+    console.log('404', '/'+req.params[0] );
     res.render('pages/404')
 })
 
@@ -58,5 +61,8 @@ expressServer.listen(port, function () {
 
 
 // var dop = require("dop")
-// dop.listen({httpServer:expressServer})
-// dop.onSubscribe(() => {mola:'mazo'})
+// var listener = dop.listen({httpServer:expressServer})
+// dop.onSubscribe(() => ({mola:'mazo'}))
+// listener.on('connect', ()=>console.log('connect'))
+// listener.on('disconnect', ()=>console.log('disconnect'))
+// listener.on('close', ()=>console.log('close'))

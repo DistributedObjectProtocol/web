@@ -1,6 +1,6 @@
-# subscribe( [...args] )
+# Node.subscribe( [...args] )
 
-> Nodes subscribe to local objects
+> Try to subscribe to remote object.
 
 ## Arguments
 
@@ -76,3 +76,5 @@ server.subscribe('johndoe@mail.com', '1234')
 > See also
 - [onSubscribe](/api/javascript/onSubscribe)
 - [register](/api/javascript/register)
+- [listen](/api/javascript/listen)
+- [connect](/api/javascript/connect)

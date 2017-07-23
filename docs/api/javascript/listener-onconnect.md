@@ -1,4 +1,4 @@
-# on('connect', callback)
+# Listener.on('connect', callback)
 
 > Event emmited when a node is connected
 
@@ -19,8 +19,7 @@ listener.on('connect', node => console.log('Connected!') )
 
 
 > See also
-- [listener.on('connect')](/api/javascript/listener-onconnect)
-- [listener.on('disconnect')](/api/javascript/listener-ondisconnect)
-- [listener.on('reconnect')](/api/javascript/listener-onreconnect)
+- [Listener.on('disconnect')](/api/javascript/Listener-ondisconnect)
+- [Listener.on('reconnect')](/api/javascript/Listener-onreconnect)
 - [connect](/api/javascript/connect)
 - [listen](/api/javascript/listen)

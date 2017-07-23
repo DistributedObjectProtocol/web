@@ -1,6 +1,6 @@
 # connect( [options] )
 
-> Connect with a listening [node](/api/javascript/node).
+> Connect with a listening [Node](/api/javascript/Node).
 
 ## Arguments
 
@@ -9,31 +9,17 @@
 
 ## Returns
 
-A new [node](/api/javascript/node) instance.
+A new [Node](/api/javascript/Node) instance.
 
 
 ## Examples
 
 ```js
-// node.js
-const dop = require('dop')
-const listener = dop.connect() // ws by default
-```
-
-```js
 // browser
 import dop from 'dop'
-const listener = dop.connect() // WebSockets by default
+const node_server = dop.connect() // WebSockets by default
 ```
 
-If you don't want to use ES6
-
-```html
-<script src="https://unpkg.com/dop"></script>
-<script>
-var listener = dop.connect() // WebSockets by default
-</script>
-```
 
 
 > See also

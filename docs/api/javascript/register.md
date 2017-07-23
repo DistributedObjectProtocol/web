@@ -4,8 +4,8 @@
 
 ## Arguments
 
-#### object `Object|Array`
-An regular object or an array.
+#### object `Object`
+A POJO object.
 
 ## Returns
 
@@ -15,31 +15,30 @@ A [ES6 proxy](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Glo
 ## Examples
 
 ```js
-const user = dop.register({name: 'John'})
+let user = dop.register({name: 'John'})
 user.name // 'John'
 ```
 
 ```js
-const user = dop.register({name: 'John'})
-const user2 = dop.register(user)
+let user = dop.register({name: 'John'})
+let user2 = dop.register(user)
 user === user2 // true
 ```
 
 ```js
-const user = dop.register({name: 'John'})
-const user2 = dop.register({name: 'John'})
+let user = dop.register({name: 'John'})
+let user2 = dop.register({name: 'John'})
 user === user2 // false
 ```
 
 
 ```js
-const userObject = {name: 'John'}
-const user = dop.register(userObject)
+let userObject = {name: 'John'}
+let user = dop.register(userObject)
 user === userObject // false
 ```
 
 
 > See also
-- [observe](/api/javascript/observe)
-- [observeProperty](/api/javascript/observeProperty)
-- [collect](/api/javascript/collect)
+- [createObserver](/api/javascript/createObserver)
+- [set](/api/javascript/set)

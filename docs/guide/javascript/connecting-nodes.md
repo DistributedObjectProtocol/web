@@ -1,8 +1,8 @@
 # Connecting nodes
 
-If you haven't seen the slides of the [home page](/), we recommend it. You will get the global picture of what dop is and will clarify the concept of nodes. Then come back here.
+If you haven't seen the slides of the [home page](/), we recommend see them, to understand the concept of a node.
 
-But for now, we are going to refer them as server and clients. But keep in mind that server is a node that listens to other clients. Clients are also nodes.
+For now, we are going to refer them as server and clients. Keep in mind that server is a node that listen to other clients. And a client is just a node that connect to another node. The server in this case.
 
 
 ```js
