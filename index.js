@@ -56,7 +56,7 @@ app.get('/*', function (req, res) {
 var port = 4444
 var expressServer = http.createServer(app)
 expressServer.listen(port, function () {
-    console.log('port:', port)
+    console.log('http://localhost:'+port)
 })
 
 

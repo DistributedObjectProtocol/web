@@ -32,8 +32,8 @@ server.on('reconnect', () => console.log('✅ I reconnected!') )
 
 
 > See also
-- [node.on('connect')](/api/javascript/node-onconnect)
-- [node.on('disconnect')](/api/javascript/node-ondisconnect)
-- [node.on('reconnect')](/api/javascript/node-onreconnect)
+- [Node.on('connect')](/api/javascript/Node-onconnect)
+- [Node.on('disconnect')](/api/javascript/Node-ondisconnect)
+- [Node.on('reconnect')](/api/javascript/Node-onreconnect)
 - [listen](/api/javascript/listen)
 - [connect](/api/javascript/connect)
