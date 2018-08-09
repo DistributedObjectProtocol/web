@@ -5,7 +5,7 @@
 ## Arguments
 
 #### object `Object`
-A POJO object.
+An object or a class instance.
 
 ## Returns
 
