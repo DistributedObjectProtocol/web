@@ -102,6 +102,9 @@
                     }, 1000)
                 }
             }
+            slide.learnMore = function() {
+                location.href = '/guide/javascript'
+            }
         }, 1000)
     // }
 // }

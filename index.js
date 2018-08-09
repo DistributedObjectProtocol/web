@@ -15,6 +15,14 @@ app.get('/', function (req, res) {
     res.render('pages/index')
 })
 
+// redirects
+app.get('/guide/javascript', function (req, res, next) {
+    req.url = '/guide/javascript/installation';
+    next();
+})
+
+
+
 // docs
 app.get('/:type/:language/:doc', function (req, res) {
     req.params.language = req.params.language.toLowerCase()

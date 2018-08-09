@@ -116,7 +116,7 @@ If you don't use ES6
 ```html
 <script src="https://unpkg.com/dop"></script>
 <script>
-var server = dop.connect({url:'ws://localhost:4444'})
+let server = dop.connect({url:'ws://localhost:4444'})
 server.on('connect', function() {
     console.log('Connected!!')
 })

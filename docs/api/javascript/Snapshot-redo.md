@@ -17,7 +17,7 @@ let user = dop.register({name: 'John', surname: 'Doe'})
 let collector = dop.collect()
 user.name = 'Enzo'
 user.surname = 'Gonzalez'
-var snapshot = collector.emit()
+let snapshot = collector.emit()
 console.log(`${user.name} ${user.surname}`) // Enzo Gonzalez
 snapshot.undo()
 console.log(`${user.name} ${user.surname}`) // John Doe

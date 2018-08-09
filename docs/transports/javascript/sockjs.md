@@ -86,8 +86,8 @@ server.on('connect', () => console.log('Server connected!'))
 <script src="https://unpkg.com/dop"></script>
 <script src="https://unpkg.com/dop-transports@2.0.2/connect/sockjs.js"></script>
 <script>
-var sockjsTransport = dop.transports.connect.sockjs
-var server = dop.connect({transport:sockjsTransport, url:'ws://localhost:4445/test'})
+let sockjsTransport = dop.transports.connect.sockjs
+let server = dop.connect({transport:sockjsTransport, url:'ws://localhost:4445/test'})
 server.on('connect', () => console.log('Server connected!'))
 </script>
 ```
