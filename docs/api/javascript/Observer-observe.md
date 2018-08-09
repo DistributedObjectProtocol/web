@@ -42,7 +42,7 @@ user.surname = 'Gonzalez'
 ```
 
 
-Unbserving
+Unobserving
 
 ```js
 let user = dop.register({surname: 'Doe'})
@@ -51,7 +51,7 @@ let unobserveUser = observer.observe(user)
 user.name = 'Enzo' // This will be observed
 unobserveUser()
 user.surname = 'Gonzalez' // This won't
-
+```
 
 
 > See also
