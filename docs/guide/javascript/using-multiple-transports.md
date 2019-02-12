@@ -24,8 +24,7 @@ When a new client/node try to subscribe. We can reuse the same dop.onSubscribe c
 ```js
 const myObject = dop.register({Hola: 'Mundo'})
 dop.onSubscribe((...args) => {
-    const req = args[args.length-1]
-    const node = req.node
+    const { node } = dop.getRequest(args)
 
     if (node.listener === listenerWs)
         console.log('Client/node subscribing from WebSockets')

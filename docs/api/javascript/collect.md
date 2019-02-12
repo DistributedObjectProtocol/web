@@ -26,11 +26,11 @@ A [Collector](/api/javascript/Collector) object/class.
 This code will print `1` twice
 
 ```js
-let user = dop.register({surname: 'Doe'})
-let observer = dop.createObserver(mutations => {
+const user = dop.register({surname: 'Doe'})
+const observer = dop.createObserver(mutations => {
     console.log(mutations.length)
 })
-observer.observe(user)
+observer.observeObject(user)
 user.name = 'Josema'
 user.surname = 'Gonzalez'
 ```
@@ -39,12 +39,12 @@ user.surname = 'Gonzalez'
 An this will print `2` once
 
 ```js
-let user = dop.register({surname: 'Doe'})
-let observer = dop.createObserver(mutations => {
+const user = dop.register({surname: 'Doe'})
+const observer = dop.createObserver(mutations => {
     console.log(mutations.length)
 })
-observer.observe(user)
-let collector = dop.collect()
+observer.observeObject(user)
+const collector = dop.collect()
 user.name = 'Josema'
 user.surname = 'Gonzalez'
 collector.emit()
@@ -54,8 +54,8 @@ collector.emit()
 
 
 ```js
-let user = dop.register({surname: 'Doe'})
-let collector = dop.collect()
+const user = dop.register({surname: 'Doe'})
+const collector = dop.collect()
 console.log(collector.mutations.length) // 0
 user.surname = 'Gonzalez'
 console.log(collector.mutations.length) // 1
@@ -65,9 +65,9 @@ console.log(collector.mutations.length) // 1
 Multiple collectors
 
 ```js
-let user = dop.register({surname: 'Doe'})
-let collectorA = dop.collect()
-let collectorB = dop.collect()
+const user = dop.register({surname: 'Doe'})
+const collectorA = dop.collect()
+const collectorB = dop.collect()
 user.surname = 'Gonzalez'
 console.log(collectorA.mutations.length) // 1
 console.log(collectorB.mutations.length) // 0
@@ -82,9 +82,9 @@ console.log(collectorB.mutations.length) // 1
 Using `index_function`
 
 ```js
-let user = dop.register({surname: 'Doe'})
-let collectorA = dop.collect()
-let collectorB = dop.collect(collectors => 0) // Position 0 of the array. It means the begining
+const user = dop.register({surname: 'Doe'})
+const collectorA = dop.collect()
+const collectorB = dop.collect(collectors => 0) // Position 0 of the array. It means the begining
 user.surname = 'Gonzalez'
 console.log(collectorA.mutations.length) // 0
 console.log(collectorB.mutations.length) // 1

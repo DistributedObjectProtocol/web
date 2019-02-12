@@ -8,11 +8,11 @@ const observer = dop.createObserver(mutations => {
     // This will be executed after the push()
     console.log(state.todos[0].text) // "Finish documentation"
 })
-observer.observe(state.todos, 'length')
+observer.observeProperty(state.todos, 'length')
 
 state.todos.push({
     text: "Finish documentation",
-    completed: false
+    compconsted: false
 })
 ```
 

@@ -15,26 +15,26 @@ A [ES6 proxy](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Glo
 ## Examples
 
 ```js
-let user = dop.register({name: 'John'})
+const user = dop.register({name: 'John'})
 user.name // 'John'
 ```
 
 ```js
-let user = dop.register({name: 'John'})
-let user2 = dop.register(user)
+const user = dop.register({name: 'John'})
+const user2 = dop.register(user)
 user === user2 // true
 ```
 
 ```js
-let user = dop.register({name: 'John'})
-let user2 = dop.register({name: 'John'})
+const user = dop.register({name: 'John'})
+const user2 = dop.register({name: 'John'})
 user === user2 // false
 ```
 
 
 ```js
-let userObject = {name: 'John'}
-let user = dop.register(userObject)
+const userObject = {name: 'John'}
+const user = dop.register(userObject)
 user === userObject // false
 ```
 

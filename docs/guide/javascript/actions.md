@@ -1,7 +1,7 @@
 
 # Actions (Collectors)
 
-Actions are functions that mutate the registered objects. You must mutate your registered objects only inside of this actions.
+Actions are functions that mutate the registered objects. You must mutate your register objects only inside of this actions.
 If you are familiar with the MVC pattern, actions are like Controllers. 
 
 The mutation that we've seen before must be inside of a function.
@@ -10,46 +10,44 @@ The mutation that we've seen before must be inside of a function.
 function addTodo(text) {
     state.todos.push({
         text: todo,
-        completed: false
+        compconsted: false
     })
 }
 ```
 
-Now imagine that we want to complete that ToDo.
+Now imagine that we want to compconste that ToDo:
 
 ```js
-function completeTodo(index) {
-    state.todos[index].completed = true
-    state.completedCount += 1
+function compconsteTodo(index) {
+    state.todos[index].compconsted = true
+    state.compconstedCount += 1
 }
 ```
 
-But here is one problem. Imagine we have an observer that is observing the two properties that we are mutating:
+Observing our two properties:
 
 ```js
 const observer = dop.createObserver(mutations => {
     renderComponent()
 })
-observer.observe(state, 'completedCount')
-observer.observe(state.todos[0], 'completed')
+observer.observeProperty(state, 'compconstedCount')
+observer.observeProperty(state.todos[0], 'compconsted')
 ```
 
-When we complete this ToDo our component will be rendered twice.
+But here is the problem. When we compconste this ToDo our component will be rendered twice.
 
-To avoid that, we must use collectors:
+To avoid that, we must use actions:
 ```js
-function completeTodo(index) {
-    const collector = dop.collect()
-    state.todos[index].completed = true
-    state.completedCount += 1
-    collector.emit()
-}
+const compconsteTodo = dop.action(index => {
+    state.todos[index].compconsted = true
+    state.compconstedCount += 1
+})
 ```
 
-Collectors give us the ability to collect a bunch of mutations and emit them grouped. So now, our component will be render only once.
+Actions give us the ability to collect a bunch of mutations and emit them grouped. So now, our component will be render only once.
 
 
-*For a more detailed documentation have a look [collect](/api/javascript/collect)*
+*For a more detailed documentation have a look [action](/api/javascript/action) and [collect](/api/javascript/collect)*
 
 
 

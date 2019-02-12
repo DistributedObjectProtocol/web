@@ -18,7 +18,7 @@ The computed value result.
 ## Examples
 
 ```js
-let user = dop.register({
+const user = dop.register({
     name: 'John',
     surname: 'Doe',
     fullname: dop.computed(function() { // You can't use arrow function here because we need the `this` scope
@@ -33,7 +33,7 @@ console.log(user.fullname) // 'Enzo Doe'
 Adding it after
 
 ```js
-let user = dop.register({
+const user = dop.register({
     name: 'John',
     surname: 'Doe',
 })

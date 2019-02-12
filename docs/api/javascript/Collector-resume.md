@@ -13,8 +13,8 @@
 
 
 ```js
-let user = dop.register({surname: 'Doe'})
-let collector = dop.collect()
+const user = dop.register({surname: 'Doe'})
+const collector = dop.collect()
 user.surname = 'Gonzalez'
 collector.pause()
 user.name = 'Josema' // This won't be collected

@@ -13,8 +13,8 @@
 
 
 ```js
-let user = dop.register({surname: 'Doe'})
-let collector = dop.collect()
+const user = dop.register({surname: 'Doe'})
+const collector = dop.collect()
 user.surname = 'Gonzalez'
 console.log(collector.mutations.length) // 1
 collector.destroy()

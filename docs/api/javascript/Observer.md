@@ -5,6 +5,8 @@ Is a special object/class that is created with [createObserver()](/api/javascrip
 
 
 > See also
-- [Observer.observe](/api/javascript/Observer-observe)
+- [Observer.observeProperty](/api/javascript/Observer-observeProperty)
+- [Observer.observeObject](/api/javascript/Observer-observeObject)
+- [Observer.observeAll](/api/javascript/Observer-observeAll)
 - [Observer.destroy](/api/javascript/Observer-destroy)
 - [createObserver](/api/javascript/createObserver)

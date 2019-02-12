@@ -27,7 +27,7 @@ The new value.
 ## Examples
 
 ```js
-let user = dop.register({name: 'John'})
+const user = dop.register({name: 'John'})
 dop.set(user, 'name', 'Enzo') // 'Enzo'
 user.name // 'Enzo'
 ```

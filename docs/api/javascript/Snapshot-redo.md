@@ -13,11 +13,11 @@
 
 
 ```js
-let user = dop.register({name: 'John', surname: 'Doe'})
-let collector = dop.collect()
+const user = dop.register({name: 'John', surname: 'Doe'})
+const collector = dop.collect()
 user.name = 'Enzo'
 user.surname = 'Gonzalez'
-let snapshot = collector.emit()
+const snapshot = collector.emit()
 console.log(`${user.name} ${user.surname}`) // Enzo Gonzalez
 snapshot.undo()
 console.log(`${user.name} ${user.surname}`) // John Doe

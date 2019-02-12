@@ -1,6 +1,6 @@
 # Observer.destroy()
 
-> Unobserve all the observations made with [Observer.observe](/api/javascript/Observer-observe).
+> Unobserve all the observations made previously.
 
 
 ## Arguments
@@ -12,17 +12,16 @@
 
 
 ```js
-let user = dop.register({surname: 'Doe'})
-let observer = dop.createObserver(mutations => {})
-observer.observe(user, 'name')
-observer.observe(user, 'surname')
-user.name = 'Enzo' // This will be observed
+const user = dop.register({surname: 'Doe'})
+const observer = dop.createObserver(mutations => {})
+observer.observeProperty(user, 'surname')
+user.surname = 'Gonzalez' // This will be observed
 observer.destroy()
-user.surname = 'Gonzalez' // This won't be observed
+user.surname = 'Smith' // This won't be observed
 ```
 
 
 > See also
 - [createObserver](/api/javascript/createObserver)
-- [Observer.observe](/api/javascript/Observer-observe)
+- [Observer.observeProperty](/api/javascript/Observer-observeProperty)
 - [register](/api/javascript/register)

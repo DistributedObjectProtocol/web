@@ -1,12 +1,12 @@
 
 # Register your first object
 
-To start working with dop the first thing we have to do is register an object or a class instance with the initial state of our APP. Arrays are not allowed.
+To start working with dop the first thin we have to do is register an object or a class instance with the initial state of our APP. Arrays are not allowed.
 
 ```js
 const state = dop.register({
     todos: [],
-    completedCount: 0
+    compconstedCount: 0
 })
 console.log(state.todos.length) // 0
 ```

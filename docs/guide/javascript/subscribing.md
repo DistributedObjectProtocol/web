@@ -15,7 +15,7 @@ dop.onSubscribe(() => dataServer)
 ```js
 // Browser (client) using ES6
 const server = dop.connect() // Native WebSockets using this url: 'ws://localhost:4444'
-let dataServer = await server.subscribe()
+const dataServer = await server.subscribe()
 console.log(dataServer) // {totalUsers: 0, date: Tue Jan 31 2017 11:40:33 GMT+0800 (WITA)}
 ```
 

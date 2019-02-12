@@ -87,8 +87,8 @@ server.on('connect', () => console.log('Server connected!'))
 <script src="https://unpkg.com/dop"></script>
 <script src="https://unpkg.com/dop-transports@2.0.2/connect/socketio.js"></script>
 <script>
-let socketioTransport = dop.transports.connect.socketio
-let server = dop.connect({transport:socketioTransport, url:'ws://localhost:4445/test'})
+const socketioTransport = dop.transports.connect.socketio
+const server = dop.connect({transport:socketioTransport, url:'ws://localhost:4445/test'})
 server.on('connect', () => console.log('Server connected!'))
 </script>
 ```

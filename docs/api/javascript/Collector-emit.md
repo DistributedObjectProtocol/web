@@ -14,8 +14,8 @@ A [Snapshot](/api/javascript/Snapshot) object/class.
 
 
 ```js
-let user = dop.register({surname: 'Doe'})
-let collector = dop.collect()
+const user = dop.register({surname: 'Doe'})
+const collector = dop.collect()
 user.name = 'Enzo'
 user.surname = 'Gonzalez'
 console.log(collector.mutations.length) // 2

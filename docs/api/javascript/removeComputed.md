@@ -25,7 +25,7 @@ An array with the functions of the removed computed values.
 ## Examples
 
 ```js
-let user = dop.register({
+const user = dop.register({
     name: 'John',
     surname: 'Doe',
     fullname: dop.computed(function() {

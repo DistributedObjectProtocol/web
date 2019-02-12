@@ -9,7 +9,7 @@
 
 ```js
 const listener = dop.listen()
-let disconnectedOnce = false
+const disconnectedOnce = false
 listener.on('connect', client => {
     if (!disconnectedOnce) {
         console.log('Client connected')
