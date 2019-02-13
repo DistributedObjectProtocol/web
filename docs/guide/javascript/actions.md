@@ -1,7 +1,7 @@
 
-# Actions (Collectors)
+# Actions
 
-Actions are functions that mutate the registered objects. You must mutate your register objects only inside of this actions.
+Actions are functions that mutate objects. You must mutate your register objects only inside of this actions.
 If you are familiar with the MVC pattern, actions are like Controllers. 
 
 The mutation that we've seen before must be inside of a function.
