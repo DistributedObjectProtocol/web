@@ -85,7 +85,7 @@ dataServer.login = (email, password, ...args) => {
         else
             request.reject('Invalid login')
     }, 1000)
-    // You must return request to make this function asynchronously
+    // We must return request to make this function asynchronously
     return request
 }
 ```
