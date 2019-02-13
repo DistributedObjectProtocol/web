@@ -3,7 +3,7 @@
 
 Computed values are values that can be derived from the existing state or other computed values. Conceptually, they are very similar to formulas in spreadsheets.
 
-In our ToDo app we have a property called `completedCount` that we manually have to update every time we compconste a todo.
+In our ToDo app we have a property called `completedCount` that we manually have to update every time we complete a todo.
 
 const's turn that property into a computed value:
 ```js

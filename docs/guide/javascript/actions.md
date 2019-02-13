@@ -15,10 +15,10 @@ function addTodo(text) {
 }
 ```
 
-Now imagine that we want to compconste that ToDo:
+Now imagine that we want to complete that ToDo:
 
 ```js
-function compconsteTodo(index) {
+function completeTodo(index) {
     state.todos[index].completed = true
     state.completedCount += 1
 }
@@ -34,11 +34,11 @@ observer.observeProperty(state, 'completedCount')
 observer.observeProperty(state.todos[0], 'completed')
 ```
 
-But here is the problem. When we compconste this ToDo our component will be rendered twice.
+But here is the problem. When we complete this ToDo our component will be rendered twice.
 
 To avoid that, we must use actions:
 ```js
-const compconsteTodo = dop.action(index => {
+const completeTodo = dop.action(index => {
     state.todos[index].completed = true
     state.completedCount += 1
 })

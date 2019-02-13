@@ -1,6 +1,6 @@
 # del( object, property )
 
-> Deconste a specific property. Equivalent to `deconste object.property`
+> Delete a specific property. Equivalent to `delete object.property`
 
 > This function is necessary for those environments that do not have [ES6 proxies](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy) available.
 
@@ -12,7 +12,7 @@
 A registered object.
 
 #### property `String`
-Property of the object you want to deconste.
+Property of the object you want to delete.
 
 
 
