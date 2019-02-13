@@ -6,7 +6,7 @@ To start working with dop the first thin we have to do is register an object or 
 ```js
 const state = dop.register({
     todos: [],
-    compconstedCount: 0
+    completedCount: 0
 })
 console.log(state.todos.length) // 0
 ```

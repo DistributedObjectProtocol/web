@@ -12,7 +12,7 @@ observer.observeProperty(state.todos, 'length')
 
 state.todos.push({
     text: "Finish documentation",
-    compconsted: false
+    completed: false
 })
 ```
 

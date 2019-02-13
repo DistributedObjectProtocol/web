@@ -10,7 +10,7 @@ The mutation that we've seen before must be inside of a function.
 function addTodo(text) {
     state.todos.push({
         text: todo,
-        compconsted: false
+        completed: false
     })
 }
 ```
@@ -19,8 +19,8 @@ Now imagine that we want to compconste that ToDo:
 
 ```js
 function compconsteTodo(index) {
-    state.todos[index].compconsted = true
-    state.compconstedCount += 1
+    state.todos[index].completed = true
+    state.completedCount += 1
 }
 ```
 
@@ -30,8 +30,8 @@ Observing our two properties:
 const observer = dop.createObserver(mutations => {
     renderComponent()
 })
-observer.observeProperty(state, 'compconstedCount')
-observer.observeProperty(state.todos[0], 'compconsted')
+observer.observeProperty(state, 'completedCount')
+observer.observeProperty(state.todos[0], 'completed')
 ```
 
 But here is the problem. When we compconste this ToDo our component will be rendered twice.
@@ -39,8 +39,8 @@ But here is the problem. When we compconste this ToDo our component will be rend
 To avoid that, we must use actions:
 ```js
 const compconsteTodo = dop.action(index => {
-    state.todos[index].compconsted = true
-    state.compconstedCount += 1
+    state.todos[index].completed = true
+    state.completedCount += 1
 })
 ```
 
