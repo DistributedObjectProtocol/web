@@ -6,7 +6,7 @@
 
 #### args `Array`
 
-ES6 rest parameters or the special object `arguments`.
+[ES6 rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) or the special object [`arguments`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments).
 
 ## Returns
 
