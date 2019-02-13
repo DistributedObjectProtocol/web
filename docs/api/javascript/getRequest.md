@@ -6,7 +6,7 @@
 
 #### args `Array`
 
-A function with the logic of your mutations.
+ES6 rest parameters or the special object `arguments`.
 
 ## Returns
 
