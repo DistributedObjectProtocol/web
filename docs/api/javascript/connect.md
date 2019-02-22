@@ -14,14 +14,16 @@ A new [Node](/api/javascript/Node) instance.
 
 ## Examples
 
+Browser using ES6
+
 ```js
-// browser
 import dop from 'dop'
 const node_server = dop.connect() // WebSockets by default
 ```
 
 Equivalent to:
 ```js
+import dop from 'dop'
 const node_server = dop.connect({ url:'ws://localhost:4444' })
 ```
 
