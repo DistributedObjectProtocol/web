@@ -20,6 +20,10 @@ import dop from 'dop'
 const node_server = dop.connect() // WebSockets by default
 ```
 
+Equivalent to:
+```js
+const node_server = dop.connect({ url:'ws://localhost:4444' })
+```
 
 
 > See also
