@@ -18,6 +18,13 @@ const dop = require('dop')
 const listener = dop.listen()
 ```
 
+Equivalent to
+```js
+const dop = require('dop')
+const wsTransport = require('dop-transports').listen.ws
+const listener = dop.listen({ transport:wsTransport, port:4444, timeout:60 })
+```
+
 
 > See also
 - [connect](/api/javascript/connect)
