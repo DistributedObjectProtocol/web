@@ -114,7 +114,7 @@ dataServer.getMyToken = (...args) => {
 }
 
 // client
-const isLogged = await dataServer.getMyToken() // > a54a6843-08a9-4332-a365-0c86aa4fe0b5
+const myToken = await dataServer.getMyToken() // > a54a6843-08a9-4332-a365-0c86aa4fe0b5
 ```
 
 
