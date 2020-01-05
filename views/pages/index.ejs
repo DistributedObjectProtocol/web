@@ -3,44 +3,18 @@
     <head>
         <title>Distributed Object Protocol</title>
         <% include ../partials/head %>
+        <link rel="stylesheet" href="/css/markdown.css" />
     </head>
     <body>
         <% include ../partials/header %>
-            <div class="slides">
-                <div class="slides-arrows">
-                    <div id="prevBtn" class="slides-arrowleft"><img src="/img/arrow.svg"></div>
-                    <div id="nextBtn" class="slides-arrowright"><img src="/img/arrow.svg"></div>
-                </div>
-                <div class="slides-claim" id="claim">
-                    <div>
-                        <div class="slides-title"><strong>Distributed  Object  Protocol</strong> is for</div>
-                        <div class="slides-description">
-                            <strong>State management</strong>, Remote procedure calls, Reactive programming,<br/>
-                            Data sync, Pub/Sub, Optimistic updates, Time-travel debugging,<br/>
-                            Unidirectional data flow, <strong>Real time apps.</strong></div>
-                    </div>
-                </div>
-                <div class="slides-text"><div id="text"></div></div>
-                <!--<div id="slides-percentage"></div>-->
-                <div id="slides-count"></div>
-                <svg 
-                    id="svg"
-                    version="1.1"
-                    width="100%"
-                    height="100%"
-                    preserveAspectRatio="xMidYMid meet"
-                    viewBox="0 0 1200 600" 
-                    xmlns="http://www.w3.org/2000/svg"></svg>
-            </div>
-        <div id="container">
-            <div class="transports-title h1">Transports overview</div>
-            <% include ../partials/transports-table %>
+        <div class="page-document-inner">
+            <%- content %>
         </div>
         <% include ../partials/footer %>
     </body>
-    <script src="/lib/snap.svg-min.js"></script>
-    <script src="/lib/SnapSVGAnimator.min.js"></script>
-    <script src="/js/slides.json.js"></script>
-    <script src="/js/slides.js"></script>
+    <script src="/lib/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
     <% include ../partials/scripts %>
 </html>

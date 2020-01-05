@@ -1,9 +1,10 @@
-html, body {
-    height: 100%
+html,
+body {
+    height: 100%;
 }
 body {
     font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: url('../img/background.png') #fff fixed;
@@ -11,13 +12,11 @@ body {
     color: #222;
 }
 a {
-    color:#000
+    color: #000;
 }
 a:hover {
     color: #777;
 }
-
-
 
 #container {
     min-height: calc(100% - 61px);
@@ -27,40 +26,59 @@ a:hover {
     padding-top: 100px;
 }
 
-
 .decoration {
     /*background: #fc4768;*/
     width: 100%;
     height: 3px;
     /*background: linear-gradient(253deg, #43f2c5, #0e4637, #f0ca0f);*/
-    background: linear-gradient(90deg, 
-      #fc4768,
-      #fb7793,
-      #fdcd66,
-      #fbcf8c, 
-      #fbcf8c, 
-      #fdcd66,
-      #fb7793,
-      #fc4768);
+    background: linear-gradient(
+        90deg,
+        #fc4768,
+        #fb7793,
+        #fdcd66,
+        #fbcf8c,
+        #fbcf8c,
+        #fdcd66,
+        #fb7793,
+        #fc4768
+    );
     background-size: 300%;
     -webkit-animation: AnimationName 15s ease infinite;
     -moz-animation: AnimationName 15s ease infinite;
     animation: AnimationName 15s ease infinite;
 }
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
-@keyframes AnimationName { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .decoration-header {
@@ -73,46 +91,33 @@ a:hover {
     position: relative;
 }
 
-
-
-
-
-
-
-
-
-
 header {
-    top:3px;
-    width:100%;
-    height: 43px;
+    top: 3px;
+    width: 100%;
+    height: 48px;
     position: fixed;
     /*background: url('../img/background.png') #fff;*/
     background: #fff;
     z-index: 4;
 }
 
-
-
 header > div {
-    float:left;
+    float: left;
     height: 100%;
 }
 
-
-
 .clear {
-    clear: both
+    clear: both;
 }
 .center {
-    text-align: center
+    text-align: center;
 }
 
-
-.header-left, .header-right {
+.header-left,
+.header-right {
     width: calc(50% - 40px);
     border-bottom: 3px double #d3d3d3;
-    height: 40px;
+    height: 45px;
 }
 .header-center {
     width: 80px;
@@ -121,12 +126,11 @@ header > div {
     height: calc(100% - 6px);
 }
 
-
 .logo {
     width: 42px;
     display: block;
     margin: 0 auto;
-    padding-top: 4px;
+    padding-top: 6px;
     /*filter: drop-shadow( 1px 1px 0px #fff);*/
 }
 
@@ -136,9 +140,8 @@ header > div {
     letter-spacing: -1px;
 }
 
-
 .header-right {
-    text-align:right;
+    text-align: right;
     /* position: absolute; */
     /* right: 0; */
 }
@@ -156,30 +159,28 @@ header > div {
     position: relative;
 }
 .header-menu > li > a {
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
     color: #7a7a7a;
     font-weight: 900;
     display: inline-block;
     padding: 12px 15px 15px 10px;
 }
-.header-menu > li > a.selected .header-menu-aunderline, 
+.header-menu > li > a.selected .header-menu-aunderline,
 .header-menu > li > a:hover .header-menu-aunderline {
     color: #000;
     border-bottom: 3px solid #000;
-    padding-bottom: 10px
+    padding-bottom: 13px;
 }
 .header-menu > li:hover .dropdown {
-    display: block
+    display: block;
 }
 .header-menu-button {
-    display: none
+    display: none;
 }
 .sidebar-button {
     display: none;
 }
-
-
 
 .dropdown-icon {
     display: inline-block;
@@ -190,7 +191,7 @@ header > div {
     border-top: 5px solid #bbb;
 }
 .dropdown {
-    display: none; 
+    display: none;
     overflow-y: auto;
     background-color: #fff;
     padding: 10px 0;
@@ -203,7 +204,7 @@ header > div {
     right: -4px;
     overflow-y: scroll;
     min-width: 150px;
-    box-shadow: 1px 1px 1px 0px rgba(0,0,0,.1);
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown li {
@@ -222,7 +223,7 @@ header > div {
 .dropdown a:hover,
 .dropdown a.selected {
     color: #222;
-    background-color: #f5f5f5
+    background-color: #f5f5f5;
 }
 
 footer {
@@ -230,23 +231,23 @@ footer {
     border-bottom: 20px;
     color: #a1a1a1;
     height: 58px;
-    box-shadow: 0px -4px rgba(0,0,0,.1);
+    box-shadow: 0px -4px rgba(0, 0, 0, 0.1);
     clear: both;
     width: 100%;
     z-index: 2;
     position: relative;
 }
-footer > div { 
-    float:left;
+footer > div {
+    float: left;
     width: 33%;
     height: 100%;
 }
-footer > div > div { 
+footer > div > div {
     padding-top: 22px;
 }
 .footer-left > div {
-    font-size:13px;
-    padding-left: 20px
+    font-size: 13px;
+    padding-left: 20px;
 }
 .footer-center {
     width: 34%;
@@ -259,16 +260,16 @@ footer > div > div {
 }
 .footer-right > div {
     float: right;
-    padding-right: 20px
+    padding-right: 20px;
 }
 .footer-center img {
     width: 35px;
-    filter:invert(.4)
+    filter: invert(0.4);
 }
 
 .footer-right > div {
     float: right;
-    padding-top: 17px
+    padding-top: 17px;
 }
 .footer-right ul {
     padding: 0;
@@ -282,24 +283,14 @@ footer > div > div {
     width: 24px;
 }
 
-
-
-
-
-
-
-
-
-
 /************************/
 /****** INDEX PAGE ******/
 /************************/
 
-
 .slides {
     text-align: center;
     position: relative;
-    margin-top: 46px; 
+    margin-top: 46px;
     height: calc(100% - 46px);
     width: 100%;
 }
@@ -323,10 +314,10 @@ footer > div > div {
     position: relative;
     top: calc(50% - 25px);
     margin: 0 auto;
-    opacity: .3
+    opacity: 0.3;
 }
 .slides-arrows div:hover img {
-    opacity: 1
+    opacity: 1;
 }
 .slides-arrowleft img {
     transform: rotate(180deg);
@@ -334,7 +325,7 @@ footer > div > div {
 .slides-text {
     position: absolute;
     width: 100%;
-    bottom: 15px
+    bottom: 15px;
 }
 .slides-text > div {
     opacity: 0;
@@ -400,13 +391,12 @@ footer > div > div {
     bottom: 4px;
     width: 0;
     height: 5px;
-    background: rgba(0,0,0,.2);
+    background: rgba(0, 0, 0, 0.2);
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
 }
-
 
 /*.transports {
         
@@ -420,9 +410,9 @@ footer > div > div {
 }
 .transports-title {
     text-align: center;
-    margin-top:60px;
+    margin-top: 60px;
     color: #999;
-    font-weight: 100
+    font-weight: 100;
 }
 .transports-table {
     margin-top: 60px;
@@ -430,10 +420,11 @@ footer > div > div {
 .transports-table table {
     margin: 0 auto;
     border-spacing: 0;
-    border-collapse:collapse;
+    border-collapse: collapse;
 }
-.transports-table th, .transports-table td {
-    border: 1px dotted #AAA;
+.transports-table th,
+.transports-table td {
+    border: 1px dotted #aaa;
 }
 .transports-table th {
     border-top: 0;
@@ -443,14 +434,16 @@ footer > div > div {
     color: #666;
     font-weight: 400;
 }
-.transports-table th:first-child, .transports-table td:first-child {
-    border-left:0
+.transports-table th:first-child,
+.transports-table td:first-child {
+    border-left: 0;
 }
-.transports-table th:last-child, .transports-table td:last-child {
-    border-right:0
+.transports-table th:last-child,
+.transports-table td:last-child {
+    border-right: 0;
 }
 .transports-table tr:last-child td {
-    border-bottom:0
+    border-bottom: 0;
 }
 
 .transports-table th img {
@@ -487,13 +480,6 @@ footer > div > div {
     line-height: 10px;
 }
 
-
-
-
-
-
-
-
 /****************************/
 /****** NOT FOUND PAGE ******/
 /****************************/
@@ -511,20 +497,13 @@ footer > div > div {
     font-weight: 100;
 }
 
-
-
-
-
-
-
-
 /****************************/
 /****** DOCS PAGE ******/
 /****************************/
 
 .page {
     width: 100%;
-    background: rgba(255,255,255,.5);
+    background: rgba(255, 255, 255, 0.5);
     /*height: calc(100% - 50px);*/
     padding-bottom: 30px;
     padding-top: 46px;
@@ -534,27 +513,31 @@ footer > div > div {
 .page > div {
     /* float: left; */
 }
+
 .page-document {
-    padding-top: 35px;
-    /* width: calc(100% - 275px); */
     margin-left: 250px;
-    padding-left: 50px;
+}
+
+.page-document-inner {
+    padding: 50px;
     padding-right: 40px;
-    font-size: 16px;
-    /*background: rgba(255,255,255,1);*/
+    font-size: 17px;
+    max-width: 980px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .page-document-edit {
-    position: fixed;
+    position: absolute;
     right: 35px;
     z-index: 1;
 }
 .page-document-edit a {
-    opacity: .2;
+    opacity: 0.2;
     display: block;
 }
 .page-document-edit a:hover {
-    opacity: 1
+    opacity: 1;
 }
 
 .sidebar {
@@ -573,35 +556,33 @@ footer > div > div {
 }
 
 .sidebar::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+    width: 6px;
+    height: 6px;
 }
 .sidebar::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.07);
-  border-radius: 1em;
-  cursor: grab;
+    background: rgba(0, 0, 0, 0.07);
+    border-radius: 1em;
+    cursor: grab;
 }
 .sidebar::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.02);
+    background: rgba(0, 0, 0, 0.02);
 }
 
 .sidebar > div {
-    padding: 35px;
-    padding-right: 30px;
-    padding-bottom: 100px;
+    padding: 30px 30px 100px 25px;
 }
 
 .sidebar-title {
     font-weight: bold;
     font-size: 22px;
-    line-height: 17px;
+    line-height: 20px;
 }
 .sidebar-title-category {
     border-bottom: 1px dotted #ccc;
     padding-bottom: 15px;
-    font-weight: bold;
-    color: #ccc;
-    font-size: 12px;
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 2px;
 }
 .sidebar ul {
     padding: 0;
@@ -612,6 +593,12 @@ footer > div > div {
 }
 .sidebar a {
     text-decoration: none;
+    color: #000;
+    border-radius: 5px;
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+    line-height: 20px;
 }
 .sidebar-category {
     font-weight: 100;
@@ -619,43 +606,43 @@ footer > div > div {
     font-size: 19px;
     letter-spacing: -0.5px;
     color: #ff5977;
+    letter-spacing: 1px;
 }
 .sidebar-category a {
-    color:#ff5977
+    color: #ff5977;
 }
 .sidebar-category a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 .sidebar-subcategory {
-    font-size: 11px;
-    color: #ccc !important;
+    font-size: 13px;
+    color: #999;
+    margin-top: 10px;
+    /* font-weight: bold; */
+    margin-bottom: 2px;
 }
 .sidebar-link {
-    line-height: 23px
+    line-height: 32px;
+    font-weight: bold;
 }
+/* .sidebar-link a:hover {
+    color: #000;
+    background: linear-gradient(90deg, #ffc74e, #fbcf8c);
+} */
 .sidebar-link a:hover,
 .sidebar-link a.selected {
-    color: #777;
-    border-bottom: 1px solid #ccc
+    background: linear-gradient(90deg, #fc4768, #fb7793);
+    color: white;
 }
 
-
-
-
-
-
-
-
-
-
-.h0, .page-document > h1:first-of-type {
+.h0,
+.page-document-inner > h1:first-of-type {
     padding: 0;
     margin: 0;
     font-size: 3.7em;
-    line-height: 44px;
+    line-height: 48px;
     border-bottom: 0;
     margin-bottom: 30px;
-    letter-spacing: -2px;
 }
 
 .page-document-path {
@@ -663,4 +650,26 @@ footer > div > div {
     color: #aaa;
     font-size: 1em;
     padding-left: 2px;
+}
+
+.next-step {
+    text-align: right;
+    /* background: #fb00ff; */
+    border: 0;
+}
+
+blockquote h4 a {
+    background: linear-gradient(90deg, #fc4768, #fb7793);
+    color: white;
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;
+    padding: 5px 15px;
+}
+blockquote h4 a:hover {
+    color: #000;
+    background: linear-gradient(90deg, #ffc74e, #fbcf8c);
 }

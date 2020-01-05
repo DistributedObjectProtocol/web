@@ -1,55 +1,53 @@
 # Installation
 
-## node.js
+## Package Manager
 
-To use it in node.js you must have [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com) installed.
+You must have [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com) installed.
 
-```
+```sh
 npm install dop
-```
-
-```
+# or
 yarn add dop
 ```
 
-Then you just have to require the library in your script.
+Then you just have to require the library in your code.
 
 ```js
-const dop = require('dop')
+const { createNode, createStore } = require('dop')
+// or with ES6
+import { createNode, createStore } from 'dop'
 ```
 
-## Browsers
+##### You can include dop directly from the [unpkg CDN](https://unpkg.com/dop/).
 
-If you are using ES6 and you already have installed the package
+_For the latest minified version_
 
-```js
-import dop from 'dop'
-```
-
-
-##### With a CDN you have to include the library in your html. We recommend to use [unpkg](https://unpkg.com).
-
-*For the latest minified version*
 ```html
 <script src="https://unpkg.com/dop"></script>
 ```
 
+_For the latest unminified version_
 
-*For the latest unminified version*
 ```html
 <script src="https://unpkg.com/dop/dist/dop.js"></script>
 ```
 
+_For a specific minified version_
 
-*For a specific minified version*
 ```html
 <script src="https://unpkg.com/dop@X.X.X/dist/dop.min.js"></script>
 ```
 
-*For a specific unminified version*
+_For a specific unminified version_
+
 ```html
 <script src="https://unpkg.com/dop@X.X.X/dist/dop.js"></script>
 ```
 
-> #### Next step
-> [Register object](/guide/javascript/register-object)
+The variable `dop` will be available globally, which will give you access to the top-level exports.
+
+```js
+const { createNode, createStore } = dop // global variable: window.dop
+```
+
+> #### [Connecting nodes →](/guide/javascript/connecting-nodes)

@@ -3,22 +3,35 @@
     <head>
         <title>Distributed Object Protocol</title>
         <% include ../partials/head %>
-        <link rel="stylesheet" href="/css/markdown.css">
+        <link rel="stylesheet" href="/css/markdown.css" />
     </head>
     <body>
         <% include ../partials/header %>
         <div id="container" class="page">
             <%- include(sidebar) %>
             <div class="page-document">
-                <div class="page-document-edit"><a href="<%= info.urldocs %><%= type %>/<%= language %>/<%= doc %>.md" target="_blank"><img src="/img/edit.svg" /></a></div>
-                <div class="page-document-path"><%= type[0].toUpperCase() + type.slice(1) %> / <%= info.name %> /</div>
-                <%- content %>
+                <div class="page-document-inner">
+                    <div class="page-document-edit">
+                        <a
+                            href="<%= info.urldocs %><%= type %>/<%= language %>/<%= doc %>.md"
+                            target="_blank"
+                            ><img src="/img/edit.svg"
+                        /></a>
+                    </div>
+                    <div class="page-document-path">
+                        <%= type[0].toUpperCase() + type.slice(1) %> / <%=
+                        info.name %> /
+                    </div>
+                    <%- content %>
+                </div>
             </div>
             <div class="clear"></div>
         </div>
         <% include ../partials/footer %>
     </body>
     <script src="/lib/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
     <% include ../partials/scripts %>
 </html>

@@ -1,21 +1,31 @@
 {
-  "name": "dop-web",
-  "version": "1.0.0",
-  "description": "Web for Distributed Object Protocol",
-  "main": "index.js",
-  "dependencies": {
-    "ejs": "^2.5.5",
-    "express": "^4.14.0",
-    "marked": "^0.3.6"
-  },
-  "scripts": {
-    "start": "node index"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DistributedObjectProtocol/web.git"
-  },
-  "author": "Josema Gonzalez",
-  "license": "MIT",
-  "homepage": "https://distributedobjectprotocol.org"
+    "name": "dop-web",
+    "version": "1.0.0",
+    "description": "Web for Distributed Object Protocol",
+    "main": "index.js",
+    "dependencies": {
+        "ejs": "^2.5.5",
+        "express": "^4.14.0",
+        "marked": "^0.3.6",
+        "request": "^2.88.0",
+        "request-promise": "^4.2.5"
+    },
+    "scripts": {
+        "start": "node index",
+        "dev": "node index"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DistributedObjectProtocol/web.git"
+    },
+    "author": "Josema Gonzalez",
+    "license": "MIT",
+    "homepage": "https://distributedobjectprotocol.org",
+    "prettier": {
+        "printWidth": 80,
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true,
+        "bracketSpacing": true
+    }
 }
