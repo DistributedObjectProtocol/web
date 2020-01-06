@@ -1,6 +1,6 @@
 # Connecting nodes
 
-The first thing to do is create nodes. Dop is transport agnostic so is up to you decide how they will communicate. In this guide, we will use WebSockets because is the easiest way to create real-time and bidirectional communication.
+The first thing to do is create and connect nodes. Dop is transport agnostic so is up to you decide how they will communicate. In this example, we will use WebSockets because is the easiest way to create real-time and bidirectional communication.
 
 Assuming we already have a WebSocket connection
 
@@ -19,7 +19,7 @@ function getServerEndPoints() {
 client.open(ws.send, getServerEndPoints)
 ```
 
-The first argument of open is a function that dop will run anytime it needs to send data to the other side. The second argument is an optional function that will be the entry point of the other side.
+The first argument of `open` is a function that dop will run anytime it needs to send data to the other side. The second argument is an optional function that will be the entry point of the other side.
 
 ```js
 // Client
@@ -28,7 +28,7 @@ const server = createNode()
 const getServerEndPoints = server.open(ws.send)
 ```
 
-`open` returns the function that is been passed as second argument in the other side. Then when we run it, we will get what it should.
+`open` returns the function that is been passed as second argument in the other side. If we run it, we will get what it should.
 
 ```js
 const { login, register } = await getServerEndPoints()
@@ -100,4 +100,4 @@ Or in the browser:
 </script>
 ```
 
-> #### [Remote Procedure Calls →](/guide/javascript/remote-procedure-calls)
+> #### [Using RPCs →](/guide/javascript/using-rpcs)

@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
 
 // redirects
 app.get('/guide/javascript', function(req, res, next) {
-    res.redirect('/guide/javascript/installation')
+    res.redirect('/guide/javascript/connecting-nodes')
 })
 
 // docs

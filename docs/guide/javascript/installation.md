@@ -18,30 +18,18 @@ const { createNode, createStore } = require('dop')
 import { createNode, createStore } from 'dop'
 ```
 
-##### You can include dop directly from the [unpkg CDN](https://unpkg.com/dop/).
+## CDNs
 
-_For the latest minified version_
+_Using [Unpkg](https://unpkg.com/dop/)_
 
 ```html
 <script src="https://unpkg.com/dop"></script>
 ```
 
-_For the latest unminified version_
+_Using [JSDeliver](https://www.jsdelivr.com/package/npm/dop)_
 
 ```html
-<script src="https://unpkg.com/dop/dist/dop.js"></script>
-```
-
-_For a specific minified version_
-
-```html
-<script src="https://unpkg.com/dop@X.X.X/dist/dop.min.js"></script>
-```
-
-_For a specific unminified version_
-
-```html
-<script src="https://unpkg.com/dop@X.X.X/dist/dop.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dop/dist/dop.umd.js"></script>
 ```
 
 The variable `dop` will be available globally, which will give you access to the top-level exports.
