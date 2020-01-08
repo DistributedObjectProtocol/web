@@ -42,19 +42,21 @@ ws.on('message', msg => {
 })
 ```
 
-This might looks very abstract but when combining everything with a library like [ws](https://github.com/websockets/ws) is very clear and simple.
+This might looks very abstract but when we combine everything with a library like [ws](https://github.com/websockets/ws) it becomes very clear and simple.
 
 ```js
 // Server
 const { createNode } = require('dop')
 const WebSocket = require('ws')
 const wss = new WebSocket.Server({ port: 8080 })
+
 function getOperations() {
     return {
         sum: (a, b) => a + b,
         multiply: (a, b) => a * b
     }
 }
+
 wss.on('connection', ws => {
     const client = createNode()
     client.open(msg => ws.send(JSON.stringify(msg)), getOperations)
@@ -66,8 +68,8 @@ wss.on('connection', ws => {
 const ws = new WebSocket('ws://localhost:8080')
 const server = createNode()
 ws.on('open', async () => {
-    const getEndPoints = server.open(msg => ws.send(JSON.stringify(msg)))
-    const { sum, multiply } = await getEndPoints()
+    const getOperations = server.open(msg => ws.send(JSON.stringify(msg)))
+    const { sum, multiply } = await getOperations()
     const result1 = await sum(5, 5)
     const result2 = await multiply(5, 5)
     console.log(result1, result2) // 10, 25
@@ -100,4 +102,4 @@ Or in the browser:
 </script>
 ```
 
-> #### [Using RPCs →](/guide/javascript/using-rpcs)
+> #### [RPCs →](/guide/javascript/rpcs)

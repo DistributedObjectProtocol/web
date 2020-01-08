@@ -1,40 +1,64 @@
-# Using RPCs
+# RPCs
 
-Remote Procedure Calls are the funniest part of this protocol because functions are created dynamically. Which means that we can call a remote function and pass a local one as an argument.
+Like you were calling a function locally
 
 ```js
 // Server
-function calcSquare(n, callback) {
+function sum(a, b) {
+    return a + b
+}
+
+// Client
+const result = await sum(5, 5)
+```
+
+Old style using Promises
+
+```js
+// Client
+sum(5, 5).then(result => {
+    // ...
+})
+```
+
+You can pass or recive any valid JSON value
+
+```js
+// Server
+function sum({ a, b }) {
+    return { result: a + b }
+}
+
+// Client
+const { result } = await sum({ a: 5, b: 5 })
+```
+
+Remote Procedure Calls are the funniest part of this protocol because functions are created dynamically. Which means we can call a remote function and pass a local one as an argument.
+
+```js
+// Server
+function square(n, callback) {
     callback(n * n)
 }
 
 // Client
-calcSquare(5, result => {
-    console.log(result) // 25
+square(5, result => {
+    console.log(result)
 })
 ```
 
-This will work as expected, but is a bad pattern. Because we are creating a new function every time we call calcSquare. Instead we should do something like this in client.
+This will work as expected, but is a bad pattern. Because we are creating a new function every time we call square. Instead we should do something like this to create only one function on server.
 
 ```js
+function square(n, callback) {
+    callback(n * n)
+}
+
 // Client
 function processResult(result) {
     console.log(result) // 25
 }
 calcSquare(5, processResult)
-```
-
-Still creating a function, so we can just.
-
-```js
-// Server
-function calcSquare(n) {
-    return n * n
-}
-
-// Client
-const result = await calcSquare(5)
-console.log(result) // 25
 ```
 
 ### Throwing errors
@@ -77,7 +101,7 @@ function login(email, password, ...args) {
         }
     }, 1000)
 
-    // We must return request to make this function asynchronously
+    // We must return request to make this function asynchronous
     return request
 }
 ```
@@ -100,7 +124,7 @@ function login(email, password) {
 
 ### Auth
 
-Dop does not handle authentication because not all architectures needs it. But when we have the typical Server-Client architecture most of the time we need to know what client is calling our functions on server.
+Dop does not handle authentication because not all situations needs it. But when we have the typical Server-Client architecture most of the time we need to know what client is calling our functions on server.
 
 When a function is being called remotely the last argument is a Promise instance with an extra property named `node`. Which is the node that is calling the function. Is the same instance/object that we got using [`createNode`](/api/javascript/createNode).
 
@@ -111,6 +135,4 @@ function login(email, password, ...args) {
 }
 ```
 
-### Stub calls
-
-> #### [Auth →](/guide/javascript/auth)
+> #### [Stores →](/guide/javascript/stores)

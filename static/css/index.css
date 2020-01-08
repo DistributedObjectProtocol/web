@@ -668,6 +668,7 @@ blockquote h4 a {
     border-radius: 5px;
     display: block;
     padding: 5px 15px;
+    margin-right: -15px;
 }
 blockquote h4 a:hover {
     color: #000;
