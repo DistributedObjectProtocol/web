@@ -21,7 +21,7 @@ function subscribeToServerStore(listener) {
 }
 ```
 
-We can now subscribe this way
+We can now subscribe doing this
 
 ```js
 // Client
