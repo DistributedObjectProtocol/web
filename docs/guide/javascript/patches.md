@@ -45,11 +45,7 @@ const patch = { b: { c: null } }
 const object = {}
 const patch = { b: { c: 3 } }
 // object
-{
-    b: {
-        c: 3
-    }
-}
+{ b: { c: 3 } }
 ```
 
 ## Arrays
@@ -91,9 +87,7 @@ const patch = { a: TYPE.Delete }
 
 applyPatch(object, patch)
 // object
-{
-    b: 2
-}
+{ b: 2 }
 ```
 
 ## Replace
@@ -108,11 +102,7 @@ const patch = { obj: TYPE.Replace({ c: 3 }) }
 
 applyPatch(object, patch)
 // object
-{
-    obj: {
-        c: 3
-    }
-}
+{ obj: { c: 3 } }
 ```
 
 If we would't use Replace the result would be

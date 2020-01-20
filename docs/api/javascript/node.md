@@ -1,6 +1,6 @@
 # &lt;Node&gt;
 
-Is a special object/instance that represent another node that you can connect with.
+Is a special object/instance that represent a node that you can connect with.
 
 > See also
 

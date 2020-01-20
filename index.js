@@ -24,6 +24,9 @@ app.get('/', function(req, res) {
 app.get('/guide/javascript', function(req, res, next) {
     res.redirect('/guide/javascript/connecting-nodes')
 })
+app.get('/api/javascript', function(req, res, next) {
+    res.redirect('/api/javascript/createNode')
+})
 
 // docs
 app.get('/:type/:language/:doc', function(req, res) {
