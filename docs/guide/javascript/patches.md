@@ -2,48 +2,126 @@
 
 A patche describes mutations to be made in our state using plain objects. Is like using [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) but in a more advanced way.
 
-Let's learn the syntax
-
-```json
-// target
-{
-    a: 1
-}
-
-// patch
-{
-    a: 2
-}
-
-// result
-{
-    a: 2
-}
-```
-
-New properties
+A quick example.
 
 ```js
-// target
-{ a: 1, b: 2 }
+import { applyPatch } from "dop"
 
-// patch
-{ a: null, c: 3 }
-
-// result
-{ a: null, b: 2, c: 3 }
-```
-
-# API
-
-A quick example using the API
-
-```js
-import { applyPatch } from 'dop'
-
-const object = { a: 1, b: 2 }
-const patch = { a: null, c: 3 }
+const object = { a: 1 }
+const patch = { a: 2 }
 
 applyPatch(object, patch)
-console.log(patch) // { a:null, b:2, c:3 }
+console.log(object) // { a: 2 }
+```
+
+Creating
+
+```js
+const object = { a: 1 }
+const patch = { b: "World" }
+// object
+{ a: 1, b: 'World' }
+```
+
+Mutating and creating
+
+```js
+const object = { a: 1 }
+const patch = { a: "Hello", b: "World" }
+// object
+{ a: 'Hello', b: 'World' }
+```
+
+Deep mutation
+
+```js
+const object = { a: 1, b: { c: 3 } }
+const patch = { b: { c: null } }
+// object
+{ a: 1, b: { c: null } }
+```
+
+```js
+const object = {}
+const patch = { b: { c: 3 } }
+// object
+{
+    b: {
+        c: 3
+    }
+}
+```
+
+## Arrays
+
+Arrays are immutables, which means are always replaced.
+
+```js
+const object = { a: [1, 2, 3], b:false }
+const patch = { a: [4] }
+// object
+{ a: [4], b: false }
+```
+
+You can not mutate inner object of arrays
+
+```js
+const object = { a: [1] }
+const patch = { a: { 0: 2 } }
+// object
+{ a: { "0": 2 } }
+```
+
+```js
+const object = { array: [{ a: true }] }
+const patch = { array: { 0: { a: false } } }
+// object
+{ array: { 0: { a: false } } }
+```
+
+## Delete
+
+We must use a special type in order to delete properties
+
+```js
+import { applyPatch, TYPE } from "dop"
+
+const object = { a: 1, b: 2 }
+const patch = { a: TYPE.Delete }
+
+applyPatch(object, patch)
+// object
+{
+    b: 2
+}
+```
+
+## Replace
+
+You can replace a whole object using the special type Replace
+
+```js
+import { applyPatch, TYPE } from "dop"
+
+const object = { obj: { a: 1, b: 2 } }
+const patch = { obj: TYPE.Replace({ c: 3 }) }
+
+applyPatch(object, patch)
+// object
+{
+    obj: {
+        c: 3
+    }
+}
+```
+
+If we would't use Replace the result would be
+
+```js
+const object = { obj: { a: 1, b: 2 } }
+const patch = { obj: { c: 3 } }
+
+applyPatch(object, patch)
+// object
+{ obj: { a: 1, b: 2, c: 3 } }
 ```

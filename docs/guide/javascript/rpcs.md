@@ -68,16 +68,16 @@ We can throw an error. And catch it on the client.
 ```js
 // Server
 function login(email, password) {
-    if (email === 'johndoe@mail.com' && password === '1234') {
+    if (email === "johndoe@mail.com" && password === "1234") {
         return true
     } else {
-        throw 'Invalid login'
+        throw "Invalid login"
     }
 }
 
 // Client
 try {
-    const isLogged = await login('wrong', 'wrong')
+    const isLogged = await login("wrong", "wrong")
 } catch (message_error) {
     console.error(message_error) // > 'Invalid login'
 }
@@ -94,10 +94,10 @@ When calling a remote function, the last argument is always a deferred promise.
 function login(email, password, ...args) {
     const request = args[args.length - 1]
     setTimeout(() => {
-        if (email === 'johndoe@mail.com' && password === '1234') {
+        if (email === "johndoe@mail.com" && password === "1234") {
             request.resolve(true)
         } else {
-            request.reject('Invalid login')
+            request.reject("Invalid login")
         }
     }, 1000)
 
@@ -112,10 +112,10 @@ Or you can use your own Promise
 function login(email, password) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (email === 'johndoe@mail.com' && password === '1234') {
+            if (email === "johndoe@mail.com" && password === "1234") {
                 resolve(true)
             } else {
-                reject('Invalid login')
+                reject("Invalid login")
             }
         }, 1000)
     })

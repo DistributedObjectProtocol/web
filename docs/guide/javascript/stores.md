@@ -6,18 +6,19 @@ Let's see an example where we create a store and clients can subscribe to it.
 
 ```js
 // Server
-import { createStore } from 'dop'
+import { createStore } from "dop"
 
 const store = createStore({ players: 0 })
 
 function subscribeToServerStore(listener) {
-    // A patch looks like this
-    const patch = { players: store.state.players + 1 }
-    // We apply the patch and we emit the mutations to all the subscribers
-    store.patchAndEmit(patch)
+    const { state } = store
+    // Incrementing number of player as a patch
+    const listeners = store.applyPatch({ players: state.players + 1 })
+    // We emit the patch to all the subscribers
+    listeners.forEach(({ listener, patch }) => listener(patch))
     // Here we subscribe our client
     store.subscribe(listener)
-    return store.state
+    return state
 }
 ```
 
@@ -25,7 +26,7 @@ We can now subscribe doing this
 
 ```js
 // Client
-import { createStore } from 'dop'
+import { createStore } from "dop"
 
 // Getting the current state of the server and subscribing to it
 const state = await subscribeToServerStore(onPatch)
