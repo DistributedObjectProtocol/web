@@ -20,11 +20,5 @@
     },
     "author": "Josema Gonzalez",
     "license": "MIT",
-    "homepage": "https://distributedobjectprotocol.org",
-    "prettier": {
-        "printWidth": 80,
-        "tabWidth": 4,
-        "semi": false,
-        "bracketSpacing": true
-    }
+    "homepage": "https://distributedobjectprotocol.org"
 }

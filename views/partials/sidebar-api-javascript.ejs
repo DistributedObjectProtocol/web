@@ -1,64 +1,76 @@
-    <div id="sidebar" class="sidebar">
+<div id="sidebar" class="sidebar">
+    <div>
+        <div class="sidebar-title">API</div>
+        <div class="sidebar-title-category">JavaScript</div>
         <div>
-            <div class="sidebar-title">API</div>
-            <div class="sidebar-title-category">JavaScript</div>
-            <div>
-                <ul>
-                    <li class="sidebar-category">dop</li>
-                    <li class="sidebar-subcategory">State management</li>
-                    <li class="sidebar-link"><a href="/api/javascript/register" class="autoselect">register</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/createObserver" class="autoselect">createObserver</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/action" class="autoselect">action</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/collect" class="autoselect">collect</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/computed" class="autoselect">computed</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/removeComputed" class="autoselect">removeComputed</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/set" class="autoselect">set</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/del" class="autoselect">del</a></li>
+            <ul>
+                <li class="sidebar-link">
+                    <a href="/api/javascript/createNode" class="autoselect"
+                        >createNode</a
+                    >
+                </li>
+                <li class="sidebar-link">
+                    <a href="/api/javascript/createStore" class="autoselect"
+                        >createStore</a
+                    >
+                </li>
+                <li class="sidebar-link">
+                    <a href="/api/javascript/applyPatch" class="autoselect"
+                        >applyPatch</a
+                    >
+                </li>
+                <li class="sidebar-link">
+                    <a href="/api/javascript/merge" class="autoselect">merge</a>
+                </li>
+                <li class="sidebar-link">
+                    <a href="/api/javascript/encode" class="autoselect"
+                        >encode</a
+                    >
+                </li>
+                <li class="sidebar-link">
+                    <a href="/api/javascript/decode" class="autoselect"
+                        >decode</a
+                    >
+                </li>
+                <li class="sidebar-link">
+                    <a href="/api/javascript/factory" class="autoselect"
+                        >factory</a
+                    >
+                </li>
 
+                <li class="sidebar-category">
+                    <a href="/api/javascript/node" class="autoselect"
+                        >&lt;Node&gt;</a
+                    >
+                </li>
+                <li class="sidebar-link">
+                    <a href="/api/javascript/node-open" class="autoselect"
+                        >open</a
+                    >
+                </li>
+                <li class="sidebar-link">
+                    <a href="/api/javascript/node-message" class="autoselect"
+                        >message</a
+                    >
+                </li>
+                <li class="sidebar-link">
+                    <a href="/api/javascript/node-close" class="autoselect"
+                        >close</a
+                    >
+                </li>
 
-                    <li class="sidebar-subcategory">Real time (Nodes)</li>
-                    <li class="sidebar-link"><a href="/api/javascript/listen" class="autoselect">listen</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/connect" class="autoselect">connect</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/onSubscribe" class="autoselect">onSubscribe</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/getRequest" class="autoselect">getRequest</a></li>
-     
-
-                    <li class="sidebar-category"><a href="/api/javascript/Observer" class="autoselect">&lt;Observer&gt;</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Observer-observeProperty" class="autoselect">observeProperty</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Observer-observeObject" class="autoselect">observeObject</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Observer-observeAll" class="autoselect">observeAll</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Observer-destroy" class="autoselect">destroy</a></li>
-
-
-                    <li class="sidebar-category"><a href="/api/javascript/Collector" class="autoselect">&lt;Collector&gt;</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Collector-emit" class="autoselect">emit</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Collector-emitWithoutDestroy" class="autoselect">emitWithoutDestroy</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Collector-destroy" class="autoselect">destroy</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Collector-pause" class="autoselect">pause</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Collector-resume" class="autoselect">resume</a></li>
-
-
-                    <li class="sidebar-category"><a href="/api/javascript/Listener" class="autoselect">&lt;Listener&gt;</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Listener-onconnect" class="autoselect">on('connect')</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Listener-ondisconnect" class="autoselect">on('disconnect')</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Listener-onreconnect" class="autoselect">on('reconnect')</a></li>
-
-                    
-                    <li class="sidebar-category"><a href="/api/javascript/Node" class="autoselect">&lt;Node&gt;</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Node-subscribe" class="autoselect">subscribe</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Node-unsubscribe" class="autoselect">unsubscribe</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Node-reconnect" class="autoselect">reconnect</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Node-disconnect" class="autoselect">disconnect</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Node-onconnect" class="autoselect">on('connect')</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Node-ondisconnect" class="autoselect">on('disconnect')</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Node-onreconnect" class="autoselect">on('reconnect')</a></li>
-
-
-                    <li class="sidebar-category"><a href="/api/javascript/Snapshot" class="autoselect">&lt;Snapshot&gt;</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Snapshot-undo" class="autoselect">undo</a></li>
-                    <li class="sidebar-link"><a href="/api/javascript/Snapshot-redo" class="autoselect">redo</a></li>
-
-                </ul>
-            </div>
+                <li class="sidebar-category">TYPE</li>
+                <li class="sidebar-link">
+                    <a href="/api/javascript/type-delete" class="autoselect"
+                        >Delete</a
+                    >
+                </li>
+                <li class="sidebar-link">
+                    <a href="/api/javascript/type-replace" class="autoselect"
+                        >Replace</a
+                    >
+                </li>
+            </ul>
         </div>
     </div>
+</div>
