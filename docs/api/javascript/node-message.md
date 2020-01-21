@@ -7,7 +7,7 @@
 #### message `Array`
 
 
-## Returns
+## Returns `Boolean`
 
 A `Boolean` that identifies if is a valid message/call for dop.
 

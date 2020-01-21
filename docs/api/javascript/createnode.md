@@ -8,7 +8,7 @@
 
 - *max_remote_functions* `number` By default is Infinity
 
-## Returns
+## Returns `Object`
 
 A new [Node](/api/javascript/node) instance.
 

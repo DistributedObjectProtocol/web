@@ -12,7 +12,7 @@ Any time dop needs to send something to the other node will call this function w
 
 An optional function that will be sent to the other side to start the communication.
 
-## Returns
+## Returns `Function`
 
 The `entryFunction` of the other side.
 

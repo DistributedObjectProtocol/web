@@ -611,8 +611,11 @@ footer > div > div {
 .sidebar-category a {
     color: #ff5977;
 }
-.sidebar-category a:hover {
-    text-decoration: underline;
+.sidebar-category a:hover,
+.sidebar-category a.selected 
+{
+    background: linear-gradient(90deg, #ffc74e, #fbcf8c);
+    color: black;
 }
 .sidebar-subcategory {
     font-size: 13px;
