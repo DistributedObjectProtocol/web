@@ -6,4 +6,3 @@ Is a special object/instance that represent a node that you can connect with.
 
 -   [Node.open()](/api/javascript/node-open)
 -   [Node.message()](/api/javascript/node-message)
--   [Node.close()](/api/javascript/node-close)

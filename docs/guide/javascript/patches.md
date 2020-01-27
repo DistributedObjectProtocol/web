@@ -1,6 +1,6 @@
 # Patches
 
-A patche describes mutations to be made in our state using plain objects. Is like using [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) but in a more advanced way.
+A patche describes mutations to be made in our state using plain objects. Is like using [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) but in a more advanced way. 
 
 A quick example.
 
@@ -50,7 +50,7 @@ const patch = { b: { c: 3 } }
 
 ## Arrays
 
-Arrays are immutables, which means are always replaced.
+Arrays are immutables, which means are always replaced. So in order to mutate arrays you must create a new array. Or use methods like `.slice`, `.concat` or any other that creates a copy of the array. 
 
 ```js
 const object = { a: [1, 2, 3], b:false }
@@ -62,18 +62,22 @@ const patch = { a: [4] }
 You can not mutate inner object of arrays
 
 ```js
-const object = { a: [1] }
-const patch = { a: { 0: 2 } }
+const object = { array: [1,2,3] }
+const patch = { array: { 3: 4 } }
 // object
-{ a: { "0": 2 } }
+{ array: { 3: 4 } }
 ```
 
+You should do something like
+
 ```js
-const object = { array: [{ a: true }] }
-const patch = { array: { 0: { a: false } } }
+const object = { array: [1,2,3] }
+const patch = { array: object.array.concat(4) }
 // object
-{ array: { 0: { a: false } } }
+{ array: [1,2,3,4] }
 ```
+
+
 
 ## Delete
 
@@ -115,3 +119,5 @@ applyPatch(object, patch)
 // object
 { obj: { a: 1, b: 2, c: 3 } }
 ```
+
+[Learn more](https://github.com/DistributedObjectProtocol/protocol#Patches) about the specification.

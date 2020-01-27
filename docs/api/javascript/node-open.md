@@ -32,7 +32,7 @@ function serverEntryFunction() {
 }
 wss.on("connection", ws => {
     const client = createNode()
-    client.open(msg => ws.send(JSON.stringify(msg)), serverEntryFunction)
+    client.open(ws.send, serverEntryFunction)
     //...
 })
 
@@ -42,7 +42,7 @@ const ws = new WebSocket("ws://localhost:8080")
 const server = createNode()
 
 ws.onopen = async () => {
-    const serverEntryFunction = server.open(msg => ws.send(JSON.stringify(msg)))
+    const serverEntryFunction = server.open(ws.send)
     // ...
 }
 ```

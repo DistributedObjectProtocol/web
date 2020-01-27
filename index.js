@@ -13,7 +13,7 @@ app.use('/', express.static(path.join(__dirname, 'static'))) // statics
 // home
 app.get('/', function(req, res) {
     rp(
-        'https://raw.githubusercontent.com/DistributedObjectProtocol/dop/lite/README.md'
+        'https://raw.githubusercontent.com/DistributedObjectProtocol/dop/master/README.md'
     ).then(htmlString => {
         req.params.content = marked(htmlString)
         res.render('pages/index', req.params)
@@ -45,6 +45,9 @@ app.get('/:type/:language/:doc', function(req, res) {
     )
     if (fs.existsSync(filepath)) {
         var content = fs.readFileSync(filepath, 'utf8')
+        var h1s = (/^# ([a-zA-Z0-9 .]+)/gm).exec(content)
+        req.params.title = 'Distributed Object Protocol'
+        if (h1s && h1s[1]) req.params.title = h1s[1] + ' - ' + req.params.title
         req.params.info = info[req.params.language]
         req.params.content = marked(content)
         req.params.sidebar =
@@ -87,9 +90,3 @@ expressServer.listen(port, function() {
     console.log('http://localhost:' + port)
 })
 
-// var dop = require("dop")
-// var listener = dop.listen({httpServer:expressServer})
-// dop.onSubscribe(() => ({mola:'mazo'}))
-// listener.on('connect', ()=>console.log('connect'))
-// listener.on('disconnect', ()=>console.log('disconnect'))
-// listener.on('close', ()=>console.log('close'))

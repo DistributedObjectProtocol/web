@@ -46,7 +46,7 @@ This might looks very abstract but when we combine everything with a library lik
 
 ```js
 // Server
-const { createNode } = require("dop@1.0.0-beta.5")
+const { createNode } = require("dop")
 const WebSocket = require("ws")
 const wss = new WebSocket.Server({ port: 8080 })
 const sum = (a, b) => a + b
@@ -54,23 +54,21 @@ const multiply = (a, b) => a * b
 const getCalculator = () => ({ sum, multiply })
 wss.on("connection", ws => {
     const client = createNode()
-    client.open(msg => ws.send(JSON.stringify(msg)), getCalculator)
-    ws.on("message", msg => client.message(JSON.parse(msg)))
-    ws.on("close", client.close)
+    client.open(ws.send.bind(ws), getCalculator)
+    ws.on("message", client.message)
 })
 
 // Client
 const ws = new WebSocket("ws://localhost:8080")
 const server = createNode()
 ws.on("open", async () => {
-    const getCalculator = server.open(msg => ws.send(JSON.stringify(msg)))
+    const getCalculator = server.open(ws.send.bind(ws))
     const { sum, multiply } = await getCalculator()
     const result1 = await sum(5, 5)
-    const result2 = await multiply(5, 5)
-    console.log({ result1, result2 }) // 10, 25
+    const result2 = await multiply(3, 3)
+    console.log(result1, result2) // 10, 9
 })
-ws.on("message", msg => server.message(JSON.parse(msg)))
-ws.on("close", server.close)
+ws.on("message", server.message)
 ```
 
 Try it yourself [https://runkit.com/josema/5e11d3313a68ac001a6a524e](https://runkit.com/josema/5e11d3313a68ac001a6a524e)
@@ -84,16 +82,14 @@ Or in the browser:
 <script>
     const ws = new WebSocket("ws://localhost:8080")
     const server = dop.createNode()
-
     ws.onopen = async () => {
-        const getOperations = server.open(msg => ws.send(JSON.stringify(msg)))
+        const getOperations = server.open(ws.send)
         const { sum, multiply } = await getOperations()
         const result1 = await sum(5, 5)
         const result2 = await multiply(5, 5)
         alert(`${result1} ${result2}`) // 10, 25
     }
-    ws.onmessage = e => server.message(JSON.parse(e.data))
-    ws.onclose = server.close
+    ws.onmessage = server.message
 </script>
 ```
 

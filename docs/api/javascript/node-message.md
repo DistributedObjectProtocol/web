@@ -15,7 +15,6 @@ A `Boolean` that identifies if is a valid message/call for dop.
 
 ```js
 ws.on('message', msg => {
-    // If we are using WebSockets we will probably need to parse the message
-    const isValid = node.message(JSON.parse(msg))
+    const isValid = node.message(msg)
 })
 ```

@@ -195,7 +195,7 @@ table tr {
     background-color: #fff;
 }
 table tr:nth-child(2n) {
-    background-color: #f7f7f7;
+    background-color: #1E1E1E;
 }
 
 img {
@@ -207,14 +207,13 @@ tt {
     margin: 0 2px;
     white-space: nowrap;
     border: 1px solid #eaeaea;
-    background-color: #f7f7f7;
     border-radius: 3px;
     font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
     font-size: 15px;
     color: #e91e63;
     padding: 1px 8px;
     overflow: auto;
-    background-color: #f7f7f7;
+    background-color: #f1f1f1;
     border: 0;
     border-radius: 3px;
 }
@@ -229,7 +228,7 @@ pre > code {
 }
 
 .highlight pre {
-    background-color: #f7f7f7;
+    background-color: #1E1E1E;
     border: 1px solid #ccc;
     font-size: 13px;
     line-height: 19px;
@@ -239,11 +238,11 @@ pre > code {
 }
 
 pre {
-    background-color: #f7f7f7;
+    background-color: #1E1E1E;
     border: 0;
     overflow: auto;
     padding: 10px 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 35px;
 }
 pre code,
@@ -520,7 +519,7 @@ em {
     font-weight: bold;
 }
 .highlight .w {
-    color: #bbb;
+    color: #5F6367;
 }
 .highlight .mf,
 .highlight .mh,
@@ -595,11 +594,11 @@ body.dark #wrapper {
 
 .hljs,
 .hljs-subst {
-    color: #666;
+    color: #DDDDDD;
 }
 
 .hljs-comment {
-    color: #bbb;
+    color: #5F6367;
 }
 
 .hljs-keyword,
@@ -619,13 +618,13 @@ body.dark #wrapper {
 .hljs-quote,
 .hljs-template-tag,
 .hljs-deletion {
-    color: #98a365;
+    color: #EBBB84;
     /* font-weight: bold; */
 }
 
 .hljs-title,
 .hljs-section {
-    color: #ee9000;
+    color: #FFAA00;
     font-weight: bold;
 }
 
@@ -637,11 +636,11 @@ body.dark #wrapper {
 .hljs-link,
 .hljs-selector-attr,
 .hljs-selector-pseudo {
-    color: #ff8099;
+    color: #1FA1F1;
 }
 
 .hljs-literal {
-    color: #ff8099;
+    color: #1FA1F1;
     /* font-weight: bold; */
 }
 
@@ -649,7 +648,7 @@ body.dark #wrapper {
 .hljs-bullet,
 .hljs-code,
 .hljs-addition {
-    color: #ee9000;
+    color: #FFAA00;
     font-weight: bold;
 }
 
