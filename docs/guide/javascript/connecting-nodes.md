@@ -75,22 +75,22 @@ Try it yourself [https://runkit.com/josema/5e11d3313a68ac001a6a524e](https://run
 
 Or in the browser:
 
-<!-- <script src="https://unpkg.com/dop@1.0.0-beta.1/dist/dop.umd.js"></script> -->
 
 ```html
 <script src="https://unpkg.com/dop"></script>
 <script>
-    const ws = new WebSocket("ws://localhost:8080")
+    const ws = new WebSocket('ws://localhost:8080')
     const server = dop.createNode()
     ws.onopen = async () => {
-        const getOperations = server.open(ws.send)
-        const { sum, multiply } = await getOperations()
+        const getCalculator = server.open(ws.send.bind(ws))
+        const { sum, multiply } = await getCalculator()
         const result1 = await sum(5, 5)
-        const result2 = await multiply(5, 5)
-        alert(`${result1} ${result2}`) // 10, 25
+        const result2 = await multiply(3, 3)
+        alert(`${result1} ${result2}`) // 10, 9
     }
-    ws.onmessage = server.message
+    ws.onmessage = e => server.message(e.data)
 </script>
+
 ```
 
 > #### [RPCs →](/guide/javascript/rpcs)

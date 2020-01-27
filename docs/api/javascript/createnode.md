@@ -10,7 +10,7 @@
 
 - *deserialize* `function` By default is `JSON.parse`
 
-- *max_remote_functions* `number` By default is Infinity
+- *max_remote_functions* `number` By default is Infinity. It limits the amount of functions that can be created from the other side.
 
 ## Returns `Object`
 
@@ -22,8 +22,8 @@ A new [Node](/api/javascript/node) instance.
 import { createNode } from "dop"
 
 const node = createNode({ 
-    serialize: compressFunction,
-    deserialize: uncompressFunction,
-    max_remote_functions: 5
+    serialize: JSON.stringify,
+    deserialize: JSON.parse,
+    max_remote_functions: Infinity
 })
 ```
