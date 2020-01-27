@@ -5,7 +5,7 @@ A patche describes mutations to be made in our state using plain objects. Is lik
 A quick example.
 
 ```js
-import { applyPatch } from "dop"
+import { applyPatch } from 'dop'
 
 const object = { a: 1 }
 const patch = { a: 2 }
@@ -18,7 +18,7 @@ Creating
 
 ```js
 const object = { a: 1 }
-const patch = { b: "World" }
+const patch = { b: 'World' }
 // object
 { a: 1, b: 'World' }
 ```
@@ -27,7 +27,7 @@ Mutating and creating
 
 ```js
 const object = { a: 1 }
-const patch = { a: "Hello", b: "World" }
+const patch = { a: 'Hello', b: 'World' }
 // object
 { a: 'Hello', b: 'World' }
 ```
@@ -84,7 +84,7 @@ const patch = { array: object.array.concat(4) }
 We must use a special type in order to delete properties
 
 ```js
-import { applyPatch, TYPE } from "dop"
+import { applyPatch, TYPE } from 'dop'
 
 const object = { a: 1, b: 2 }
 const patch = { a: TYPE.Delete }
@@ -99,7 +99,7 @@ applyPatch(object, patch)
 You can replace a whole object using the special type Replace
 
 ```js
-import { applyPatch, TYPE } from "dop"
+import { applyPatch, TYPE } from 'dop'
 
 const object = { obj: { a: 1, b: 2 } }
 const patch = { obj: TYPE.Replace({ c: 3 }) }

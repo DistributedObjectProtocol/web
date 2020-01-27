@@ -20,8 +20,8 @@ The `entryFunction` of the other side.
 
 ```js
 // Server
-const { createNode } = require("dop")
-const WebSocket = require("ws")
+const { createNode } = require('dop')
+const WebSocket = require('ws')
 const wss = new WebSocket.Server({ port: 8080 })
 function serverEntryFunction() {
     return {
@@ -30,15 +30,15 @@ function serverEntryFunction() {
         logout
     }
 }
-wss.on("connection", ws => {
+wss.on('connection', ws => {
     const client = createNode()
     client.open(ws.send, serverEntryFunction)
     //...
 })
 
 // Client (Browser)
-import { createNode } from "dop"
-const ws = new WebSocket("ws://localhost:8080")
+import { createNode } from 'dop'
+const ws = new WebSocket('ws://localhost:8080')
 const server = createNode()
 
 ws.onopen = async () => {

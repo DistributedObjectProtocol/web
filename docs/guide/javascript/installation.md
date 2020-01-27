@@ -13,9 +13,9 @@ yarn add dop
 Then you just have to require the library in your code.
 
 ```js
-const { createNode, createStore } = require("dop")
+const { createNode, createStore } = require('dop')
 // or with ES6
-import { createNode, createStore } from "dop"
+import { createNode, createStore } from 'dop'
 ```
 
 ## CDNs

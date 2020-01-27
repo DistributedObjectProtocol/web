@@ -32,7 +32,7 @@ const { result, unpatch, mutations } = applyPatch(object, patch)
 result // { a: 1, b: 2 }
 unpatch // { a: 1, b: TYPE.Delete }
 mutations.length // 1
-mutations[0] // { "oldValue":TYPE.Delete, "object", "prop":"b", "path":["b"] }
+mutations[0] // { 'oldValue':TYPE.Delete, 'object', 'prop':'b', 'path':['b'] }
 ```
 
 

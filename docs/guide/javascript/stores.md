@@ -6,7 +6,7 @@ Let's see an example where we create a store and clients can subscribe to it.
 
 ```js
 // Server
-import { createStore } from "dop"
+import { createStore } from 'dop'
 
 const store = createStore({ players: 0 })
 
@@ -26,7 +26,7 @@ We can now subscribe doing this
 
 ```js
 // Client
-import { createStore } from "dop"
+import { createStore } from 'dop'
 
 // Getting the current state of the server and subscribing to it
 const state = await subscribeToServerStore(onPatch)

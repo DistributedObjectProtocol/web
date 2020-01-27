@@ -6,7 +6,7 @@ Assuming we already have a WebSocket connection
 
 ```js
 // Server
-const { createNode } = require("dop")
+const { createNode } = require('dop')
 const client = createNode()
 
 function getServerEndPoints() {
@@ -23,7 +23,7 @@ The first argument of `open` is a function that dop will run anytime it needs to
 
 ```js
 // Client
-const { createNode } = require("dop")
+const { createNode } = require('dop')
 const server = createNode()
 const getServerEndPoints = server.open(ws.send)
 ```
@@ -37,7 +37,7 @@ const { login, register } = await getServerEndPoints()
 Also don't forget passing all the data we receive from the othe side.
 
 ```js
-ws.on("message", msg => {
+ws.on('message', msg => {
     client.message(msg)
 })
 ```
@@ -46,29 +46,29 @@ This might looks very abstract but when we combine everything with a library lik
 
 ```js
 // Server
-const { createNode } = require("dop")
-const WebSocket = require("ws")
+const { createNode } = require('dop')
+const WebSocket = require('ws')
 const wss = new WebSocket.Server({ port: 8080 })
 const sum = (a, b) => a + b
 const multiply = (a, b) => a * b
 const getCalculator = () => ({ sum, multiply })
-wss.on("connection", ws => {
+wss.on('connection', ws => {
     const client = createNode()
     client.open(ws.send.bind(ws), getCalculator)
-    ws.on("message", client.message)
+    ws.on('message', client.message)
 })
 
 // Client
-const ws = new WebSocket("ws://localhost:8080")
+const ws = new WebSocket('ws://localhost:8080')
 const server = createNode()
-ws.on("open", async () => {
+ws.on('open', async () => {
     const getCalculator = server.open(ws.send.bind(ws))
     const { sum, multiply } = await getCalculator()
     const result1 = await sum(5, 5)
     const result2 = await multiply(3, 3)
     console.log(result1, result2) // 10, 9
 })
-ws.on("message", server.message)
+ws.on('message', server.message)
 ```
 
 Try it yourself [https://runkit.com/josema/5e11d3313a68ac001a6a524e](https://runkit.com/josema/5e11d3313a68ac001a6a524e)

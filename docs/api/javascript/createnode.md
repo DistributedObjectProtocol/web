@@ -19,7 +19,7 @@ A new [Node](/api/javascript/node) instance.
 ## Example
 
 ```js
-import { createNode } from "dop"
+import { createNode } from 'dop'
 
 const node = createNode({ 
     serialize: JSON.stringify,
