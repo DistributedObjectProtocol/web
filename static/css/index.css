@@ -526,6 +526,7 @@ footer > div > div {
     max-width: 980px;
     margin: 0 auto;
     position: relative;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
 
 .page-document-edit {

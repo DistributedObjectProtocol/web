@@ -20,3 +20,5 @@ addType({
 ## Examples
 
 To do...
+
+But for now you can have a look to [https://github.com/DistributedObjectProtocol/dop/tree/master/src/types](https://github.com/DistributedObjectProtocol/dop/tree/master/src/types)

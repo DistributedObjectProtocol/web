@@ -19,7 +19,7 @@ function getServerEndPoints() {
 client.open(ws.send, getServerEndPoints)
 ```
 
-The first argument of `open` is a function that dop will run anytime it needs to send data to the other side. The second argument is an optional function that will be the entry point of the other side.
+The first argument of `open` is a function that dop will run anytime it needs to send data to the client. The second argument is an optional function that will be the entry point of the client.
 
 ```js
 // Client
@@ -34,7 +34,7 @@ const getServerEndPoints = server.open(ws.send)
 const { login, register } = await getServerEndPoints()
 ```
 
-Also don't forget passing all the data we receive from the othe side.
+Also don't forget passing all the data we receive from client.
 
 ```js
 ws.on('message', msg => {
