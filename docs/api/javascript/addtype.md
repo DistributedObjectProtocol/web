@@ -6,7 +6,7 @@
 
 #### type `Object`
 
-Must be an object that expose two or three functions. `patch` is optional
+Must be an object that expose two or three functions. `patch` is optional.
 
 ```js
 addType({ 

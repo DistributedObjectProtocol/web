@@ -34,8 +34,10 @@ const state = await subscribeToServerStore(onPatch)
 const store = createStore(state)
 
 function onPatch(patch) {
-    // Notifying subscribers
-    store.patchAndEmit(patch)
+    // Applying patch from the server
+    const listeners = store.applyPatch(patch)
+    // We emit the patch to all the subscribers
+    listeners.forEach(({ listener, patch }) => listener(patch))
 }
 ```
 

@@ -12,6 +12,9 @@ app.use('/', express.static(path.join(__dirname, 'static'))) // statics
 
 // home
 app.get('/', function(req, res) {
+    // var htmlString = fs.readFileSync('./docs/home.md', 'utf8')
+    // req.params.content = marked(htmlString)
+    // res.render('pages/index', req.params)
     rp(
         'https://raw.githubusercontent.com/DistributedObjectProtocol/dop/master/README.md'
     ).then(htmlString => {

@@ -10,6 +10,7 @@ function sum(a, b) {
 
 // Client
 const result = await sum(5, 5)
+console.log(result) // 10
 ```
 
 Old style using Promises
@@ -17,7 +18,7 @@ Old style using Promises
 ```js
 // Client
 sum(5, 5).then(result => {
-    // ...
+    console.log(result) // 10
 })
 ```
 
@@ -31,6 +32,7 @@ function sum({ a, b }) {
 
 // Client
 const { result } = await sum({ a: 5, b: 5 })
+console.log(result) // 10
 ```
 
 Remote Procedure Calls are the funniest part of this protocol because functions are created dynamically. Which means we can call a remote function and pass a local one as an argument.
@@ -43,7 +45,7 @@ function square(n, callback) {
 
 // Client
 square(5, result => {
-    console.log(result)
+    console.log(result) // 25
 })
 ```
 
