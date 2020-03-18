@@ -3,18 +3,32 @@
     <head>
         <title>Distributed Object Protocol</title>
         <% include ../partials/head %>
-        <link rel="stylesheet" href="/css/markdown.css" />
     </head>
-    <body>
+    <body onload="init();">
         <% include ../partials/header %>
-        <div class="page-document-inner">
-            <%- content %>
-        </div>
+            <div class="slides">
+                <div class="slides-arrows">
+                    <div id="prevBtn" class="slides-arrowleft"><img src="/img/arrow.svg"></div>
+                    <div id="nextBtn" class="slides-arrowright"><img src="/img/arrow.svg"></div>
+                </div>
+                <div class="slides-claim" id="claim">
+                    <div>
+                        <div class="slides-title"><strong>Distributed  Object  Protocol</strong> is for</div>
+                        <div class="slides-description">
+                            <strong>State management</strong>, Remote procedure calls, Reactive programming,<br/>
+                            Data sync, Pub/Sub, Optimistic updates, Time-travel debugging,<br/>
+                            Unidirectional data flow, <strong>Real time apps.</strong></div>
+                    </div>
+                </div>
+                <div class="slides-text"><div id="text"></div></div>
+                <!--<div id="slides-percentage"></div>-->
+                <div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:1200px; height:600px">
+                    <canvas id="canvas" width="1200" height="600" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+                    <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1200px; height:600px; position: absolute; left: 0px; top: 0px; display: block;">
+                    </div>
+                </div>
+            </div>
         <% include ../partials/footer %>
     </body>
-    <script src="/lib/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad()
-    </script>
     <% include ../partials/scripts %>
 </html>

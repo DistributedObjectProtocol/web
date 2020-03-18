@@ -678,3 +678,8 @@ blockquote h4 a:hover {
     color: #000;
     background: linear-gradient(90deg, #ffc74e, #fbcf8c);
 }
+
+#animation_container, #canvas, #dom_overlay_container {
+    width: 100% !important;
+    height: auto !important;
+}

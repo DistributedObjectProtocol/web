@@ -76,4 +76,4 @@ function compareArray(array1, array2) {
 }
 
 // Next
-document.getElementById('next-step').parentElement.className = 'next-step'
+// document.getElementById('next-step').parentElement.className = 'next-step'
