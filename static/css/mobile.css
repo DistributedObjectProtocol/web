@@ -4,6 +4,14 @@
   body {
     background-attachment: scroll !important;
   }
+
+  .h0, .page-document-inner > h1:first-of-type {
+      font-size: 2em;
+  }
+
+  .page-document-inner{
+    padding: 0;
+  }
   .header-menu-button {
     display: block;
     float: right;

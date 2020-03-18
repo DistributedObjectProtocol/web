@@ -35,11 +35,11 @@ const store = createStore({ users: 0 })
 // Subscribing listener1
 store.subscribe(listener1)
 // Subscribing listener2 with a filter
-store.subscribe(listener2, function filter({ object, prop, path, oldValue }) {
+store.subscribe(listener2, function filter({ object, prop, path, old_value }) {
     console.log(object) // { users: 1 }
     console.log(prop) // 'users'
     console.log(path) // ['users']
-    console.log(oldValue) // 0
+    console.log(old_value) // 0
     return false // This will avoid the mutation
 })
 
