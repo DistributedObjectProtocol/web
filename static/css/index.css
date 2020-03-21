@@ -9,7 +9,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background: url('../img/background.png') #fff fixed;
     margin: 0;
-    color: #222;
+    color: #000;
 }
 a {
     color: #d14;
@@ -682,4 +682,8 @@ blockquote h4 a:hover {
 #animation_container, #canvas, #dom_overlay_container {
     width: 100% !important;
     height: auto !important;
+    position: unset !important;
+    max-width: 1200px !important;
+    max-height: 600px !important;
+    margin: 0 auto;
 }
