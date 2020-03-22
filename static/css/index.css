@@ -292,7 +292,6 @@ footer > div > div {
     text-align: center;
     position: relative;
     margin-top: 46px;
-    height: calc(100% - 46px);
     width: 100%;
 }
 
@@ -340,14 +339,21 @@ footer > div > div {
     /* font-weight: 600; */
     font-size: 16px;
     cursor: default;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; */
     border-radius: 2px;
     /* box-shadow: 4px 4px 1px rgba(0,0,0,0.2); */
     margin: 0 auto;
 }
+
+.slides-text a {
+    color: white;
+    text-decoration: underline;
+}
+
+
 .slide #svg {
     max-width: 1200px !important;
 }
@@ -525,7 +531,8 @@ footer > div > div {
     max-width: 980px;
     margin: 0 auto;
     position: relative;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+        sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
 .page-document-edit {
@@ -613,8 +620,7 @@ footer > div > div {
     color: #ff5977;
 }
 .sidebar-category a:hover,
-.sidebar-category a.selected 
-{
+.sidebar-category a.selected {
     background: linear-gradient(90deg, #ffc74e, #fbcf8c);
     color: black;
 }
@@ -679,7 +685,9 @@ blockquote h4 a:hover {
     background: linear-gradient(90deg, #ffc74e, #fbcf8c);
 }
 
-#animation_container, #canvas, #dom_overlay_container {
+#animation_container,
+#canvas,
+#dom_overlay_container {
     width: 100% !important;
     height: auto !important;
     position: unset !important;

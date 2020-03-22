@@ -173,7 +173,6 @@
 
 @media only screen and (max-width: 750px) and (orientation: portrait) {
   .slides {
-    height: 40%;
   }
   .slides-arrowright img {
     float: right;
