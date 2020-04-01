@@ -75,3 +75,15 @@ function compareArray(array1, array2) {
     return true
 }
 
+// function round(number, round) {
+//     if (typeof round != 'number') round = 1;
+//     var decimal = Math.pow(10, round);
+//     return Math.round(number * decimal) / decimal;
+// }
+// fetch('https://unpkg.com/dop')
+//     .then(response => response.text())
+//     .then(fileString => {
+//         const deflate = pako.deflate(fileString, { to: 'string' });
+//         console.log( 'Size (gzip):', round(deflate.length/1024,2),'/', round(fileString.length/1024,2) );
+//     })
+

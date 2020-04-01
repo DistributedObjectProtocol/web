@@ -7,8 +7,9 @@ const SLIDE_TEXT = [
     'This is a node. A node is just an entity that can allocate JSON objects and can comunicate with other nodes.',
     'Here is another node. And we have connected them via WebSockets.',
     "The concept of node is a bit abstract. Let's turn them into Server and Client.",
-    'Now imagine we have this JSON object on both sides.',
-    'Client can send a <a href="https://github.com/DistributedObjectProtocol/protocol#Patches" target="_blank">Patch</a> to mutate the name.',
+    'Now imagine we have this JSON object on both sides. And the Client sends a <a href="https://github.com/DistributedObjectProtocol/protocol#Patches" target="_blank">Patch</a> to mutate the name.',
+    'Everything went well and our state is synced.',
+    'But what happens if the Client opens a new browser window and somehow they mutate the name at the same time.',
     '',
     '',
     '',
@@ -42,6 +43,7 @@ function configureSlides(movie) {
         const claimElement = document.getElementById('claim')
         const slidesCountElement = document.getElementById('slides-count')
         // const slidesPercentageElement = document.getElementById('slides-percentage')
+        changeText(SLIDE_TEXT[0])
 
         // Events
         prevElement.addEventListener('click', prev)

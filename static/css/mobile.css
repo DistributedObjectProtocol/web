@@ -169,6 +169,11 @@
   .page-document-edit {
     right: 20px;
   }
+
+  #middle {
+      /* top: -10%; */
+  }
+
 }
 
 @media only screen and (max-width: 750px) and (orientation: portrait) {
