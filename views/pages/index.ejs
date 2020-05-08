@@ -55,7 +55,7 @@
 
             <div class="middlerow">
                 <div class="middlecol">
-                    <div class="middletitle">State Management</div>
+                    <div class="middletitle">Patches</div>
                     <div class="middletext">
                         Distributed Object Protocol is for
         State management, Remote procedure calls, Data sync, Pub/Sub,
@@ -69,7 +69,7 @@
 
                 </div>
                 <div class="middlecol">
-                    <div class="middletitle">State Management</div>
+                    <div class="middletitle">RPCs</div>
                     <div class="middletext">
                         Distributed Object Protocol is for
         State management, Remote procedure calls, Data sync, Pub/Sub,
@@ -96,9 +96,9 @@
                     </div>
                 </div>
                 <div class="middlecol">
-                    <div class="middletitle">State Management</div>
+                    <div class="middletitle">Unidirectional data flow</div>
                     <div class="middletext">
-                        Distributed Object Protocol is for
+                        Unidirectional data flow is for
         State management, Remote procedure calls, Data sync, Pub/Sub,
         Reactive programming, Time travel, Optimistic updates,
         Unidirectional data flow, Real time apps.
@@ -113,7 +113,7 @@
             
             <div class="middlerow">
                 <div class="middlecol">
-                    <div class="middletitle">State Management</div>
+                    <div class="middletitle">Transport agnostic</div>
                     <div class="middletext">
                         Distributed Object Protocol is for
         State management, Remote procedure calls, Data sync, Pub/Sub,
@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <div class="middlecol">
-                    <div class="middletitle">State Management</div>
+                    <div class="middletitle">Time Travel</div>
                     <div class="middletext">
                         Distributed Object Protocol is for
         State management, Remote procedure calls, Data sync, Pub/Sub,
@@ -151,11 +151,11 @@
             <div id="bundletop">BUNDLE SIZE</div>
             <div id="bundlecontent">
                 <div class="bundlecol">
-                    <div class="bundlenumber">8.3<span>kB</span></div>
+                    <div class="bundlenumber"><span id="minified">...</span><span>kB</span></div>
                     <div class="bundlelabel">MINIFIED</div>
                 </div>
                 <div class="bundlecol">
-                    <div class="bundlenumber">3.1<span>kB</span></div>
+                    <div class="bundlenumber"><span id="gzipped">...</span><span>kB</span></div>
                     <div class="bundlelabel">GZIPPED</div>
                 </div>
             </div>
@@ -164,4 +164,19 @@
         <% include ../partials/footer %>
     </body>
     <% include ../partials/scripts %>
+    <script src="/lib/gzip.min.js"></script>
+    <script>
+function round(number, round) {
+    if (typeof round != 'number') round = 1;
+    var decimal = Math.pow(10, round);
+    return Math.round(number * decimal) / decimal;
+}
+fetch('https://unpkg.com/dop')
+    .then(response => response.text())
+    .then(fileString => {
+        const deflate = pako.deflate(fileString, { to: 'string' });
+        $('minified').innerHTML = round(fileString.length/1024,1)
+        $('gzipped').innerHTML = round(deflate.length/1024,1)
+    })
+    </script>
 </html>

@@ -11,10 +11,9 @@
 ## Examples
 
 ```js
-import { encode, TYPE } from 'dop'
+import { encode, decode, TYPE } from 'dop'
 
-const encoded = encode({ prop: TYPE.Delete() })
-encoded // { prop: { $d: 0 } }
+const encoded = encode({ prop: TYPE.Delete() }) // { prop: { $d: 0 } }
 decode(encoded) // { prop: TYPE.Delete() }
 ```
 

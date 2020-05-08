@@ -6,7 +6,7 @@
 
 #### target `Any`
 
-The object you want to mutate. Usually an object.
+The object or array you want to mutate.
 
 #### patch `Any`
 
@@ -26,20 +26,20 @@ The patch to be applied.
 ```js
 import { applyPatch, TYPE } from 'dop'
 
-const object = { a: 1 }
+const target = { a: 1 }
 const patch = { b: 2 }
-const { result, unpatch, mutations } = applyPatch(object, patch)
+const { result, unpatch, mutations } = applyPatch(target, patch)
 result // { a: 1, b: 2 }
 unpatch // { a: 1, b: TYPE.Delete }
 mutations.length // 1
-mutations[0] // { 'old_value':TYPE.Delete, 'object', 'prop':'b', 'path':['b'] }
+mutations[0] // { old_value:TYPE.Delete, target, prop:'b', path:['b'] }
 ```
 
 
 ```js
-const object = { a: 1 }
-const patch = [1,2,3]
-const { result, unpatch, mutations } = applyPatch(object, patch)
+const target = { a: 1 }
+const patch = [1, 2, 3]
+const { result, unpatch, mutations } = applyPatch(target, patch)
 result // [1,2,3]
 ```
 

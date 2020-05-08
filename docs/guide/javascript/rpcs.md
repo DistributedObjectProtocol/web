@@ -128,7 +128,7 @@ function login(email, password) {
 
 Dop does not handle authentication because not all situations needs it. But when we have the typical Server-Client architecture most of the time we need to know what client is calling our functions on server.
 
-When a function is being called remotely the last argument is a Promise instance with an extra property named `node`. Which is the node that is calling the function. Is the same instance/object that we got using [`createNode`](/api/javascript/createNode).
+When a function is being called remotely the last argument is a Promise instance with an extra property named `node`. Which is the node that is calling the function. Is the same instance/object that we got using [`createNode`](/api/javascript/createnode).
 
 ```js
 // Server
@@ -137,4 +137,4 @@ function login(email, password, ...args) {
 }
 ```
 
-> #### [Stores →](/guide/javascript/stores)
+[Learn more with the API.](/api/javascript).

@@ -1,6 +1,10 @@
+function $(id) {
+    return document.getElementById(id)
+}
+
 // Menu
-var headerMenu = document.getElementById('header-menu')
-var headerMenuButton = document.getElementById('header-menu-button')
+var headerMenu = $('header-menu')
+var headerMenuButton = $('header-menu-button')
 var headerMenuOpen = false
 headerMenuButton.addEventListener('click', function(e) {
     if (!headerMenuOpen) {
@@ -74,16 +78,4 @@ function compareArray(array1, array2) {
             return false
     return true
 }
-
-// function round(number, round) {
-//     if (typeof round != 'number') round = 1;
-//     var decimal = Math.pow(10, round);
-//     return Math.round(number * decimal) / decimal;
-// }
-// fetch('https://unpkg.com/dop')
-//     .then(response => response.text())
-//     .then(fileString => {
-//         const deflate = pako.deflate(fileString, { to: 'string' });
-//         console.log( 'Size (gzip):', round(deflate.length/1024,2),'/', round(fileString.length/1024,2) );
-//     })
 

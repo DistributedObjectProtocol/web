@@ -12,23 +12,28 @@ app.use('/', express.static(path.join(__dirname, 'static'))) // statics
 
 // home
 app.get('/', function(req, res) {
-    // var htmlString = fs.readFileSync('./docs/home.md', 'utf8')
-    // req.params.content = marked(htmlString)
     // res.render('pages/index', req.params)
     rp(
         'https://raw.githubusercontent.com/DistributedObjectProtocol/dop/master/README.md'
     ).then(htmlString => {
         req.params.content = marked(htmlString)
-        res.render('pages/index', req.params)
+        res.render('pages/index-markdown', req.params)
     })
 })
 
+
+
 // redirects
 app.get('/guide/javascript', function(req, res, next) {
-    res.redirect('/guide/javascript/connecting-nodes')
+    res.redirect('/guide/javascript/patches')
 })
 app.get('/api/javascript', function(req, res, next) {
     res.redirect('/api/javascript/createnode')
+})
+
+// examples
+app.get('/examples/javascript', function(req, res, next) {
+    res.render('pages/examples')
 })
 
 // docs
@@ -76,10 +81,6 @@ app.get('/:type/:language/:doc', function(req, res) {
     }
 })
 
-// transports
-app.get('/transports', function(req, res) {
-    res.render('pages/transports')
-})
 
 // any other
 app.get('/*', function(req, res) {

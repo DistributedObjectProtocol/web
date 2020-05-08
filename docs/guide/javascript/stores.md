@@ -53,4 +53,4 @@ function unsubscribeToServerStore(listener) {
 unsubscribeToServerStore(onPatch)
 ```
 
-> #### [Patches →](/guide/javascript/patches)
+> #### [Connecting nodes →](/guide/javascript/connecting-nodes)

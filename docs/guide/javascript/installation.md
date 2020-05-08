@@ -38,4 +38,4 @@ The variable `dop` will be available globally, which will give you access to the
 const { createNode, createStore } = dop // global variable: window.dop
 ```
 
-> #### [Connecting nodes →](/guide/javascript/connecting-nodes)
+> #### [Patches →](/guide/javascript/patches)

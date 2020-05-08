@@ -7,117 +7,129 @@ A quick example.
 ```js
 import { applyPatch } from 'dop'
 
-const object = { a: 1 }
+const target = { a: 1 }
 const patch = { a: 2 }
 
-applyPatch(object, patch)
-console.log(object) // { a: 2 }
+applyPatch(target, patch)
+console.log(target) // { a: 2 }
 ```
 
-Creating
+Extending
 
 ```js
-const object = { a: 1 }
+const target = { a: 1 }
 const patch = { b: 'World' }
-// object
+// target
 { a: 1, b: 'World' }
 ```
 
-Mutating and creating
+Mutating and extending
 
 ```js
-const object = { a: 1 }
+const target = { a: 1 }
 const patch = { a: 'Hello', b: 'World' }
-// object
+// target
 { a: 'Hello', b: 'World' }
 ```
+
 
 Deep mutation
 
 ```js
-const object = { a: 1, b: { c: 3 } }
-const patch = { b: { c: null } }
-// object
-{ a: 1, b: { c: null } }
+const target = { a: 1, b: { c: false } }
+const patch = { b: { c: true } }
+// target
+{ a: 1, b: { c: true } }
 ```
 
 ```js
-const object = {}
+const target = {}
 const patch = { b: { c: 3 } }
-// object
+// target
 { b: { c: 3 } }
 ```
 
-## Arrays
-
-Arrays are immutables, which means are always replaced. So in order to mutate arrays you must create a new array. Or use methods like `.slice`, `.concat` or any other that creates a copy of the array. 
+If the patch is an array this will always be replaced
 
 ```js
-const object = { a: [1, 2, 3], b:false }
+const target = { a: [1, 2, 3] }
 const patch = { a: [4] }
-// object
-{ a: [4], b: false }
+// target
+{ a: [4] }
 ```
-
-You can not mutate inner object of arrays
 
 ```js
-const object = { array: [1,2,3] }
-const patch = { array: { 3: 4 } }
-// object
-{ array: { 3: 4 } }
+const target = { a: { b:true } }
+const patch = { a: [1,2,3] }
+// target
+{ a: [1,2,3] }
 ```
 
-You should do something like
+
+But we can mutate arrays as we do with objects
 
 ```js
-const object = { array: [1,2,3] }
-const patch = { array: object.array.concat(4) }
-// object
-{ array: [1,2,3,4] }
+const target = { a: [1,2,3] }
+const patch = { a: { 3: 4 } }
+// target
+{ a: [1,2,3,4] }
 ```
 
+```js
+const target = { a: [1,2,3,4,5] }
+const patch = { a: { length: 1 } }
+// target
+{ a: [1] }
+```
+
+## Types
 
 
-## Delete
+### Delete
 
 We must use a special type in order to delete properties
 
 ```js
 import { applyPatch, TYPE } from 'dop'
 
-const object = { a: 1, b: 2 }
+const target = { a: 1, b: 2 }
 const patch = { a: TYPE.Delete }
-
-applyPatch(object, patch)
-// object
+// target
 { b: 2 }
 ```
 
-## Replace
+### Replace
 
 You can replace a whole object using the special type Replace
 
 ```js
 import { applyPatch, TYPE } from 'dop'
 
-const object = { obj: { a: 1, b: 2 } }
+const target = { obj: { a: 1, b: 2 } }
 const patch = { obj: TYPE.Replace({ c: 3 }) }
-
-applyPatch(object, patch)
-// object
+// target
 { obj: { c: 3 } }
 ```
 
 If we would't use Replace the result would be
 
 ```js
-const object = { obj: { a: 1, b: 2 } }
+const target = { obj: { a: 1, b: 2 } }
 const patch = { obj: { c: 3 } }
 
-applyPatch(object, patch)
+applyPatch(target, patch)
 // object
 { obj: { a: 1, b: 2, c: 3 } }
 ```
 
-[Learn more](https://github.com/DistributedObjectProtocol/protocol#Patches) about the specification.
+### Splice
+### Swap
+### Multi
+
+
+## Unpatch
+## Mutations
+
+
+
+> #### [Stores →](/guide/javascript/stores)

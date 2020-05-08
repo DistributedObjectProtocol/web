@@ -745,9 +745,9 @@ blockquote h4 a:hover {
     background: black;
     color: white;
     border: 3px solid black;
-    border-radius: 25px;
+    border-radius: 40px;
     line-height: 35px;
-    padding: 0 30px;
+    padding: 0 35px;
     font-weight: bolder;
     letter-spacing: -0.2px;
     font-size: 14px;
@@ -813,13 +813,13 @@ blockquote h4 a:hover {
 }
 .bundlenumber {
     font-weight: bold;
-    font-size: 85px;
+    font-size: 55px;
     color: white;
     letter-spacing: -1px;
     line-height: 60px;
 }
-.bundlenumber span {
-    font-size: 55px;
+#minified, #gzipped {
+    font-size: 85px;
 }
 .bundlelabel{
     color: #9f9f9f;
@@ -828,6 +828,17 @@ blockquote h4 a:hover {
     text-align: center;
 }
     
+
+.examples {
+    max-width:1000px;
+    margin: 0 auto;
+}
+
+.example {
+    padding-bottom: 40px;
+    font-size: 40px;
+    font-weight: bold;
+}
 
     
 
