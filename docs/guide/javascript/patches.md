@@ -82,8 +82,6 @@ const patch = { a: { length: 1 } }
 { a: [1] }
 ```
 
-## Types
-
 
 ### Delete
 
@@ -93,7 +91,7 @@ We must use a special type in order to delete properties
 import { applyPatch, TYPE } from 'dop'
 
 const target = { a: 1, b: 2 }
-const patch = { a: TYPE.Delete }
+const patch = { a: TYPE.Delete() }
 // target
 { b: 2 }
 ```
@@ -116,20 +114,69 @@ If we would't use Replace the result would be
 ```js
 const target = { obj: { a: 1, b: 2 } }
 const patch = { obj: { c: 3 } }
-
-applyPatch(target, patch)
-// object
+// target
 { obj: { a: 1, b: 2, c: 3 } }
 ```
 
 ### Splice
+
+Splice let us add or remove items directly into arrays. It follow the same API of the [JavaScript splice method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
+```js
+import { applyPatch, TYPE } from 'dop'
+
+const target = { array: [1,2,3]}
+const patch = { array: TYPE.Splice(1,1,'Hello','World') }
+// target
+{ array: [1,'Hello','World',3] }
+```
+
 ### Swap
+
+We can swap items in arrays.
+
+```js
+import { applyPatch, TYPE } from 'dop'
+
+const target = { array: [1,2,3]}
+const patch = { array: TYPE.Swap(0,2) }
+// target
+{ array: [3,2,1] }
+```
+
+
 ### Multi
+
+Useful when we want to apply multiple operations to the same target.
+
+```js
+import { applyPatch, TYPE } from 'dop'
+
+const target = { array: "String"}
+const patch = { array: TYPE.Multi(
+    [1,2,3],                   // [1,2,3]
+    TYPE.Splice(0,0, "Hello"), // ["Hello",1,2,3]
+    TYPE.Splice(4,0, "World"), // ["Hello",1,2,3,"World"]
+    TYPE.Swap(0,4),            // ["World",1,2,3,"Hello"]
+    TYPE.Swap(1,3),            // ["World",3,2,1,"Hello"]
+)}
+// target
+{ array:  ["World",3,2,1,"Hello"] }
+```
 
 
 ## Unpatch
-## Mutations
 
+We can revert any patch using the unpatch value that we obtain with `applyPatch`.
 
+```js
+import { applyPatch, TYPE } from 'dop'
+
+const target = { a:1 }
+const patch = { a: TYPE.Delete()}
+const { unpatch } = applyPatch(target, patch)
+console.log(target) // { }
+applyPatch(target, unpatch)
+console.log(target) // { a:1 }
+```
 
 > #### [Stores →](/guide/javascript/stores)

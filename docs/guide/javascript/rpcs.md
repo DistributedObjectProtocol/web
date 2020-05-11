@@ -52,15 +52,16 @@ square(5, result => {
 This will work as expected, but is a bad pattern. Because we are creating a new function every time we call square. Instead we should do something like this to create only one function on server.
 
 ```js
+// Server
 function square(n, callback) {
     callback(n * n)
 }
 
 // Client
-function processResult(result) {
+function callback(result) {
     console.log(result) // 25
 }
-calcSquare(5, processResult)
+square(5, callback)
 ```
 
 ### Throwing errors

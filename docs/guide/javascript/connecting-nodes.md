@@ -1,6 +1,6 @@
 # Connecting nodes
 
-The first thing to do is create and connect nodes. Dop is transport agnostic so is up to you decide how they will communicate. In this example, we will use WebSockets because is the easiest way to create real-time and bidirectional communication.
+Dop is transport agnostic so is up to you decide how they will communicate. In this example, we will use WebSockets because is the easiest way to create real-time and bidirectional communication.
 
 Assuming we already have a WebSocket connection
 
