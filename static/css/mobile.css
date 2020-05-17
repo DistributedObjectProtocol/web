@@ -9,6 +9,11 @@
       font-size: 2em;
   }
 
+  .page-document-index{
+    padding: 25px;
+    padding-top: 50px;
+  }
+
   .page-document-inner{
     padding: 0;
   }
