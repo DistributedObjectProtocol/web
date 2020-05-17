@@ -154,8 +154,8 @@ import { applyPatch, TYPE } from 'dop'
 const target = { array: "String"}
 const patch = { array: TYPE.Multi(
     [1,2,3],                   // [1,2,3]
-    TYPE.Splice(0,0, "Hello"), // ["Hello",1,2,3]
-    TYPE.Splice(4,0, "World"), // ["Hello",1,2,3,"World"]
+    TYPE.Splice(0,0,"Hello"),  // ["Hello",1,2,3]
+    TYPE.Splice(4,0,"World"),  // ["Hello",1,2,3,"World"]
     TYPE.Swap(0,4),            // ["World",1,2,3,"Hello"]
     TYPE.Swap(1,3),            // ["World",3,2,1,"Hello"]
 )}
@@ -172,11 +172,24 @@ We can revert any patch using the unpatch value that we obtain with `applyPatch`
 import { applyPatch, TYPE } from 'dop'
 
 const target = { a:1 }
-const patch = { a: TYPE.Delete()}
+const patch = { a:TYPE.Delete(), b:2 }
 const { unpatch } = applyPatch(target, patch)
-console.log(target) // { }
+console.log(target) // { b:2 }
 applyPatch(target, unpatch)
 console.log(target) // { a:1 }
+```
+
+## encode & decode
+
+One of the main feature of dop is that patches can be encoded and decoded to be transfered via HTTP, WebSockets or any other way.
+
+
+```js
+import { encode, decode, TYPE } from 'dop'
+
+const patch = { a:TYPE.Delete(), b:2 }
+const encoded = JSON.stringify(encode(patch)) // "{"a":{"$d":0},"b":2}"
+decode(JSON.parse(encoded)) // { a:TYPE.Delete(), b:2 }
 ```
 
 > #### [Stores →](/guide/javascript/stores)

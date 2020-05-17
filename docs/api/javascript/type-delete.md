@@ -9,8 +9,8 @@
 ```js
 import { applyPatch, TYPE } from 'dop'
 
-const object = { hello: 'hola', world: 'mundo' }
+const target = { hello: 'hola', world: 'mundo' }
 const patch = { world: TYPE.Delete() }
-applyPatch(object, patch)
-object // { hello: 'hola' }
+applyPatch(target, patch)
+target // { hello: 'hola' }
 ```

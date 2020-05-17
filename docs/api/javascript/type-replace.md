@@ -9,8 +9,8 @@
 ```js
 import { applyPatch, TYPE } from 'dop'
 
-const object = { data: { a:1, b:2 } }
+const target = { data: { a:1, b:2 } }
 const patch = { data: TYPE.Replace({ c:3 }) }
-applyPatch(object, patch)
-object // { data: { c:3 } }
+applyPatch(target, patch)
+target // { data: { c:3 } }
 ```
