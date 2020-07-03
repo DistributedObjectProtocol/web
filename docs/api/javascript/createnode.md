@@ -24,6 +24,6 @@ import { createNode } from 'dop'
 const node = createNode({ 
     serialize: JSON.stringify,
     deserialize: JSON.parse,
-    max_remote_functions: Infinity
+    rpcFilter: ({ rpc }) => rpc,
 })
 ```
