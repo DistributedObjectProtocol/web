@@ -10,7 +10,7 @@
 
 - *deserialize* `function` By default is `JSON.parse`
 
-- *max_remote_functions* `number` By default is Infinity. It limits the amount of functions that can be created from the other side.
+- *rpcFilter* `function` Can be used to block or manipulate the rpc that is going to be created.
 
 ## Returns `Object`
 
