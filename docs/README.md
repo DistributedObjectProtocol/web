@@ -2,8 +2,6 @@
 
 ## Guides
 
-### JavaScript
-
 - [Installation](./guide/javascript/installation.md)
 - [Patches](./guide/javascript/patches.md)
 - [Stores](./guide/javascript/stores.md)
@@ -11,8 +9,6 @@
 - [RPCs](./guide/javascript/rpcs.md)
 
 ## API
-
-### JavaScript
 
 - [createNode](./api/javascript/createnode.md)
 - [createStore](./api/javascript/createstore.md)
